@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0767FB4C19F89102000AB021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB4B19F89102000AB021 /* AppDelegate.swift */; };
-		0767FB4E19F89102000AB021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB4D19F89102000AB021 /* ViewController.swift */; };
+		0767FB4E19F89102000AB021 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB4D19F89102000AB021 /* LogInViewController.swift */; };
 		0767FB5119F89102000AB021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB4F19F89102000AB021 /* Main.storyboard */; };
 		0767FB5319F89102000AB021 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5219F89102000AB021 /* Images.xcassets */; };
 		0767FB5619F89102000AB021 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5419F89102000AB021 /* LaunchScreen.xib */; };
 		0767FB6219F89102000AB021 /* GymBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6119F89102000AB021 /* GymBuddyTests.swift */; };
+		0767FB6C19F8998E000AB021 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */; };
+		0767FB6E19F899C4000AB021 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6D19F899C4000AB021 /* QueryViewController.swift */; };
+		0767FB7019F89A01000AB021 /* MatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6F19F89A01000AB021 /* MatchingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		0767FB4619F89102000AB021 /* GymBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0767FB4A19F89102000AB021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0767FB4B19F89102000AB021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0767FB4D19F89102000AB021 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0767FB4D19F89102000AB021 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0767FB5019F89102000AB021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0767FB5219F89102000AB021 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0767FB5519F89102000AB021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0767FB5B19F89102000AB021 /* GymBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0767FB6019F89102000AB021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0767FB6119F89102000AB021 /* GymBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymBuddyTests.swift; sourceTree = "<group>"; };
+		0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		0767FB6D19F899C4000AB021 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
+		0767FB6F19F89A01000AB021 /* MatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
-				0767FB4D19F89102000AB021 /* ViewController.swift */,
+				0767FB4D19F89102000AB021 /* LogInViewController.swift */,
+				0767FB6F19F89A01000AB021 /* MatchingViewController.swift */,
 				0767FB4F19F89102000AB021 /* Main.storyboard */,
+				0767FB6D19F899C4000AB021 /* QueryViewController.swift */,
+				0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */,
 				0767FB5219F89102000AB021 /* Images.xcassets */,
 				0767FB5419F89102000AB021 /* LaunchScreen.xib */,
 				0767FB4919F89102000AB021 /* Supporting Files */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0767FB4E19F89102000AB021 /* ViewController.swift in Sources */,
+				0767FB6C19F8998E000AB021 /* RegistrationViewController.swift in Sources */,
+				0767FB6E19F899C4000AB021 /* QueryViewController.swift in Sources */,
+				0767FB4E19F89102000AB021 /* LogInViewController.swift in Sources */,
 				0767FB4C19F89102000AB021 /* AppDelegate.swift in Sources */,
+				0767FB7019F89A01000AB021 /* MatchingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
