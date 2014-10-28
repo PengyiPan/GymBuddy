@@ -16,6 +16,7 @@
 		0767FB6C19F8998E000AB021 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */; };
 		0767FB6E19F899C4000AB021 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6D19F899C4000AB021 /* QueryViewController.swift */; };
 		0767FB7019F89A01000AB021 /* MatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6F19F89A01000AB021 /* MatchingViewController.swift */; };
+		991D88661A00277100ECCDEB /* README_yt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 991D88641A00277100ECCDEB /* README_yt.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		0767FB6D19F899C4000AB021 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		0767FB6F19F89A01000AB021 /* MatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
+		991D88641A00277100ECCDEB /* README_yt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_yt.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				0767FB5219F89102000AB021 /* Images.xcassets */,
 				0767FB5419F89102000AB021 /* LaunchScreen.xib */,
 				0767FB4919F89102000AB021 /* Supporting Files */,
+				991D88641A00277100ECCDEB /* README_yt.txt */,
 			);
 			path = GymBuddy;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0767FB5119F89102000AB021 /* Main.storyboard in Resources */,
+				991D88661A00277100ECCDEB /* README_yt.txt in Resources */,
 				0767FB5619F89102000AB021 /* LaunchScreen.xib in Resources */,
 				0767FB5319F89102000AB021 /* Images.xcassets in Resources */,
 			);
@@ -419,6 +423,7 @@
 				0767FB6719F89102000AB021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0767FB6819F89102000AB021 /* Build configuration list for PBXNativeTarget "GymBuddyTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				0767FB6A19F89102000AB021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
