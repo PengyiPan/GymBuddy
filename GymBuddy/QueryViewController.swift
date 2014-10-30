@@ -41,7 +41,7 @@ class QueryViewController: UIViewController {
     
     //set to only support portrait, too lazy to do the landscape shit
     override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Portrait.toRaw())
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
     }
     
     
@@ -53,7 +53,7 @@ class QueryViewController: UIViewController {
     }
     
     @IBAction func locationBtnPressed(sender: UIButton) {
-        myModel.fillLocationPicker(locationPickerView)
+        //myModel.fillLocationPicker(locationPickerView)
         locationPickerView.alpha = 1
     }
     

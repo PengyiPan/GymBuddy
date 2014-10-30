@@ -28,14 +28,14 @@ class QueryViewModel {
 
     }
     
-    func fillLocationPicker(picker: UIPickerView){
-        class customDataSource : NSObject, UIPickerViewDelegate{
-            func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-                return pickerData[row]
-            }
-        }
-        picker.delegate = customDataSource()
-    }
+//    func fillLocationPicker(picker: UIPickerView){
+//        class customDataSource : NSObject, UIPickerViewDelegate{
+//            func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+//                return pickerData[row]
+//            }
+//        }
+//        picker.delegate = customDataSource()
+//    }
 
 }
 
