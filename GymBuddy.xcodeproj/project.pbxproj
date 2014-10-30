@@ -16,6 +16,7 @@
 		0767FB6C19F8998E000AB021 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */; };
 		0767FB6E19F899C4000AB021 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6D19F899C4000AB021 /* QueryViewController.swift */; };
 		0767FB7019F89A01000AB021 /* MatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6F19F89A01000AB021 /* MatchingViewController.swift */; };
+		0767FB721A01E32D000AB021 /* QueryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB711A01E32D000AB021 /* QueryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		0767FB6D19F899C4000AB021 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		0767FB6F19F89A01000AB021 /* MatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
+		0767FB711A01E32D000AB021 /* QueryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				0767FB4A19F89102000AB021 /* Info.plist */,
+				0767FB711A01E32D000AB021 /* QueryViewModel.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				0767FB6C19F8998E000AB021 /* RegistrationViewController.swift in Sources */,
 				0767FB6E19F899C4000AB021 /* QueryViewController.swift in Sources */,
 				0767FB4E19F89102000AB021 /* LogInViewController.swift in Sources */,
+				0767FB721A01E32D000AB021 /* QueryViewModel.swift in Sources */,
 				0767FB4C19F89102000AB021 /* AppDelegate.swift in Sources */,
 				0767FB7019F89A01000AB021 /* MatchingViewController.swift in Sources */,
 			);
@@ -419,6 +423,7 @@
 				0767FB6719F89102000AB021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0767FB6819F89102000AB021 /* Build configuration list for PBXNativeTarget "GymBuddyTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				0767FB6A19F89102000AB021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
