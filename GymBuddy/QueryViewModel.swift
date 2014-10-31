@@ -10,7 +10,6 @@ import UIKit
 
 class QueryViewModel {
     
-    let pickerData = ["Mozzarella","Gorgonzola","Provolone","Brie","Maytag Blue","Sharp Cheddar","Monterrey Jack","Stilton","Gouda","Goat Cheese", "Asiago"]	
 
     init(){
     }
@@ -18,8 +17,8 @@ class QueryViewModel {
     func dateToString(date:NSDate) -> NSString{
         let dateFormatter = NSDateFormatter()
         
-        var theDateFormat = NSDateFormatterStyle.ShortStyle
-        let theTimeFormat = NSDateFormatterStyle.ShortStyle
+        var theDateFormat = NSDateFormatterStyle.MediumStyle
+        let theTimeFormat = NSDateFormatterStyle.MediumStyle
         
         dateFormatter.dateStyle = theDateFormat
         dateFormatter.timeStyle = theTimeFormat
@@ -28,14 +27,25 @@ class QueryViewModel {
 
     }
     
-//    func fillLocationPicker(picker: UIPickerView){
-//        class customDataSource : NSObject, UIPickerViewDelegate{
-//            func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-//                return pickerData[row]
-//            }
-//        }
-//        picker.delegate = customDataSource()
-//    }
+    //TODO need to write using xml or SQL
+    func getLocationData() -> [NSString] {
+        let locationData = ["East","West","Brodie","Bla","Bllla"]
+        return locationData
+    }
+    
+    //TODO need to write using xml or SQL
+    func getSportData() -> [NSString] {
+        let sportData = ["Golf","Swimming","Workout","Football", "Basketball"]
+        return sportData
+    }
+    
+    //TODO need to write using xml or SQL
+    func getCategoryData() -> [NSString] {
+        let categoryData = ["Newbie","Noob","Median","High","Pro"]
+        return categoryData
+    }
+    
+
 
 }
 
