@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071BD8981A04233D00CCE835 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BD8971A04233D00CCE835 /* Login.storyboard */; };
+		071BD89A1A04247000CCE835 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BD8991A04247000CCE835 /* Registration.storyboard */; };
+		071BD89C1A04252C00CCE835 /* Query.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BD89B1A04252C00CCE835 /* Query.storyboard */; };
+		071BD89E1A0425B400CCE835 /* Matching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BD89D1A0425B400CCE835 /* Matching.storyboard */; };
+		071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD9521A04354500CCE835 /* RBStoryboardLink.m */; };
+		071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD9551A04354500CCE835 /* RBStoryboardModalSegue.m */; };
+		071BD9601A04354500CCE835 /* RBStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD9571A04354500CCE835 /* RBStoryboardPopoverSegue.m */; };
+		071BD9611A04354500CCE835 /* RBStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD9591A04354500CCE835 /* RBStoryboardPushSegue.m */; };
+		071BD9621A04354500CCE835 /* RBStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD95B1A04354500CCE835 /* RBStoryboardSegue.m */; };
+		071BD9631A04354500CCE835 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD95D1A04354500CCE835 /* UIViewController+RBStoryboardLink.m */; };
 		0767FB6219F89102000AB021 /* GymBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6119F89102000AB021 /* GymBuddyTests.swift */; };
 		0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0769AEB81A0360E400689EAE /* GymBuddy.xcdatamodeld */; };
 		07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5219F89102000AB021 /* Images.xcassets */; };
@@ -16,7 +26,6 @@
 		07CF3DD81A02CADC00FF8773 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6D19F899C4000AB021 /* QueryViewController.swift */; };
 		07CF3DD91A02CADC00FF8773 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */; };
 		07CF3DDC1A02CADC00FF8773 /* QueryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB711A01E32D000AB021 /* QueryViewModel.swift */; };
-		07CF3EB61A02DFA000FF8773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB4F19F89102000AB021 /* Main.storyboard */; };
 		07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5419F89102000AB021 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
@@ -31,11 +40,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071BD8971A04233D00CCE835 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		071BD8991A04247000CCE835 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		071BD89B1A04252C00CCE835 /* Query.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Query.storyboard; sourceTree = "<group>"; };
+		071BD89D1A0425B400CCE835 /* Matching.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Matching.storyboard; sourceTree = "<group>"; };
+		071BD9511A04354500CCE835 /* RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLink.h; sourceTree = "<group>"; };
+		071BD9521A04354500CCE835 /* RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardLink.m; sourceTree = "<group>"; };
+		071BD9531A04354500CCE835 /* RBStoryboardLinkSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLinkSource.h; sourceTree = "<group>"; };
+		071BD9541A04354500CCE835 /* RBStoryboardModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardModalSegue.h; sourceTree = "<group>"; };
+		071BD9551A04354500CCE835 /* RBStoryboardModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardModalSegue.m; sourceTree = "<group>"; };
+		071BD9561A04354500CCE835 /* RBStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		071BD9571A04354500CCE835 /* RBStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		071BD9581A04354500CCE835 /* RBStoryboardPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardPushSegue.h; sourceTree = "<group>"; };
+		071BD9591A04354500CCE835 /* RBStoryboardPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardPushSegue.m; sourceTree = "<group>"; };
+		071BD95A1A04354500CCE835 /* RBStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardSegue.h; sourceTree = "<group>"; };
+		071BD95B1A04354500CCE835 /* RBStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardSegue.m; sourceTree = "<group>"; };
+		071BD95C1A04354500CCE835 /* UIViewController+RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RBStoryboardLink.h"; sourceTree = "<group>"; };
+		071BD95D1A04354500CCE835 /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
 		0767FB4619F89102000AB021 /* GymBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0767FB4A19F89102000AB021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0767FB4B19F89102000AB021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0767FB4D19F89102000AB021 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		0767FB5019F89102000AB021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0767FB5219F89102000AB021 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0767FB5519F89102000AB021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0767FB5B19F89102000AB021 /* GymBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +91,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071BD9501A04354500CCE835 /* RBStoryboardLink */ = {
+			isa = PBXGroup;
+			children = (
+				071BD9511A04354500CCE835 /* RBStoryboardLink.h */,
+				071BD9521A04354500CCE835 /* RBStoryboardLink.m */,
+				071BD9531A04354500CCE835 /* RBStoryboardLinkSource.h */,
+				071BD9541A04354500CCE835 /* RBStoryboardModalSegue.h */,
+				071BD9551A04354500CCE835 /* RBStoryboardModalSegue.m */,
+				071BD9561A04354500CCE835 /* RBStoryboardPopoverSegue.h */,
+				071BD9571A04354500CCE835 /* RBStoryboardPopoverSegue.m */,
+				071BD9581A04354500CCE835 /* RBStoryboardPushSegue.h */,
+				071BD9591A04354500CCE835 /* RBStoryboardPushSegue.m */,
+				071BD95A1A04354500CCE835 /* RBStoryboardSegue.h */,
+				071BD95B1A04354500CCE835 /* RBStoryboardSegue.m */,
+				071BD95C1A04354500CCE835 /* UIViewController+RBStoryboardLink.h */,
+				071BD95D1A04354500CCE835 /* UIViewController+RBStoryboardLink.m */,
+			);
+			name = RBStoryboardLink;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		0767FB3D19F89102000AB021 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +136,10 @@
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
 				0767FB4D19F89102000AB021 /* LogInViewController.swift */,
 				0767FB6F19F89A01000AB021 /* MatchingViewController.swift */,
-				0767FB4F19F89102000AB021 /* Main.storyboard */,
+				071BD89B1A04252C00CCE835 /* Query.storyboard */,
+				071BD8971A04233D00CCE835 /* Login.storyboard */,
+				071BD89D1A0425B400CCE835 /* Matching.storyboard */,
+				071BD8991A04247000CCE835 /* Registration.storyboard */,
 				0767FB6D19F899C4000AB021 /* QueryViewController.swift */,
 				0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */,
 				0767FB5219F89102000AB021 /* Images.xcassets */,
@@ -104,6 +153,7 @@
 		0767FB4919F89102000AB021 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				071BD9501A04354500CCE835 /* RBStoryboardLink */,
 				0767FB4A19F89102000AB021 /* Info.plist */,
 				0767FB711A01E32D000AB021 /* QueryViewModel.swift */,
 			);
@@ -207,8 +257,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071BD89A1A04247000CCE835 /* Registration.storyboard in Resources */,
+				071BD89C1A04252C00CCE835 /* Query.storyboard in Resources */,
+				071BD8981A04233D00CCE835 /* Login.storyboard in Resources */,
 				07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */,
-				07CF3EB61A02DFA000FF8773 /* Main.storyboard in Resources */,
+				071BD89E1A0425B400CCE835 /* Matching.storyboard in Resources */,
 				07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071BD9621A04354500CCE835 /* RBStoryboardSegue.m in Sources */,
+				071BD9631A04354500CCE835 /* UIViewController+RBStoryboardLink.m in Sources */,
+				071BD9611A04354500CCE835 /* RBStoryboardPushSegue.m in Sources */,
+				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
+				071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */,
+				071BD9601A04354500CCE835 /* RBStoryboardPopoverSegue.m in Sources */,
 				07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */,
 				07CF3DD71A02CADC00FF8773 /* MatchingViewController.swift in Sources */,
 				0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */,
@@ -256,14 +315,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0767FB4F19F89102000AB021 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0767FB5019F89102000AB021 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0767FB5419F89102000AB021 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
