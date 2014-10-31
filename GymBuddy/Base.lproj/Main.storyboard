@@ -803,19 +803,9 @@ CA
                                 <exclude reference="cmH-Uf-de0"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2Wk-A1-z7F"/>
-                                <exclude reference="2tx-Ai-E1t"/>
-                                <exclude reference="zZF-9L-QcH"/>
-                                <exclude reference="ELY-kk-Gqz"/>
-                                <exclude reference="TGb-Nb-tMy"/>
-                                <exclude reference="SOp-yX-Vwx"/>
-                                <exclude reference="fjL-kx-mUH"/>
-                                <exclude reference="8tt-DB-kQV"/>
-                                <exclude reference="G4x-pb-Y8y"/>
-                                <exclude reference="O8E-Ca-h3V"/>
-                                <exclude reference="vJX-Mz-ztE"/>
-                                <exclude reference="FJ6-xQ-iEg"/>
-                                <exclude reference="qTB-Wk-Tk8"/>
+                                <exclude reference="2Jm-bM-xSj"/>
+                                <exclude reference="R1o-Fc-4lG"/>
+                                <exclude reference="akN-2C-UNg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -828,19 +818,9 @@ CA
                                 <include reference="cmH-Uf-de0"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2Wk-A1-z7F"/>
-                                <include reference="2tx-Ai-E1t"/>
-                                <include reference="zZF-9L-QcH"/>
-                                <include reference="ELY-kk-Gqz"/>
-                                <include reference="TGb-Nb-tMy"/>
-                                <include reference="SOp-yX-Vwx"/>
-                                <include reference="fjL-kx-mUH"/>
-                                <include reference="8tt-DB-kQV"/>
-                                <include reference="G4x-pb-Y8y"/>
-                                <include reference="O8E-Ca-h3V"/>
-                                <include reference="vJX-Mz-ztE"/>
-                                <include reference="FJ6-xQ-iEg"/>
-                                <include reference="qTB-Wk-Tk8"/>
+                                <include reference="2Jm-bM-xSj"/>
+                                <include reference="R1o-Fc-4lG"/>
+                                <include reference="akN-2C-UNg"/>
                             </mask>
                         </variation>
                     </view>
@@ -941,7 +921,7 @@ CA
         <image name="icon_time" width="287" height="285"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J7V-vJ-eVi"/>
-        <segue reference="w3W-HX-fBm"/>
+        <segue reference="UDW-Va-Wby"/>
+        <segue reference="c1q-tS-gyu"/>
     </inferredMetricsTieBreakers>
 </document>
