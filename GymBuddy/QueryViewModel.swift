@@ -10,7 +10,6 @@ import UIKit
 
 class QueryViewModel {
     
-    
 
     init(){
     }
@@ -18,8 +17,8 @@ class QueryViewModel {
     func dateToString(date:NSDate) -> NSString{
         let dateFormatter = NSDateFormatter()
         
-        var theDateFormat = NSDateFormatterStyle.ShortStyle
-        let theTimeFormat = NSDateFormatterStyle.ShortStyle
+        var theDateFormat = NSDateFormatterStyle.MediumStyle
+        let theTimeFormat = NSDateFormatterStyle.MediumStyle
         
         dateFormatter.dateStyle = theDateFormat
         dateFormatter.timeStyle = theTimeFormat

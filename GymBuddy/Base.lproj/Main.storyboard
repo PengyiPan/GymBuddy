@@ -278,12 +278,16 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-f5-5mD" userLabel="Category Picker View">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="362" width="400" height="162"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="j7U-bS-2qA" id="idd-Xa-cxs"/>
                                     <outlet property="delegate" destination="j7U-bS-2qA" id="iRH-fa-3cP"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQm-Sg-vsd" userLabel="Sport Picker View">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="j7U-bS-2qA" id="A52-XG-Oci"/>
+                                    <outlet property="delegate" destination="j7U-bS-2qA" id="Twh-h2-pip"/>
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-Uf-de0" userLabel="Location Picker View">
@@ -841,22 +845,22 @@
                                         <exclude reference="jWu-A1-Mmu"/>
                                         <exclude reference="txo-qx-Dr1"/>
                                         <exclude reference="xh2-1D-m0I"/>
-                                        <exclude reference="JWV-RQ-Khr"/>
-                                        <exclude reference="KQc-lg-b95"/>
-                                        <exclude reference="jLN-dZ-rHk"/>
                                         <exclude reference="PF8-k7-z50"/>
                                         <exclude reference="kYD-hY-Gkt"/>
                                         <exclude reference="lsc-5n-NcG"/>
                                         <exclude reference="mUx-hV-78t"/>
-                                        <exclude reference="KvD-Uh-Pi2"/>
-                                        <exclude reference="dCl-22-oy4"/>
-                                        <exclude reference="eD2-fr-oNY"/>
-                                        <exclude reference="izq-Fk-VWe"/>
                                         <exclude reference="5w6-J8-Xgn"/>
                                         <exclude reference="GV5-47-aeP"/>
                                         <exclude reference="fj1-7O-ns0"/>
                                         <exclude reference="iGo-EL-JB8"/>
                                         <exclude reference="trJ-Z6-FuA"/>
+                                        <exclude reference="KvD-Uh-Pi2"/>
+                                        <exclude reference="dCl-22-oy4"/>
+                                        <exclude reference="eD2-fr-oNY"/>
+                                        <exclude reference="izq-Fk-VWe"/>
+                                        <exclude reference="JWV-RQ-Khr"/>
+                                        <exclude reference="KQc-lg-b95"/>
+                                        <exclude reference="jLN-dZ-rHk"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -871,35 +875,52 @@
                                         <include reference="jWu-A1-Mmu"/>
                                         <include reference="txo-qx-Dr1"/>
                                         <include reference="xh2-1D-m0I"/>
-                                        <include reference="JWV-RQ-Khr"/>
-                                        <include reference="KQc-lg-b95"/>
-                                        <include reference="jLN-dZ-rHk"/>
                                         <include reference="PF8-k7-z50"/>
                                         <include reference="kYD-hY-Gkt"/>
                                         <include reference="lsc-5n-NcG"/>
                                         <include reference="mUx-hV-78t"/>
-                                        <include reference="KvD-Uh-Pi2"/>
-                                        <include reference="dCl-22-oy4"/>
-                                        <include reference="eD2-fr-oNY"/>
-                                        <include reference="izq-Fk-VWe"/>
                                         <include reference="5w6-J8-Xgn"/>
                                         <include reference="GV5-47-aeP"/>
                                         <include reference="fj1-7O-ns0"/>
                                         <include reference="iGo-EL-JB8"/>
                                         <include reference="trJ-Z6-FuA"/>
+                                        <include reference="KvD-Uh-Pi2"/>
+                                        <include reference="dCl-22-oy4"/>
+                                        <include reference="eD2-fr-oNY"/>
+                                        <include reference="izq-Fk-VWe"/>
+                                        <include reference="JWV-RQ-Khr"/>
+                                        <include reference="KQc-lg-b95"/>
+                                        <include reference="jLN-dZ-rHk"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQm-Sg-vsd" userLabel="Sport Picker View">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="362" width="400" height="162"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPt-yr-5Fe" userLabel="FindMatchButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.46867840880529643" green="0.70169499919837686" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="9ZW-43-ds6"/>
+                                    <constraint firstAttribute="height" constant="38" id="eiA-hb-tYZ"/>
+                                </constraints>
+                                <state key="normal" title="Find Match">
+                                    <color key="titleColor" red="0.029414589986061723" green="0.34309701371567258" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9ZW-43-ds6"/>
+                                        <exclude reference="eiA-hb-tYZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9ZW-43-ds6"/>
+                                        <include reference="eiA-hb-tYZ"/>
+                                    </mask>
                                 </variation>
                                 <connections>
-                                    <outlet property="dataSource" destination="j7U-bS-2qA" id="A52-XG-Oci"/>
-                                    <outlet property="delegate" destination="j7U-bS-2qA" id="Twh-h2-pip"/>
+                                    <action selector="findMatchBtnPressed:" destination="j7U-bS-2qA" eventType="touchUpInside" id="7dm-yv-dbg"/>
                                 </connections>
-                            </pickerView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -912,8 +933,10 @@
                             <constraint firstItem="cmH-Uf-de0" firstAttribute="top" secondItem="R2m-lF-sWi" secondAttribute="bottom" constant="3" id="FbZ-Ui-BuM"/>
                             <constraint firstAttribute="centerX" secondItem="fQm-Sg-vsd" secondAttribute="centerX" id="LXc-X6-7VI"/>
                             <constraint firstAttribute="centerX" secondItem="R2m-lF-sWi" secondAttribute="centerX" id="NW0-bh-gC7"/>
+                            <constraint firstItem="O5o-Lv-nLF" firstAttribute="top" secondItem="bPt-yr-5Fe" secondAttribute="bottom" constant="16" id="S3J-Dw-N0Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yrF-Ao-gaW" secondAttribute="trailing" id="SOp-yX-Vwx"/>
                             <constraint firstItem="WM6-ZV-W16" firstAttribute="leading" secondItem="CIC-d0-a86" secondAttribute="leading" id="TGb-Nb-tMy"/>
+                            <constraint firstAttribute="centerX" secondItem="bPt-yr-5Fe" secondAttribute="centerX" id="Yea-x2-D7Q"/>
                             <constraint firstItem="yrF-Ao-gaW" firstAttribute="leading" secondItem="CIC-d0-a86" secondAttribute="leadingMargin" id="fjL-kx-mUH"/>
                             <constraint firstAttribute="centerX" secondItem="5vk-f5-5mD" secondAttribute="centerX" id="nL0-oz-0Ss"/>
                             <constraint firstAttribute="centerX" secondItem="id2-Kw-U8i" secondAttribute="centerX" id="qTB-Wk-Tk8"/>
@@ -926,63 +949,69 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="5vk-f5-5mD"/>
+                                <exclude reference="fQm-Sg-vsd"/>
                                 <exclude reference="cmH-Uf-de0"/>
                                 <exclude reference="id2-Kw-U8i"/>
                                 <exclude reference="WM6-ZV-W16"/>
                                 <exclude reference="yrF-Ao-gaW"/>
                                 <exclude reference="dyH-8f-obk"/>
                                 <exclude reference="R2m-lF-sWi"/>
-                                <exclude reference="fQm-Sg-vsd"/>
+                                <exclude reference="bPt-yr-5Fe"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ELY-kk-Gqz"/>
-                                <exclude reference="TGb-Nb-tMy"/>
-                                <exclude reference="FJ6-xQ-iEg"/>
-                                <exclude reference="qTB-Wk-Tk8"/>
-                                <exclude reference="EIq-U7-lfp"/>
-                                <exclude reference="NW0-bh-gC7"/>
                                 <exclude reference="nL0-oz-0Ss"/>
-                                <exclude reference="LXc-X6-7VI"/>
-                                <exclude reference="SOp-yX-Vwx"/>
-                                <exclude reference="fjL-kx-mUH"/>
+                                <exclude reference="S3J-Dw-N0Q"/>
                                 <exclude reference="FbZ-Ui-BuM"/>
                                 <exclude reference="sRG-ML-Cxy"/>
+                                <exclude reference="LXc-X6-7VI"/>
+                                <exclude reference="Yea-x2-D7Q"/>
                                 <exclude reference="2Wk-A1-z7F"/>
                                 <exclude reference="2tx-Ai-E1t"/>
                                 <exclude reference="qVm-ag-2ML"/>
                                 <exclude reference="shr-lC-E6Y"/>
                                 <exclude reference="zZF-9L-QcH"/>
+                                <exclude reference="ELY-kk-Gqz"/>
+                                <exclude reference="TGb-Nb-tMy"/>
+                                <exclude reference="SOp-yX-Vwx"/>
+                                <exclude reference="fjL-kx-mUH"/>
+                                <exclude reference="EIq-U7-lfp"/>
+                                <exclude reference="NW0-bh-gC7"/>
+                                <exclude reference="FJ6-xQ-iEg"/>
+                                <exclude reference="qTB-Wk-Tk8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="5vk-f5-5mD"/>
+                                <include reference="fQm-Sg-vsd"/>
                                 <include reference="cmH-Uf-de0"/>
                                 <include reference="id2-Kw-U8i"/>
                                 <include reference="WM6-ZV-W16"/>
                                 <include reference="yrF-Ao-gaW"/>
                                 <include reference="dyH-8f-obk"/>
                                 <include reference="R2m-lF-sWi"/>
-                                <include reference="fQm-Sg-vsd"/>
+                                <include reference="bPt-yr-5Fe"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ELY-kk-Gqz"/>
-                                <include reference="TGb-Nb-tMy"/>
-                                <include reference="FJ6-xQ-iEg"/>
-                                <include reference="qTB-Wk-Tk8"/>
-                                <include reference="EIq-U7-lfp"/>
-                                <include reference="NW0-bh-gC7"/>
                                 <include reference="nL0-oz-0Ss"/>
-                                <include reference="LXc-X6-7VI"/>
-                                <include reference="SOp-yX-Vwx"/>
-                                <include reference="fjL-kx-mUH"/>
+                                <include reference="S3J-Dw-N0Q"/>
                                 <include reference="FbZ-Ui-BuM"/>
                                 <include reference="sRG-ML-Cxy"/>
+                                <include reference="LXc-X6-7VI"/>
+                                <include reference="Yea-x2-D7Q"/>
                                 <include reference="2Wk-A1-z7F"/>
                                 <include reference="2tx-Ai-E1t"/>
                                 <include reference="qVm-ag-2ML"/>
                                 <include reference="shr-lC-E6Y"/>
                                 <include reference="zZF-9L-QcH"/>
+                                <include reference="ELY-kk-Gqz"/>
+                                <include reference="TGb-Nb-tMy"/>
+                                <include reference="SOp-yX-Vwx"/>
+                                <include reference="fjL-kx-mUH"/>
+                                <include reference="EIq-U7-lfp"/>
+                                <include reference="NW0-bh-gC7"/>
+                                <include reference="FJ6-xQ-iEg"/>
+                                <include reference="qTB-Wk-Tk8"/>
                             </mask>
                         </variation>
                     </view>
@@ -991,6 +1020,7 @@
                         <outlet property="categoryDisplayLabel" destination="NRO-sJ-cEi" id="GOj-Na-qwE"/>
                         <outlet property="categoryPickerView" destination="5vk-f5-5mD" id="Jwj-aK-5R2"/>
                         <outlet property="datePicker" destination="yrF-Ao-gaW" id="3IY-VS-kiU"/>
+                        <outlet property="findMatchButton" destination="bPt-yr-5Fe" id="RAK-Yo-f0D"/>
                         <outlet property="locationBtn" destination="A3M-Lr-U6E" id="FI5-Pe-1tW"/>
                         <outlet property="locationDisplayLabel" destination="Idr-9b-G1J" id="xl7-gV-Ax8"/>
                         <outlet property="locationPickerView" destination="cmH-Uf-de0" id="q8S-6p-5j8"/>
