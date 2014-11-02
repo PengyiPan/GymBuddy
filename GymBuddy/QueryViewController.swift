@@ -35,7 +35,7 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var categoryDisplayLabel: UILabel!
     
     
-
+    //the array to keep track of the current input state
     var inputLog = [NSManagedObject]()
     
     override func viewDidLoad() {
@@ -43,8 +43,8 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // Do any additional setup after loading the view, typically from a nib.
         okBtn.alpha = 0
         hideAllPicker()
-        loadTestName()
-        
+        loadInputLog()
+        updateDisplayLabel()
         
     }
     
@@ -63,19 +63,12 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         hideAllPicker()
         okBtn.alpha = 1
         datePicker.alpha = 1
-        saveTestName()
     }
     
     @IBAction func locationBtnPressed(sender: UIButton) {
         hideAllPicker()
         okBtn.alpha = 1
         locationPickerView.alpha = 1
-        for log in inputLog {
-            println(log.valueForKey("time"))
-            println(log.valueForKey("location"))
-            println("----------")
-        }
-        println("End of inputLog print")
         
     }
     
@@ -92,31 +85,37 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     @IBAction func findMatchBtnPressed(sender: UIButton) {
-        println("find match!!!")
+        saveAllInput()
+        println("Find Match Button Pressed, query info sent:")
+        println(self.labelTextToOutputText(timeDisplayLabel.text!))
+        println(self.labelTextToOutputText(locationDisplayLabel.text!))
+        println(self.labelTextToOutputText(sportDisplayLabel.text!))
+        println(self.labelTextToOutputText(categoryDisplayLabel.text!))
+        
     }
     
     @IBAction func okBtnPressed(sender: UIButton) {
         
         if datePicker.alpha == 1 {
-            println(myModel.dateToString(datePicker.date))
+            //println(myModel.dateToString(datePicker.date))
             timeDisplayLabel.text = "Time: " + myModel.dateToString(datePicker.date)
             enoughInfoChecker[0] = true
 
         }
         else if locationPickerView.alpha == 1 {
-            println(myModel.getLocationData()[locationPickerView.selectedRowInComponent(0)])
+            //println(myModel.getLocationData()[locationPickerView.selectedRowInComponent(0)])
             locationDisplayLabel.text = "Location: " + myModel.getLocationData()[locationPickerView.selectedRowInComponent(0)]
             enoughInfoChecker[1] = true
 
         }
         else if sportPickerView.alpha == 1 {
-            println(myModel.getSportData()[sportPickerView.selectedRowInComponent(0)])
+            //println(myModel.getSportData()[sportPickerView.selectedRowInComponent(0)])
             sportDisplayLabel.text = "Sport: " + myModel.getSportData()[sportPickerView.selectedRowInComponent(0)]
             enoughInfoChecker[2] = true
 
         }
         else if categoryPickerView.alpha == 1 {
-            println(myModel.getCategoryData()[categoryPickerView.selectedRowInComponent(0)])
+            //println(myModel.getCategoryData()[categoryPickerView.selectedRowInComponent(0)])
             categoryDisplayLabel.text = "Category: " + myModel.getCategoryData()[categoryPickerView.selectedRowInComponent(0)]
             enoughInfoChecker[3] = true
 
@@ -167,6 +166,7 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
     }
     
+    //Hide all pickers
     func hideAllPicker() {
         datePicker.alpha = 0
         locationPickerView.alpha = 0
@@ -175,43 +175,45 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         findMatchButton.alpha = 0
     }
     
+    //If all four info are filled, show findMatch Button
     func tryToShowFindMatchBtn() {
         if !contains(enoughInfoChecker,false) {
             findMatchButton.alpha = 1
         }
     }
     
-    func saveTestName() {
+    //Save the current query info into coredata
+    func saveAllInput() {
         //1
-        let appDelegate =
-        UIApplication.sharedApplication().delegate as AppDelegate
-        
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         
         //2
-        let entity =  NSEntityDescription.entityForName("QueryLog",
-            inManagedObjectContext:
-            managedContext)
+        let entity =  NSEntityDescription.entityForName("QueryLog",inManagedObjectContext:managedContext)
         
-        let newInput = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext:managedContext)
+        let newInput = NSManagedObject(entity: entity!,insertIntoManagedObjectContext:managedContext)
         
         //3
-        newInput.setValue("test name 1", forKey: "time")
-        newInput.setValue("test lacation 1", forKey: "location")
+        let timeToSave = myModel.dateToString(datePicker.date)
+        let locationToSave = myModel.getLocationData()[locationPickerView.selectedRowInComponent(0)]
+        let sportToSave = myModel.getSportData()[sportPickerView.selectedRowInComponent(0)]
+        let categoryToSave = myModel.getCategoryData()[categoryPickerView.selectedRowInComponent(0)]
+        
+        newInput.setValue(timeToSave, forKey: "time")
+        newInput.setValue(locationToSave, forKey: "location")
+        newInput.setValue(sportToSave, forKey: "sport")
+        newInput.setValue(categoryToSave, forKey: "category")
         
         //4
         var error: NSError?
         if !managedContext.save(&error) {
             println("Could not save \(error), \(error?.userInfo)")
-        }  
-        //5
-        inputLog.append(newInput)
-        
-        
+        }
+
     }
     
-    func loadTestName() {
+    //Load the last query input
+    func loadInputLog() {
         //1
         let appDelegate =
         UIApplication.sharedApplication().delegate as AppDelegate
@@ -224,9 +226,7 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         //3
         var error: NSError?
         
-        let fetchedResults =
-        managedContext.executeFetchRequest(fetchRequest,
-            error: &error) as [NSManagedObject]?
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest,error: &error) as [NSManagedObject]?
         
         if let results = fetchedResults {
              inputLog = results
@@ -235,35 +235,55 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
     }
     
-//    func saveTestInfo() {
-//        var newItem = NSEntityDescription.insertNewObjectForEntityForName("QueryInfo", inManagedObjectContext: self.managedObjectContext!) as QueryInfo
-//
-//        newItem.time = "agggggg"
-//        newItem.category = "bgggggg"
-//        newItem.location = "cgggggg"
-//        newItem.sport = "dggggggg"
-//        self.managedObjectContext!.save(nil)
-//        presentItemInfo()
-//        
-//    }
-//    
-//    func presentItemInfo() {
-//        let fetchRequest = NSFetchRequest(entityName: "QueryInfo")
-//        //fetchRequest.returnsObjectsAsFaults = false
-//        
-//        
-//        
-//        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [QueryInfo] {
-//
-//            println(fetchResults[0].time)
-//            println(fetchResults[0].location)
-//            println(fetchResults[0].sport)
-//            println(fetchResults[0].category)
-//  
-//        }
-//        println("asdasdasdasd")
-//    }
+    //update the display label according to the loaded query input from last time
+    func updateDisplayLabel() {
+        var timeStr = ""
+        var locStr = ""
+        var spStr = ""
+        var caStr = ""
+        
+        if (inputLog.count > 0) {
+            timeStr = inputLog.last!.valueForKey("time") as String
+            locStr = inputLog.last!.valueForKey("location") as String
+            spStr = inputLog.last!.valueForKey("sport") as String
+            caStr = inputLog.last!.valueForKey("category") as String
+            
+            enoughInfoChecker[0] = true
+            enoughInfoChecker[1] = true
+            enoughInfoChecker[2] = true
+            enoughInfoChecker[3] = true
+            
+            timeDisplayLabel.text = "Time: " + timeStr
+            locationDisplayLabel.text = "Location: " + locStr
+            sportDisplayLabel.text = "Sport: " + spStr
+            categoryDisplayLabel.text = "Category: " + caStr
+            
+            tryToShowFindMatchBtn()
+        }
+        
+        
+        
+    }
     
+    //convert the text in label to pure info String
+    func labelTextToOutputText (inputString: String) -> String {
+        return inputString.componentsSeparatedByString(": ")[1]
+    }
+    
+    // for debugging purpose
+    func printLog() {
+            for res in inputLog {
+                println(res.valueForKey("time"))
+                println(res.valueForKey("location"))
+                println(res.valueForKey("sport"))
+                println(res.valueForKey("category"))
+                println("End of printLog")
+                println("        ")
+        }
+    
+    }
+    
+
     
     
 }
