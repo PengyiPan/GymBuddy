@@ -50,7 +50,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="TRG-YH-Ips"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="YhC-d3-0Jc"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icon_time">
+                                        <state key="normal" title="Button" image="time">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -79,7 +79,7 @@
                                             <constraint firstAttribute="height" constant="65" id="2gN-nB-GsD"/>
                                             <constraint firstAttribute="width" constant="65" id="ZtD-f3-a0G"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icon_time">
+                                        <state key="normal" title="Button" image="category">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -179,7 +179,7 @@
                                             <constraint firstAttribute="height" constant="65" id="iUx-tZ-dF8"/>
                                             <constraint firstAttribute="width" constant="65" id="iaY-lc-I37"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icon_time">
+                                        <state key="normal" title="Button" image="sport">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -229,7 +229,7 @@
                                             <constraint firstAttribute="height" constant="65" id="S0T-Hh-jPH"/>
                                             <constraint firstAttribute="width" constant="65" id="hV2-j2-XvQ"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icon_time">
+                                        <state key="normal" title="Button" image="location">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -825,7 +825,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_time" width="287" height="285"/>
+        <image name="category" width="95" height="95"/>
+        <image name="location" width="95" height="95"/>
+        <image name="sport" width="95" height="95"/>
+        <image name="time" width="95" height="95"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XUU-A3-nVI"/>
