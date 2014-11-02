@@ -10,39 +10,45 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="splashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="sTY-0N-NIc">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="g9f-yb-7B3">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="sTY-0N-NIc" secondAttribute="bottom" id="MoT-5q-A93"/>
-                <constraint firstItem="sTY-0N-NIc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TyL-Nf-R45"/>
-                <constraint firstAttribute="trailing" secondItem="sTY-0N-NIc" secondAttribute="trailing" id="euM-cu-kuO"/>
-                <constraint firstItem="sTY-0N-NIc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jUb-uo-mHG"/>
+                <constraint firstAttribute="trailing" secondItem="g9f-yb-7B3" secondAttribute="trailing" id="0ex-qP-9ve"/>
+                <constraint firstItem="g9f-yb-7B3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FKD-gF-wyj"/>
+                <constraint firstAttribute="bottom" secondItem="g9f-yb-7B3" secondAttribute="bottom" id="qyx-TD-Bm9"/>
+                <constraint firstItem="g9f-yb-7B3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xWT-kC-D8e"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="g9f-yb-7B3"/>
+                </mask>
                 <mask key="constraints">
-                    <exclude reference="MoT-5q-A93"/>
-                    <exclude reference="TyL-Nf-R45"/>
-                    <exclude reference="euM-cu-kuO"/>
-                    <exclude reference="jUb-uo-mHG"/>
+                    <exclude reference="0ex-qP-9ve"/>
+                    <exclude reference="FKD-gF-wyj"/>
+                    <exclude reference="qyx-TD-Bm9"/>
+                    <exclude reference="xWT-kC-D8e"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="g9f-yb-7B3"/>
+                </mask>
                 <mask key="constraints">
-                    <include reference="MoT-5q-A93"/>
-                    <include reference="TyL-Nf-R45"/>
-                    <include reference="euM-cu-kuO"/>
-                    <include reference="jUb-uo-mHG"/>
+                    <include reference="0ex-qP-9ve"/>
+                    <include reference="FKD-gF-wyj"/>
+                    <include reference="qyx-TD-Bm9"/>
+                    <include reference="xWT-kC-D8e"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="495" y="455"/>
         </view>
     </objects>
     <resources>
-        <image name="splashScreen" width="125" height="222"/>
+        <image name="launchScreen" width="250" height="445"/>
     </resources>
 </document>

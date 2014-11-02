@@ -59,9 +59,9 @@
                                 <exclude reference="g43-eG-Mr3"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="GPI-3Z-2et"/>
                                 <exclude reference="Vkv-X5-Eey"/>
                                 <exclude reference="fPS-mS-7yN"/>
-                                <exclude reference="GPI-3Z-2et"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -69,9 +69,9 @@
                                 <include reference="g43-eG-Mr3"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="GPI-3Z-2et"/>
                                 <include reference="Vkv-X5-Eey"/>
                                 <include reference="fPS-mS-7yN"/>
-                                <include reference="GPI-3Z-2et"/>
                             </mask>
                         </variation>
                     </view>
@@ -89,6 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zlX-AQ-cL7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W9F-Ig-V7T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -110,6 +111,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pR2-wa-UU0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uEJ-VR-h6T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
