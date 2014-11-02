@@ -64,18 +64,18 @@
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="r2h-X7-nLr"/>
                                                 <exclude reference="5Ns-E8-r2f"/>
-                                                <exclude reference="YcY-gs-zrC"/>
                                                 <exclude reference="77P-f1-pC7"/>
+                                                <exclude reference="YcY-gs-zrC"/>
+                                                <exclude reference="r2h-X7-nLr"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="r2h-X7-nLr"/>
                                                 <include reference="5Ns-E8-r2f"/>
-                                                <include reference="YcY-gs-zrC"/>
                                                 <include reference="77P-f1-pC7"/>
+                                                <include reference="YcY-gs-zrC"/>
+                                                <include reference="r2h-X7-nLr"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -120,8 +120,8 @@
                                     <mask key="constraints">
                                         <exclude reference="NJc-Bn-9hB"/>
                                         <exclude reference="k5X-Rc-Yji"/>
-                                        <exclude reference="gt6-Kr-yPc"/>
                                         <exclude reference="Vqt-a5-hM6"/>
+                                        <exclude reference="gt6-Kr-yPc"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -132,8 +132,8 @@
                                     <mask key="constraints">
                                         <include reference="NJc-Bn-9hB"/>
                                         <include reference="k5X-Rc-Yji"/>
-                                        <include reference="gt6-Kr-yPc"/>
                                         <include reference="Vqt-a5-hM6"/>
+                                        <include reference="gt6-Kr-yPc"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -197,6 +197,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dgN-E6-HJu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IQ2-f9-IJc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
