@@ -10,8 +10,17 @@ import UIKit
 
 class MatchingViewController: UIViewController {
     
+    @IBOutlet weak var textView: UITextView!
+    
+    var receivedQueryTime = ""
+    var receivedQueryLocation = ""
+    var receivedQuerySport = ""
+    var receivedQueryCategory = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.text = (receivedQueryTime + "\n" + receivedQueryLocation + "\n" + receivedQuerySport + "\n" + receivedQueryCategory)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
