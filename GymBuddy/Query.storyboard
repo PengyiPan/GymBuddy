@@ -649,7 +649,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="findMatchBtnPressed:" destination="fad-1l-0hb" eventType="touchUpInside" id="Nde-QC-cNK"/>
-                                    <segue destination="whR-3r-THJ" kind="custom" customClass="RBStoryboardModalSegue" id="JUf-N8-FxT"/>
+                                    <segue destination="whR-3r-THJ" kind="custom" identifier="findMatchSegue" customClass="RBStoryboardModalSegue" id="JUf-N8-FxT"/>
                                 </connections>
                             </button>
                         </subviews>

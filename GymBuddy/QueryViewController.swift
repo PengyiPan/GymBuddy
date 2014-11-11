@@ -283,6 +283,18 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "findMatchSegue") {
+            var destinationVC = segue.destinationViewController as MatchingViewController;
+            destinationVC.receivedQueryTime = self.labelTextToOutputText(timeDisplayLabel.text!)
+            destinationVC.receivedQueryLocation = self.labelTextToOutputText(locationDisplayLabel.text!)
+            destinationVC.receivedQuerySport = self.labelTextToOutputText(sportDisplayLabel.text!)
+            destinationVC.receivedQueryCategory = self.labelTextToOutputText(categoryDisplayLabel.text!)
+            
+
+        }
+    }
+    
 
     
     
