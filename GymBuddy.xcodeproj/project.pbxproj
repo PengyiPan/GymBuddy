@@ -18,6 +18,7 @@
 		071BD9621A04354500CCE835 /* RBStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD95B1A04354500CCE835 /* RBStoryboardSegue.m */; };
 		071BD9631A04354500CCE835 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 071BD95D1A04354500CCE835 /* UIViewController+RBStoryboardLink.m */; };
 		0722280F1A213B050015DC7F /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722280E1A213B050015DC7F /* MatchingViewModel.swift */; };
+		072228131A214E2E0015DC7F /* PostedWorkoutRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072228121A214E2E0015DC7F /* PostedWorkoutRecord.swift */; };
 		0767FB6219F89102000AB021 /* GymBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6119F89102000AB021 /* GymBuddyTests.swift */; };
 		0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0769AEB81A0360E400689EAE /* GymBuddy.xcdatamodeld */; };
 		07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5219F89102000AB021 /* Images.xcassets */; };
@@ -59,6 +60,7 @@
 		071BD95C1A04354500CCE835 /* UIViewController+RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RBStoryboardLink.h"; sourceTree = "<group>"; };
 		071BD95D1A04354500CCE835 /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
 		0722280E1A213B050015DC7F /* MatchingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
+		072228121A214E2E0015DC7F /* PostedWorkoutRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostedWorkoutRecord.swift; sourceTree = "<group>"; };
 		0767FB4619F89102000AB021 /* GymBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0767FB4A19F89102000AB021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0767FB4B19F89102000AB021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,10 +157,11 @@
 		0767FB4919F89102000AB021 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0722280E1A213B050015DC7F /* MatchingViewModel.swift */,
 				071BD9501A04354500CCE835 /* RBStoryboardLink */,
+				0722280E1A213B050015DC7F /* MatchingViewModel.swift */,
 				0767FB4A19F89102000AB021 /* Info.plist */,
 				0767FB711A01E32D000AB021 /* QueryViewModel.swift */,
+				072228121A214E2E0015DC7F /* PostedWorkoutRecord.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				0722280F1A213B050015DC7F /* MatchingViewModel.swift in Sources */,
 				07CF3DD81A02CADC00FF8773 /* QueryViewController.swift in Sources */,
 				07CF3DD91A02CADC00FF8773 /* RegistrationViewController.swift in Sources */,
+				072228131A214E2E0015DC7F /* PostedWorkoutRecord.swift in Sources */,
 				07CF3DDC1A02CADC00FF8773 /* QueryViewModel.swift in Sources */,
 				07CF3DD51A02CAC100FF8773 /* AppDelegate.swift in Sources */,
 			);

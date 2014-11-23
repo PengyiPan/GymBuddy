@@ -12,6 +12,8 @@ class MatchingViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
+    let myModel = MatchingViewModel()
+    
     var receivedQueryTime = ""
     var receivedQueryLocation = ""
     var receivedQuerySport = ""
@@ -19,34 +21,35 @@ class MatchingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeDatabaseQuery()
+        makeQuery()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func makeDatabaseQuery() {
-        var bodyData = "query= SELECT * FROM PostedWorkOutRecord"
-        
-        
-        let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
-        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
-            {
-                (response, data, error) in
-                var output = NSString(data: data, encoding: NSUTF8StringEncoding) // new output variable
-                println(output!)
-                self.textView.text = output!
-                //TODO: parse received Json data
-                
-        }
+    func makeQuery() {
+        myModel.makeDatabaseQuery(receivedQueryTime, receivedQueryLocation: receivedQueryLocation, receivedQuerySport: receivedQuerySport, receivedQueryCategory: receivedQueryCategory,viewCtrl:self)
+     
     }
+    
+    func didGetQueryResult(resultList:Array<PostedWorkoutRecord>) {
+        //TODO:make input as object list, show that on UI
+        for record in resultList {
+            println(record.record_id!)
+            println(record.time_start!)
+            println(record.time_end!)
+            println(record.location!)
+            println(record.sport_type!)
+            println(record.sport_sub_type!)
+        }
+    
+    }
+    
     
   
     
