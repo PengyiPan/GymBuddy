@@ -45,7 +45,6 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         hideAllPicker()
         loadInputLog()
         updateDisplayLabel()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,7 +68,6 @@ class QueryViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         hideAllPicker()
         okBtn.alpha = 1
         locationPickerView.alpha = 1
-        
     }
     
     @IBAction func sportBtnPressed(sender: UIButton) {
