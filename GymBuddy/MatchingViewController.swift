@@ -10,7 +10,6 @@ import UIKit
 
 class MatchingViewController: UIViewController {
     
-    @IBOutlet weak var textView: UITextView!
     
     let myModel = MatchingViewModel()
     
@@ -38,7 +37,8 @@ class MatchingViewController: UIViewController {
     }
     
     func didGetQueryResult(resultList:Array<PostedWorkoutRecord>) {
-        //TODO:make input as object list, show that on UI
+
+        //print all for debug
         for record in resultList {
             println(record.record_id!)
             println(record.time_start!)
@@ -47,6 +47,9 @@ class MatchingViewController: UIViewController {
             println(record.sport_type!)
             println(record.sport_sub_type!)
         }
+        
+        //TODO: put all data into a scrolling list
+        
     
     }
     

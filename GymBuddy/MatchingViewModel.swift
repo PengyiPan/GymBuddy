@@ -9,16 +9,7 @@
 import UIKit
 
 class MatchingViewModel {
-    
-    var list:Array<Business> = []
-    
-    // left only 2 fields for demo
-    struct Business {
-        var id : Int = 0
-        var name = ""
-    }
-    
-    
+            
     init(){
     }
 
@@ -35,12 +26,14 @@ class MatchingViewModel {
             {
                 (response, data, error) in
                 var error: NSError?
-                var output = NSString(data: data, encoding: NSUTF8StringEncoding) // output as string for debugging
-                let anyObj: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),
-                    error: &error)
-                
-                //parse received Json data
-                self.parseJsonData(anyObj!,viewCtrl:viewCtrl)
+                println(response)
+                //var output = NSString(data: data, encoding: NSUTF8StringEncoding) // output as string for debugging
+                //println(output)
+                //                let anyObj: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),
+//                    error: &error)
+//                
+//                //parse received Json data
+//                self.parseJsonData(anyObj!,viewCtrl:viewCtrl)
                 
             }
         

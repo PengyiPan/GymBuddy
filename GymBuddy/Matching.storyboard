@@ -44,38 +44,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH8-Qw-RQL">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.47524637368318345" green="1" blue="0.40968625118866919" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="9to-ah-aKx"/>
-                                    <constraint firstAttribute="height" constant="128" id="zne-Z2-y5w"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="9to-ah-aKx"/>
-                                        <exclude reference="zne-Z2-y5w"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="9to-ah-aKx"/>
-                                        <include reference="zne-Z2-y5w"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="xH8-Qw-RQL" secondAttribute="centerX" id="7uB-w8-rTf"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="EKF-xc-EIh"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leading" id="Ep2-KB-B5N"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="HFd-Ce-KYI"/>
                             <constraint firstAttribute="trailing" secondItem="vXm-C4-HhX" secondAttribute="trailing" id="IFu-AF-uqa"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leading" id="JQe-kg-Qwh"/>
-                            <constraint firstAttribute="centerY" secondItem="xH8-Qw-RQL" secondAttribute="centerY" id="MBX-6d-Vhd"/>
                             <constraint firstAttribute="trailing" secondItem="vXm-C4-HhX" secondAttribute="trailing" id="P9F-AF-avE"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="PzY-Cv-go2"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leading" id="Thy-Gz-wij"/>
@@ -85,33 +61,24 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vXm-C4-HhX"/>
-                                <exclude reference="xH8-Qw-RQL"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="EKF-xc-EIh"/>
                                 <exclude reference="IFu-AF-uqa"/>
                                 <exclude reference="iyP-1y-j1B"/>
-                                <exclude reference="7uB-w8-rTf"/>
-                                <exclude reference="MBX-6d-Vhd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vXm-C4-HhX"/>
-                                <include reference="xH8-Qw-RQL"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="EKF-xc-EIh"/>
                                 <include reference="IFu-AF-uqa"/>
                                 <include reference="iyP-1y-j1B"/>
-                                <include reference="7uB-w8-rTf"/>
-                                <include reference="MBX-6d-Vhd"/>
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="textView" destination="xH8-Qw-RQL" id="dnm-44-t24"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmH-0x-kGi" sceneMemberID="firstResponder"/>
             </objects>
