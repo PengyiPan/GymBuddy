@@ -29,21 +29,22 @@ class QueryViewModel {
     
     //TODO need to write using xml or SQL
     func getLocationData() -> [NSString] {
-        let locationData = ["East","West","Brodie","Bla","Bllla"]
+        let locationData = ["East","Central","West","Other"]
         return locationData
     }
     
     //TODO need to write using xml or SQL
     func getSportData() -> [NSString] {
-        let sportData = ["Golf","Swimming","Workout","Football", "Basketball"]
+        let sportData = ["Swimming", "Basketball", "Tennis","Workout","Running","Soccer","Other"]
         return sportData
     }
     
     //TODO need to write using xml or SQL
     func getCategoryData() -> [NSString] {
-        let categoryData = ["Newbie","Noob","Median","High","Pro"]
+        let categoryData = ["Pro","Advanced","Intermediate","Beginner","Other"]
         return categoryData
     }
+    
     
 
 
