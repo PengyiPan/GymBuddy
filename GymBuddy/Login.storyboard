@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tYu-b8-Oxg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tYu-b8-Oxg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Log In View Controller-->
+        <!--LogIn-->
         <scene sceneID="nbo-g4-5QY">
             <objects>
-                <viewController id="tYu-b8-Oxg" customClass="LogInViewController" customModule="GymBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LogIn" id="tYu-b8-Oxg" customClass="LogInViewController" customModule="GymBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GJZ-T1-K8S"/>
                         <viewControllerLayoutGuide type="bottom" id="eQg-mL-nJC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XMH-pC-JC4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-RD-FCu">
@@ -179,6 +179,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dogeButton" destination="Ssv-Xb-S3S" id="1Md-hk-Ccb"/>
                         <outlet property="dogeView" destination="70y-pt-RlV" id="msT-q2-9LJ"/>

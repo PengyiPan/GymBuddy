@@ -24,7 +24,6 @@ class QueryViewModel {
         dateFormatter.timeStyle = theTimeFormat
         
         return dateFormatter.stringFromDate(date)
-
     }
     
     //TODO need to write using xml or SQL
