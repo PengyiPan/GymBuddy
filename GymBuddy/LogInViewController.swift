@@ -56,6 +56,16 @@ class LogInViewController: UIViewController {
     func didGetQueryResult(resultList:Array<User>){
         myUsers = resultList
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "logInSuccess") {
+            var destinationVC = segue.destinationViewController as QueryViewController
+            //TODO: pass netID to views
+            //destinationVC.receivedQueryTime = self.labelTextToOutputText(timeDisplayLabel.text!)
+        } else if (segue.identifier == "registration"){
+            var destinationVC = segue.destinationViewController as RegistrationViewController
+        }
+    }
 
 }
 

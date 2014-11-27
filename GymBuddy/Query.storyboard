@@ -770,6 +770,7 @@
         <!--Storyboard Link-->
         <scene sceneID="VjF-OK-hpV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4T3-lE-Fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="VpF-Nk-9fT" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hYG-Qr-6JE"/>
@@ -781,11 +782,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Registration"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Login"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4T3-lE-Fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-450" y="371"/>
         </scene>

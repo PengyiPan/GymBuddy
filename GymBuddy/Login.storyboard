@@ -57,7 +57,7 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="mLp-6N-pDq" kind="custom" customClass="RBStoryboardModalSegue" id="hxa-nU-GlP"/>
+                                                    <segue destination="mLp-6N-pDq" kind="custom" identifier="logInSuccess" customClass="RBStoryboardModalSegue" id="hxa-nU-GlP"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -71,6 +71,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Asj-4C-01N" kind="custom" identifier="registration" customClass="RBStoryboardModalSegue" id="VS2-uk-a5M"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sSX-3b-7pe">
                                 <rect key="frame" x="49" y="189" width="272" height="30"/>
@@ -116,7 +119,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4f-FU-iua" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4485.5" y="-178.5"/>
+            <point key="canvasLocation" x="-4491.5" y="-150.5"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="PC0-GJ-ToI">
+            <objects>
+                <viewController id="Asj-4C-01N" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qWU-jY-N7A"/>
+                        <viewControllerLayoutGuide type="bottom" id="4L2-68-iHt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jBc-YI-WPo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Registration"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIw-45-fIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3405" y="145"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="yoq-3G-OP8">
@@ -132,7 +157,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Registration"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Query"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
