@@ -395,7 +395,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="VpF-Nk-9fT" kind="custom" customClass="RBStoryboardModalSegue" id="Uth-fN-AvV"/>
+                                                    <segue destination="VpF-Nk-9fT" kind="custom" identifier="logout" customClass="RBStoryboardModalSegue" id="Uth-fN-AvV"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>

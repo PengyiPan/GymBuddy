@@ -108,6 +108,7 @@
                         <outlet property="netIDTextField" destination="Z8p-O9-ifO" id="ad1-AA-mqF"/>
                         <outlet property="passwordTextField" destination="CiQ-Vb-0QA" id="8Wm-Tb-pjI"/>
                         <outlet property="rePasswordTextField" destination="oh1-Op-kWp" id="y0K-vB-9dg"/>
+                        <segue destination="SgA-CA-gsu" kind="custom" customClass="RBStoryboardModalSegue" id="4hf-mR-ZnF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udg-Mk-vbb" sceneMemberID="firstResponder"/>
