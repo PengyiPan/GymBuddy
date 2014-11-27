@@ -22,10 +22,10 @@ class RegistrationViewController: UIViewController {
         if !netID.isEmpty && !password.isEmpty && !rePassword.isEmpty {
             if(password != rePassword){
                 popUpAlertDialog("Alert", message: "Password not matched", buttonText: "OK")
-                return;
+            } else {
+                //TODO:send registration info to database
+                
             }
-            //TODO:send registration info to database
-            
         } else {
             popUpAlertDialog("Alert", message: "Fill all the fields", buttonText: "OK")
         }
