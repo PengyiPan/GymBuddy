@@ -17,7 +17,6 @@ class MatchingViewModel {
         
         var bodyData = "query= SELECT * FROM PostedWorkoutRecord2"
         
-        
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         request.HTTPMethod = "POST"

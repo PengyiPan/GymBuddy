@@ -16,9 +16,10 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var rePasswordTextField: UITextField!
     
     @IBAction func RegisterButton(sender: AnyObject) {
-        var netID = netIDTextField.text
-        var password = passwordTextField.text
-        var rePassword = rePasswordTextField.text
+        var netID = netIDTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        var password = passwordTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        var rePassword = rePasswordTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
         if !netID.isEmpty && !password.isEmpty && !rePassword.isEmpty {
             if(password != rePassword){
                 popUpAlertDialog("Alert", message: "Password not matched", buttonText: "OK")

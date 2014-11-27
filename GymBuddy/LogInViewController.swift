@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  GymBuddy
 //
-//  Created by Pengyi Pan on 10/22/14.
+//  Created by Justin Zhang on 11/26/14.
 //  Copyright (c) 2014 Duke 2014 Fall CS316. All rights reserved.
 //
 
@@ -14,8 +14,9 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
 
     @IBAction func logInButton(sender: AnyObject) {
-        var netID = netIDTextField.text
-        var password = passwordTextField.text
+        var netID = netIDTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        var password = passwordTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
         if !netID.isEmpty && !password.isEmpty {
             //TODO: send to database for verification
         } else {
