@@ -29,6 +29,8 @@
 		07CF3DD91A02CADC00FF8773 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */; };
 		07CF3DDC1A02CADC00FF8773 /* QueryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB711A01E32D000AB021 /* QueryViewModel.swift */; };
 		07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5419F89102000AB021 /* LaunchScreen.xib */; };
+		AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4637481A279BA7001B75CC /* LogInModel.swift */; };
+		AA46374B1A279BDB001B75CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46374A1A279BDB001B75CC /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		0767FB6F19F89A01000AB021 /* MatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
 		0767FB711A01E32D000AB021 /* QueryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewModel.swift; sourceTree = "<group>"; };
 		0769AEB91A0360E400689EAE /* GymBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymBuddy.xcdatamodel; sourceTree = "<group>"; };
+		AA4637481A279BA7001B75CC /* LogInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
+		AA46374A1A279BDB001B75CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		0767FB4819F89102000AB021 /* GymBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				AA4637471A279B6B001B75CC /* Models */,
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
 				0767FB4D19F89102000AB021 /* LogInViewController.swift */,
 				0767FB6F19F89A01000AB021 /* MatchingViewController.swift */,
@@ -181,6 +186,15 @@
 				0767FB6019F89102000AB021 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA4637471A279B6B001B75CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA4637481A279BA7001B75CC /* LogInModel.swift */,
+				AA46374A1A279BDB001B75CC /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +305,9 @@
 				071BD9611A04354500CCE835 /* RBStoryboardPushSegue.m in Sources */,
 				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
 				071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */,
+				AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */,
 				071BD9601A04354500CCE835 /* RBStoryboardPopoverSegue.m in Sources */,
+				AA46374B1A279BDB001B75CC /* User.swift in Sources */,
 				07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */,
 				07CF3DD71A02CADC00FF8773 /* MatchingViewController.swift in Sources */,
 				0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */,
