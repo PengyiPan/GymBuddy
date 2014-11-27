@@ -9,7 +9,8 @@
 import Foundation
 
 class User{
-    var user_id:String?
+    var net_id:String?
+    var password:String?
     var last_name:String?
     var first_name:String?
     var gender:String?

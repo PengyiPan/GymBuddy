@@ -12,13 +12,26 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var netIDTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var myUsers:Array<User> = []
+    
+    let myModel = LogInModel()
 
     @IBAction func logInButton(sender: AnyObject) {
         var netID = netIDTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         var password = passwordTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
         if !netID.isEmpty && !password.isEmpty {
-            //TODO: send to database for verification
+            for user in myUsers {
+                if(user.net_id == netID){
+                    if(user.password != password){
+                        popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
+                    } else {
+                        //TODO:go to next view
+                    }
+                }
+            }
+            popUpAlertDialog("Alert", message: "No registered NetID", buttonText: "OK")
         } else {
             popUpAlertDialog("Alert", message: "Fill all the fields", buttonText: "OK")
         }
@@ -32,12 +45,16 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        myModel.makeDatabaseQuery(self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func didGetQueryResult(resultList:Array<User>){
+        myUsers = resultList
     }
 
 }
