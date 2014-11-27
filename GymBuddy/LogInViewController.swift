@@ -27,7 +27,7 @@ class LogInViewController: UIViewController {
                     if(user.password != password){
                         popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
                     } else {
-                        //TODO:go to next view
+                        self.performSegueWithIdentifier("logInSuccess", sender: self)
                     }
                 }
             }

@@ -37,31 +37,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-RD-FCu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="GymBuddy" id="PUf-ZX-QwW">
-                                        <barButtonItem key="leftBarButtonItem" id="G7P-7z-P8C">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="app-ZU-gIF">
-                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="&lt;"/>
-                                                <variation key="widthClass=compact">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                                </variation>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" id="57v-aZ-MKt">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PZz-XB-h2F">
-                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Next"/>
-                                                <variation key="widthClass=compact">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                                </variation>
-                                                <connections>
-                                                    <segue destination="mLp-6N-pDq" kind="custom" identifier="logInSuccess" customClass="RBStoryboardModalSegue" id="hxa-nU-GlP"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="GymBuddy" id="PUf-ZX-QwW"/>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-NB-3eV">
@@ -115,6 +91,7 @@
                     <connections>
                         <outlet property="netIDTextField" destination="sgp-MX-A4g" id="htG-uA-dYO"/>
                         <outlet property="passwordTextField" destination="sSX-3b-7pe" id="xOl-rA-rqE"/>
+                        <segue destination="mLp-6N-pDq" kind="custom" identifier="logInSuccess" customClass="RBStoryboardModalSegue" id="jYM-KV-xtA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4f-FU-iua" sceneMemberID="firstResponder"/>
