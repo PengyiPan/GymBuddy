@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sxf-UO-gqu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -105,13 +106,13 @@
                                 <exclude reference="kpc-5t-gCP"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="scQ-8P-27l"/>
                                 <exclude reference="EKF-xc-EIh"/>
                                 <exclude reference="IFu-AF-uqa"/>
                                 <exclude reference="iyP-1y-j1B"/>
                                 <exclude reference="EYv-ua-lmO"/>
                                 <exclude reference="l09-Bu-ESV"/>
                                 <exclude reference="mPH-pO-qRA"/>
-                                <exclude reference="scQ-8P-27l"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -120,13 +121,13 @@
                                 <include reference="kpc-5t-gCP"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="scQ-8P-27l"/>
                                 <include reference="EKF-xc-EIh"/>
                                 <include reference="IFu-AF-uqa"/>
                                 <include reference="iyP-1y-j1B"/>
                                 <include reference="EYv-ua-lmO"/>
                                 <include reference="l09-Bu-ESV"/>
                                 <include reference="mPH-pO-qRA"/>
-                                <include reference="scQ-8P-27l"/>
                             </mask>
                         </variation>
                     </view>

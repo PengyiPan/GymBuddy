@@ -9,10 +9,6 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
-
-    @IBOutlet weak var dogeView: UIView!
-    @IBOutlet weak var dogeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +19,6 @@ class LogInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
-    @IBAction func dogEyeBlinder(sender: UIButton) {
-        
-        var color1 = CGFloat(CGFloat(random())/CGFloat(RAND_MAX))
-        var color2 = CGFloat(CGFloat(random())/CGFloat(RAND_MAX))
-        var color3 = CGFloat(CGFloat(random())/CGFloat(RAND_MAX))
-        
-        self.dogeView.backgroundColor = UIColor(red: color1, green: color2, blue: color3, alpha: 1)
-    }
-    
 
 }
 
