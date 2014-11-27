@@ -154,10 +154,10 @@
                                 <exclude reference="70y-pt-RlV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="GUi-AJ-TgZ"/>
                                 <exclude reference="ABJ-nN-Cm0"/>
                                 <exclude reference="N5p-Hb-mWT"/>
                                 <exclude reference="ufg-7v-zpt"/>
+                                <exclude reference="GUi-AJ-TgZ"/>
                                 <exclude reference="Gd2-uc-bS0"/>
                                 <exclude reference="Nru-ce-Uw1"/>
                                 <exclude reference="Re4-yO-SPT"/>
@@ -169,10 +169,10 @@
                                 <include reference="70y-pt-RlV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GUi-AJ-TgZ"/>
                                 <include reference="ABJ-nN-Cm0"/>
                                 <include reference="N5p-Hb-mWT"/>
                                 <include reference="ufg-7v-zpt"/>
+                                <include reference="GUi-AJ-TgZ"/>
                                 <include reference="Gd2-uc-bS0"/>
                                 <include reference="Nru-ce-Uw1"/>
                                 <include reference="Re4-yO-SPT"/>
