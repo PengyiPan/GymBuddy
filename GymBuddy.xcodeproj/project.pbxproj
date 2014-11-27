@@ -31,6 +31,8 @@
 		07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5419F89102000AB021 /* LaunchScreen.xib */; };
 		AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4637481A279BA7001B75CC /* LogInModel.swift */; };
 		AA46374B1A279BDB001B75CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46374A1A279BDB001B75CC /* User.swift */; };
+		AA6685961A27E08800A802BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6685951A27E08800A802BC /* Profile.storyboard */; };
+		AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6685971A27E74500A802BC /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		0769AEB91A0360E400689EAE /* GymBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymBuddy.xcdatamodel; sourceTree = "<group>"; };
 		AA4637481A279BA7001B75CC /* LogInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		AA46374A1A279BDB001B75CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AA6685951A27E08800A802BC /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		AA6685971A27E74500A802BC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 				0767FB5419F89102000AB021 /* LaunchScreen.xib */,
 				0769AEB81A0360E400689EAE /* GymBuddy.xcdatamodeld */,
 				0767FB4919F89102000AB021 /* Supporting Files */,
+				AA6685951A27E08800A802BC /* Profile.storyboard */,
+				AA6685971A27E74500A802BC /* ProfileViewController.swift */,
 			);
 			path = GymBuddy;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				071BD8981A04233D00CCE835 /* Login.storyboard in Resources */,
 				07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */,
 				071BD89E1A0425B400CCE835 /* Matching.storyboard in Resources */,
+				AA6685961A27E08800A802BC /* Profile.storyboard in Resources */,
 				07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +313,7 @@
 				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
 				071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */,
 				AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */,
+				AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */,
 				071BD9601A04354500CCE835 /* RBStoryboardPopoverSegue.m in Sources */,
 				AA46374B1A279BDB001B75CC /* User.swift in Sources */,
 				07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */,

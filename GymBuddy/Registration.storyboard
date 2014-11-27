@@ -33,7 +33,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="1cy-Ny-fr8" kind="custom" customClass="RBStoryboardModalSegue" id="m6f-oi-vx7"/>
+                                                    <segue destination="1cy-Ny-fr8" kind="custom" identifier="registrationBack" customClass="RBStoryboardModalSegue" id="m6f-oi-vx7"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -102,13 +102,12 @@
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="TitleTextField" destination="Hc4-p2-QsI" id="NCk-7O-njG"/>
                         <outlet property="netIDTextField" destination="Z8p-O9-ifO" id="ad1-AA-mqF"/>
                         <outlet property="passwordTextField" destination="CiQ-Vb-0QA" id="8Wm-Tb-pjI"/>
                         <outlet property="rePasswordTextField" destination="oh1-Op-kWp" id="y0K-vB-9dg"/>
-                        <segue destination="SgA-CA-gsu" kind="custom" customClass="RBStoryboardModalSegue" id="4hf-mR-ZnF"/>
+                        <segue destination="SgA-CA-gsu" kind="custom" identifier="registerSuccess" customClass="RBStoryboardModalSegue" id="4hf-mR-ZnF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udg-Mk-vbb" sceneMemberID="firstResponder"/>
@@ -118,7 +117,7 @@
         <!--Storyboard Link-->
         <scene sceneID="cD7-O9-SIJ">
             <objects>
-                <viewController id="SgA-CA-gsu" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SgA-CA-gsu" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y1i-12-EsV"/>
                         <viewControllerLayoutGuide type="bottom" id="zlX-AQ-cL7"/>

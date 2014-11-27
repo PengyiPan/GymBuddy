@@ -31,9 +31,6 @@
                                     <action selector="logInButton:" destination="tYu-b8-Oxg" eventType="touchUpInside" id="3cL-mg-06i"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluedevil" translatesAutoresizingMaskIntoConstraints="NO" id="E3g-4k-0h5">
-                                <rect key="frame" x="0.0" y="312" width="375" height="355"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-RD-FCu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -56,6 +53,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluedevil" translatesAutoresizingMaskIntoConstraints="NO" id="E3g-4k-0h5">
+                                <rect key="frame" x="0.0" y="312" width="375" height="355"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="316" width="400" height="440"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -87,7 +90,6 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="netIDTextField" destination="sgp-MX-A4g" id="htG-uA-dYO"/>
                         <outlet property="passwordTextField" destination="sSX-3b-7pe" id="xOl-rA-rqE"/>
@@ -96,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4f-FU-iua" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4491.5" y="-150.5"/>
+            <point key="canvasLocation" x="-4492.5" y="-150.75"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="PC0-GJ-ToI">
@@ -123,7 +125,7 @@
         <!--Storyboard Link-->
         <scene sceneID="yoq-3G-OP8">
             <objects>
-                <viewController id="mLp-6N-pDq" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginStoryBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mLp-6N-pDq" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z2v-Ro-Qsl"/>
                         <viewControllerLayoutGuide type="bottom" id="dgN-E6-HJu"/>
@@ -141,23 +143,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDe-e4-s8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3450" y="-568"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="n5g-2u-XTI">
-            <objects>
-                <viewController id="d8b-OP-cT2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iVI-tH-Txg"/>
-                        <viewControllerLayoutGuide type="bottom" id="Akh-3e-t4n"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UL0-Sr-wPf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cog-Vf-htI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
