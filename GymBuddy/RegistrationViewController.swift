@@ -2,7 +2,7 @@
 //  RegistrationViewController.swift
 //  GymBuddy
 //
-//  Created by Pengyi Pan on 10/22/14.
+//  Created by Justin Zhang on 11/26/14.
 //  Copyright (c) 2014 Duke 2014 Fall CS316. All rights reserved.
 //
 
@@ -16,12 +16,15 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var rePasswordTextField: UITextField!
     
     @IBAction func RegisterButton(sender: AnyObject) {
-        if !netIDTextField.text.isEmpty && !passwordTextField.text.isEmpty && !rePasswordTextField.text.isEmpty {
-            if(passwordTextField.text != rePasswordTextField.text){
+        var netID = netIDTextField.text
+        var password = passwordTextField.text
+        var rePassword = rePasswordTextField.text
+        if !netID.isEmpty && !password.isEmpty && !rePassword.isEmpty {
+            if(password != rePassword){
                 popUpAlertDialog("Alert", message: "Password not matched", buttonText: "OK")
                 return;
             }
-            //send registration info to database
+            //TODO:send registration info to database
             
         } else {
             popUpAlertDialog("Alert", message: "Fill all the fields", buttonText: "OK")
