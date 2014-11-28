@@ -10,25 +10,33 @@ import Foundation
 
 class LogInModel {
     
-    func makeDatabaseQuery(viewCtrl:LogInViewController){
-        var bodyData = "query= SELECT * FROM User"
+    func searchForCredentials(viewCtrl: LogInViewController, netID:String, password:String){
+        var net_id = "'" + netID + "'"
+        var passwordCopy = "'" + password + "'"
+        var query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " + passwordCopy
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         request.HTTPMethod = "POST"
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        request.HTTPBody = query.dataUsingEncoding(NSUTF8StringEncoding);
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
             {
                 (response, data, error) in
-                var error: NSError?
-                var output = NSString(data: data, encoding: NSUTF8StringEncoding) // output as string for debugging
-                let anyObj: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &error)
+                println("Search Credentials Task Completed")
+                if error != nil{
+                    println(error?.localizedDescription)
+                }
+                var err: NSError?
+                let jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &err)
+                if err != nil { //if there is an error parsing Json, print it
+                    println(err?.localizedDescription)
+                }
                 //parse received Json data
-                self.parseJsonData(anyObj!,viewCtrl:viewCtrl)
+                self.parseJsonData(jsonResult,viewCtrl:viewCtrl)
         }
     }
     
-    func parseJsonData(anyObj:AnyObject, viewCtrl:LogInViewController){
+    func parseJsonData(anyObj:AnyObject?, viewCtrl:LogInViewController){
         var list:Array<User> = []
         if  anyObj is Array<AnyObject> {
             for json in anyObj as Array<AnyObject>{
@@ -46,6 +54,4 @@ class LogInModel {
         }
         viewCtrl.didGetQueryResult(list)
     }
-    
-    
 }

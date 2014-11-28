@@ -14,7 +14,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     var myUsers:Array<User> = []
-    
+    let progressView = UIProgressView(progressViewStyle: .Bar)
     let myModel = LogInModel()
 
     @IBAction func logInButton(sender: AnyObject) {
@@ -22,19 +22,17 @@ class LogInViewController: UIViewController {
         var password = passwordTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
         if !netID.isEmpty && !password.isEmpty {
-            for user in myUsers {
-                if(user.net_id == netID){
-                    if(user.password != password){
-                        popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
-                    } else {
-                        self.performSegueWithIdentifier("logInSuccess", sender: self)
-                    }
-                }
-            }
-            popUpAlertDialog("Alert", message: "No registered NetID", buttonText: "OK")
+            myModel.searchForCredentials(self, netID:netID, password:password)
+            progressView.center = view.center
+            progressView.setProgress(0.5, animated: true)
+            progressView.trackTintColor = UIColor.lightGrayColor()
+            progressView.tintColor = UIColor.blueColor()
+            view.addSubview(progressView)
         } else {
             popUpAlertDialog("Alert", message: "Fill all the fields", buttonText: "OK")
         }
+        netIDTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     func popUpAlertDialog(alert:String, message:String, buttonText:String){
@@ -45,7 +43,6 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myModel.makeDatabaseQuery(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +52,12 @@ class LogInViewController: UIViewController {
     
     func didGetQueryResult(resultList:Array<User>){
         myUsers = resultList
+        progressView.setProgress(1.0, animated: true)
+        if myUsers.isEmpty {
+            popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
+        } else {
+            self.performSegueWithIdentifier("logInSuccess", sender: self)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
