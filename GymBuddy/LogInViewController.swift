@@ -29,6 +29,8 @@ class LogInViewController: UIViewController {
             progressView.tintColor = UIColor.blueColor()
             view.addSubview(progressView)
         } else {
+            progressView.setProgress(0.0, animated:false)
+            progressView.removeFromSuperview()
             popUpAlertDialog("Alert", message: "Fill all the fields", buttonText: "OK")
         }
         netIDTextField.resignFirstResponder()
@@ -54,6 +56,8 @@ class LogInViewController: UIViewController {
         myUsers = resultList
         progressView.setProgress(1.0, animated: true)
         if myUsers.isEmpty {
+            progressView.setProgress(0.0, animated:false)
+            progressView.removeFromSuperview()
             popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
         } else {
             self.performSegueWithIdentifier("logInSuccess", sender: self)
