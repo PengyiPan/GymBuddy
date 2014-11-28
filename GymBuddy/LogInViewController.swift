@@ -56,12 +56,12 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //wipe user data
-        println("User Credentials in CoreData Deleted")
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
-            for result in fetchResults {
-                managedObjectContext?.deleteObject(result)
+            if !fetchResults.isEmpty {
+                var user:UserData = fetchResults[0]
+                netIDTextField.text = user.net_id
+                passwordTextField.text = user.password
             }
         }
     }
@@ -73,12 +73,12 @@ class LogInViewController: UIViewController {
     
     func didGetQueryResult(resultList:Array<User>){
         myUsers = resultList
-        progressView.setProgress(1.0, animated: true)
         if myUsers.isEmpty {
             progressView.setProgress(0.0, animated:false)
             progressView.removeFromSuperview()
             popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
         } else {
+            progressView.setProgress(1.0, animated: true)
             var user:User = resultList[0]
             let newUser = UserData.createInManagedObjectContext(self.managedObjectContext!, netID:user.net_id!, password:user.password!, firstName:user.first_name, lastName:user.last_name, gender:user.gender, pictureURL:user.picture_url, numThumbs:user.numb_thumb_ups, signature:user.signature)
             self.performSegueWithIdentifier("logInSuccess", sender: self)
