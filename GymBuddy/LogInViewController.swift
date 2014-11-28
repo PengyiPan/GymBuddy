@@ -56,6 +56,14 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //wipe user data
+        println("User Credentials in CoreData Deleted")
+        let fetchRequest = NSFetchRequest(entityName: "UserData")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+            for result in fetchResults {
+                managedObjectContext?.deleteObject(result)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

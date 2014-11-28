@@ -44,5 +44,12 @@ class UserData: NSManagedObject {
         }
         return newItem
     }
+    
+    class func createInManagedObjectContext(moc:NSManagedObjectContext, netID:String, password:String) -> UserData {
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("UserData", inManagedObjectContext: moc) as UserData
+        newItem.net_id = netID
+        newItem.password = password
+        return newItem
+    }
 
 }

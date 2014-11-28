@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegistrationViewController: UIViewController {
     
@@ -14,6 +15,9 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var netIDTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var rePasswordTextField: UITextField!
+    
+    let progressView = UIProgressView(progressViewStyle: .Bar)
+    let myModel = RegistrationModel()
     
     @IBAction func RegisterButton(sender: AnyObject) {
         var netID = netIDTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
@@ -25,12 +29,33 @@ class RegistrationViewController: UIViewController {
                 popUpAlertDialog("Alert", message: "Password not matched", buttonText: "OK")
             } else {
                 //TODO:send registration info to database
-                
+                myModel.postCredentials(self, netID: netID, password: password)
+                progressView.center = view.center
+                progressView.setProgress(0.5, animated: true)
+                progressView.trackTintColor = UIColor.lightGrayColor()
+                progressView.tintColor = UIColor.blueColor()
+                view.addSubview(progressView)
             }
         } else {
             popUpAlertDialog("Alert", message: "Fill all the fields", buttonText: "OK")
         }
     }
+    
+    func didGetPostResult(message:String){
+        progressView.setProgress(1.0, animated: true)
+        //check if registered successfully
+        
+    }
+    
+    lazy var managedObjectContext : NSManagedObjectContext? = {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        if let managedObjectContext = appDelegate.managedObjectContext {
+            return managedObjectContext
+        }
+        else {
+            return nil
+        }
+    }()
     
     func popUpAlertDialog(alert:String, message:String, buttonText:String){
         var alert = UIAlertController(title: alert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
