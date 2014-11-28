@@ -387,18 +387,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Query" id="6Wp-Ie-snD">
-                                        <barButtonItem key="leftBarButtonItem" id="0aS-w7-mBl">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qhv-9e-KtR">
-                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="&lt;">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="VpF-Nk-9fT" kind="custom" identifier="logout" customClass="RBStoryboardModalSegue" id="Uth-fN-AvV"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Profile" id="SMG-Ou-og5">
                                             <connections>
                                                 <segue destination="FD9-yJ-uy2" kind="custom" customClass="RBStoryboardModalSegue" id="mwC-J0-g3M"/>
@@ -771,28 +759,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1N-du-Wle" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1410" y="-153"/>
-        </scene>
-        <!--Storyboard Link-->
-        <scene sceneID="VjF-OK-hpV">
-            <objects>
-                <viewController id="VpF-Nk-9fT" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hYG-Qr-6JE"/>
-                        <viewControllerLayoutGuide type="bottom" id="ord-RL-vpx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QHR-37-cgc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Login"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4T3-lE-Fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-450" y="371"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="XcD-iY-OAP">

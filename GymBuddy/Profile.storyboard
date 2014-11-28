@@ -182,6 +182,8 @@
                             <outlet property="delegate" destination="Mjm-3N-RZd" id="4Bc-cr-dKV"/>
                         </connections>
                     </tableView>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFA-xo-XNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,6 +266,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pb4-An-sjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
