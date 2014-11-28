@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LogInViewController: UIViewController {
     
@@ -37,6 +38,16 @@ class LogInViewController: UIViewController {
         passwordTextField.resignFirstResponder()
     }
     
+    lazy var managedObjectContext : NSManagedObjectContext? = {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        if let managedObjectContext = appDelegate.managedObjectContext {
+            return managedObjectContext
+        }
+        else {
+            return nil
+        }
+    }()
+    
     func popUpAlertDialog(alert:String, message:String, buttonText:String){
         var alert = UIAlertController(title: alert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
@@ -60,6 +71,8 @@ class LogInViewController: UIViewController {
             progressView.removeFromSuperview()
             popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
         } else {
+            var user:User = resultList[0]
+            let newUser = UserData.createInManagedObjectContext(self.managedObjectContext!, netID:user.net_id!, password:user.password!, firstName:user.first_name, lastName:user.last_name, gender:user.gender, pictureURL:user.picture_url, numThumbs:user.numb_thumb_ups, signature:user.signature)
             self.performSegueWithIdentifier("logInSuccess", sender: self)
         }
     }
