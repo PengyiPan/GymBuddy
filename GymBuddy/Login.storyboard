@@ -31,12 +31,6 @@
                                     <action selector="logInButton:" destination="tYu-b8-Oxg" eventType="touchUpInside" id="3cL-mg-06i"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-RD-FCu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="GymBuddy" id="PUf-ZX-QwW"/>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-NB-3eV">
                                 <rect key="frame" x="208" y="257" width="78" height="30"/>
                                 <color key="backgroundColor" red="0.1273505446" green="0.39211344580000002" blue="0.84128736410000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,6 +53,12 @@
                                     <rect key="frame" x="0.0" y="316" width="400" height="440"/>
                                 </variation>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-RD-FCu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="GymBuddy" id="PUf-ZX-QwW"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

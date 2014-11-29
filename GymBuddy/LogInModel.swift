@@ -22,7 +22,7 @@ class LogInModel {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
             {
                 (response, data, error) in
-                println("Search Credentials Task Completed")
+                NSLog("Search Credentials Task Completed")
                 if error != nil{
                     println(error?.localizedDescription)
                 }

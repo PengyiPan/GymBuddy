@@ -92,6 +92,10 @@ class LogInViewController: UIViewController {
             var destinationVC = segue.destinationViewController as RegistrationViewController
         }
     }
-
+    
+    //set to only support portrait, too lazy to do the landscape
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
 }
 

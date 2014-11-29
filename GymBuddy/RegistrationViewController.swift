@@ -67,6 +67,11 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    //set to only support portrait, too lazy to do the landscape
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -51,4 +51,9 @@ class ProfileTableViewController:UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //set to only support portrait, too lazy to do the landscape
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
 }

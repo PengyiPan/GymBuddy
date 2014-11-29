@@ -12,7 +12,7 @@ import CoreData
 class ProfileViewController: UIViewController{
     
     @IBAction func logOutButton(sender: AnyObject) {
-        println("User Credentials in CoreData Deleted")
+        NSLog("User Credentials in CoreData Deleted")
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             for result in fetchResults {
@@ -34,6 +34,11 @@ class ProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    //set to only support portrait, too lazy to do the landscape
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
     }
     
     override func didReceiveMemoryWarning() {
