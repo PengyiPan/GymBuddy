@@ -28,7 +28,6 @@ class RegistrationViewController: UIViewController {
             if(password != rePassword){
                 popUpAlertDialog("Alert", message: "Password not matched", buttonText: "OK")
             } else {
-                //TODO:send registration info to database
                 myModel.postCredentials(self, netID: netID, password: password)
                 progressView.center = view.center
                 progressView.setProgress(0.5, animated: true)
@@ -41,10 +40,38 @@ class RegistrationViewController: UIViewController {
         }
     }
     
-    func didGetPostResult(message:String){
-        progressView.setProgress(1.0, animated: true)
-        //check if registered successfully
-        
+    func didGetPostResult(code:RegistrationModel.RegisterResult, user:User){
+        if code == RegistrationModel.RegisterResult.RegisterSuccess {
+            progressView.setProgress(1.0, animated: true)
+            deleteUserData()
+            let newUser = UserData.createInManagedObjectContext(self.managedObjectContext!, netID: user.net_id!, password: user.password!)
+            self.performSegueWithIdentifier("registerSuccess", sender: self)
+        } else {
+            progressView.setProgress(0.0, animated: false)
+            progressView.removeFromSuperview()
+            
+            if code == RegistrationModel.RegisterResult.NonValidPassword {
+                popUpAlertDialog("NonValid Password", message: "Password must be longer than 5 and shorter than 10 (inclusive)", buttonText: "OK")
+            } else if code == RegistrationModel.RegisterResult.AlreadyExists {
+                popUpAlertDialog("NetID Already Exists", message: "Change NetID or Login With Password", buttonText: "OK")
+            }
+        }
+    }
+    
+    func deleteUserData() {
+        NSLog("User Credentials in CoreData Deleted")
+        let fetchRequest = NSFetchRequest(entityName: "UserData")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+            for result in fetchResults {
+                managedObjectContext?.deleteObject(result)
+            }
+        }
+    }
+    
+    func popUpAlertDialog(alert:String, message:String, buttonText:String){
+        var alert = UIAlertController(title: alert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     lazy var managedObjectContext : NSManagedObjectContext? = {
@@ -56,12 +83,6 @@ class RegistrationViewController: UIViewController {
             return nil
         }
     }()
-    
-    func popUpAlertDialog(alert:String, message:String, buttonText:String){
-        var alert = UIAlertController(title: alert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
