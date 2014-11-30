@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ProfileTableStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mjm-3N-RZd" customClass="ProfileTableViewController" customModule="GymBuddy" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="cti-g1-euo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -66,6 +66,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Wfl-Rk-q8W" kind="custom" identifier="editFirstNameSegue" customClass="RBStoryboardModalSegue" id="GQZ-ub-Wdn"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="rT0-eC-IYm" detailTextLabel="uc1-VL-k19" style="IBUITableViewCellStyleValue1" id="CyB-fB-nZX">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -197,6 +200,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFA-xo-XNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-609" y="-162.375"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="uDU-T7-jE7">
+            <objects>
+                <viewController id="Wfl-Rk-q8W" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NJa-8F-0Su"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Xf-HU-e9C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qQ4-qg-lhx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="FirstNameEdit"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBu-Ef-PfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.5" y="-582.75"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="b9t-YV-SEW">

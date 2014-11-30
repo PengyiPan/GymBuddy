@@ -38,12 +38,38 @@ class ProfileTableViewController:UITableViewController {
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             var user:UserData = fetchResults[0];
-            photoContent.text = user.picture_url;
-            firstNameContent.text = user.first_name;
-            lastNameContent.text = user.last_name;
-            genderContent.text = user.gender;
+            
+            if countElements(user.picture_url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
+                photoContent.text = "Empty >";
+            } else {
+                photoContent.text = user.picture_url + " >";
+            }
+            
+            if countElements(user.first_name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
+                firstNameContent.text = "Empty >";
+            } else {
+                firstNameContent.text = user.first_name + " >";
+            }
+            
+            if countElements(user.last_name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
+                lastNameContent.text = "Empty >";
+            } else {
+                lastNameContent.text = user.last_name + " >";
+            }
+            
+            if countElements(user.gender.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
+                genderContent.text = "Empty >";
+            } else {
+                genderContent.text = user.gender + " >";
+            }
+            
             thumbsContent.text = user.num_thumbs;
-            signatureContent.text = user.signature;
+            
+            if countElements(user.signature.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
+                signatureContent.text = "Empty >";
+            } else {
+                signatureContent.text = user.signature + " >";
+            }
         }
     }
     

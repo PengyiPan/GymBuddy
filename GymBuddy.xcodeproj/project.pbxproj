@@ -32,6 +32,8 @@
 		AA3ED21B1A2862FD00E7DA42 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED21A1A2862FD00E7DA42 /* UserData.swift */; };
 		AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */; };
 		AA3ED24D1A2902DF00E7DA42 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */; };
+		AA3ED2501A2A53CD00E7DA42 /* FirstNameEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3ED24F1A2A53CD00E7DA42 /* FirstNameEdit.storyboard */; };
+		AA3ED2521A2A55BE00E7DA42 /* FirstNameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED2511A2A55BE00E7DA42 /* FirstNameEditViewController.swift */; };
 		AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4637481A279BA7001B75CC /* LogInModel.swift */; };
 		AA46374B1A279BDB001B75CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46374A1A279BDB001B75CC /* User.swift */; };
 		AA6685961A27E08800A802BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6685951A27E08800A802BC /* Profile.storyboard */; };
@@ -85,6 +87,8 @@
 		AA3ED21A1A2862FD00E7DA42 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		AA3ED24F1A2A53CD00E7DA42 /* FirstNameEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstNameEdit.storyboard; sourceTree = "<group>"; };
+		AA3ED2511A2A55BE00E7DA42 /* FirstNameEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNameEditViewController.swift; sourceTree = "<group>"; };
 		AA4637481A279BA7001B75CC /* LogInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		AA46374A1A279BDB001B75CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AA6685951A27E08800A802BC /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		0767FB4819F89102000AB021 /* GymBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */,
 				AA4637471A279B6B001B75CC /* Models */,
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
 				0767FB4D19F89102000AB021 /* LogInViewController.swift */,
@@ -200,6 +205,15 @@
 				0767FB6019F89102000AB021 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */ = {
+			isa = PBXGroup;
+			children = (
+				AA3ED24F1A2A53CD00E7DA42 /* FirstNameEdit.storyboard */,
+				AA3ED2511A2A55BE00E7DA42 /* FirstNameEditViewController.swift */,
+			);
+			name = ProfileTableViews;
 			sourceTree = "<group>";
 		};
 		AA4637471A279B6B001B75CC /* Models */ = {
@@ -298,6 +312,7 @@
 				07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */,
 				071BD89E1A0425B400CCE835 /* Matching.storyboard in Resources */,
 				AA6685961A27E08800A802BC /* Profile.storyboard in Resources */,
+				AA3ED2501A2A53CD00E7DA42 /* FirstNameEdit.storyboard in Resources */,
 				07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +339,7 @@
 				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
 				071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */,
 				AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */,
+				AA3ED2521A2A55BE00E7DA42 /* FirstNameEditViewController.swift in Sources */,
 				AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */,
 				071BD9601A04354500CCE835 /* RBStoryboardPopoverSegue.m in Sources */,
 				AA46374B1A279BDB001B75CC /* User.swift in Sources */,
