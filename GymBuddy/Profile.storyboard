@@ -48,6 +48,11 @@
                     </tableView>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <segue destination="Wfl-Rk-q8W" kind="custom" identifier="EditFirstNameSegue" customClass="RBStoryboardModalSegue" id="l6u-Mq-1mV"/>
+                        <segue destination="Wfl-Rk-q8W" kind="custom" identifier="EditLastNameSegue" customClass="RBStoryboardModalSegue" id="eUy-T8-l2c"/>
+                        <segue destination="Wfl-Rk-q8W" kind="custom" identifier="EditSignatureSegue" customClass="RBStoryboardModalSegue" id="2T9-5d-rj6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFA-xo-XNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,4 +293,7 @@
         <image name="doge" width="94" height="103"/>
         <image name="thumb" width="222" height="227"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2T9-5d-rj6"/>
+    </inferredMetricsTieBreakers>
 </document>

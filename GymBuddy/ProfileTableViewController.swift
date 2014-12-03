@@ -58,6 +58,31 @@ class ProfileTableViewController:UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var attribute = attributeItems[indexPath.row]
+        switch attribute {
+            case "First Name":
+                self.performSegueWithIdentifier("EditFirstNameSegue", sender: self)
+            case "Last Name":
+                self.performSegueWithIdentifier("EditLastNameSegue", sender: self)
+            case "Signature":
+                self.performSegueWithIdentifier("EditSignatureSegue", sender: self)
+            default:
+                break
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var viewController = segue.destinationViewController as FirstNameEditViewController
+        if segue.identifier == "EditFirstNameSegue" {
+            viewController.myEditThing = EditAttribute.EditFirstName
+        } else if segue.identifier == "EditLastNameSegue" {
+            viewController.myEditThing = EditAttribute.EditLastName
+        } else if segue.identifier == "EditSignatureSegue" {
+            viewController.myEditThing = EditAttribute.EditSignature
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

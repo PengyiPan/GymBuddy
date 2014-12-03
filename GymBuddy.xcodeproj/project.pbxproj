@@ -38,6 +38,7 @@
 		AA46374B1A279BDB001B75CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46374A1A279BDB001B75CC /* User.swift */; };
 		AA6685961A27E08800A802BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6685951A27E08800A802BC /* Profile.storyboard */; };
 		AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6685971A27E74500A802BC /* ProfileViewController.swift */; };
+		AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		AA46374A1A279BDB001B75CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AA6685951A27E08800A802BC /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AA6685971A27E74500A802BC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAttribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			children = (
 				AA3ED24F1A2A53CD00E7DA42 /* ProfileTextEdit.storyboard */,
 				AA3ED2511A2A55BE00E7DA42 /* FirstNameEditViewController.swift */,
+				AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */,
 			);
 			name = ProfileTableViews;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				AA3ED24D1A2902DF00E7DA42 /* ProfileTableViewController.swift in Sources */,
 				071BD9621A04354500CCE835 /* RBStoryboardSegue.m in Sources */,
+				AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */,
 				071BD9631A04354500CCE835 /* UIViewController+RBStoryboardLink.m in Sources */,
 				071BD9611A04354500CCE835 /* RBStoryboardPushSegue.m in Sources */,
 				AA3ED21B1A2862FD00E7DA42 /* UserData.swift in Sources */,
