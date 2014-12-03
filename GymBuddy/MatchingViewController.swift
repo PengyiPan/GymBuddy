@@ -92,7 +92,7 @@ class MatchingViewController: UIViewController, UITableViewDelegate, UITableView
 //            })
 //        }
         
-        cell.textLabel.text =  myModel.makeCellTitleString(myData[indexPath.row] as PostedWorkoutRecord)
+        cell.textLabel?.text =  myModel.makeCellTitleString(myData[indexPath.row] as PostedWorkoutRecord)
         cell.detailTextLabel?.text = myModel.makeCellDetailString(myData[indexPath.row] as PostedWorkoutRecord)
         
         return cell
