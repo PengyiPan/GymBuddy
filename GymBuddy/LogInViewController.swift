@@ -56,6 +56,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.secureTextEntry = true
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             if !fetchResults.isEmpty {
