@@ -80,6 +80,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="navigationLabel" destination="DaI-3t-fEj" id="Ysd-Ad-KG8"/>
                         <outlet property="textField" destination="NV2-xc-Yvj" id="Jwz-qb-72Y"/>
                     </connections>
                 </viewController>

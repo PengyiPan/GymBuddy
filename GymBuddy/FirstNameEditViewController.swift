@@ -12,20 +12,34 @@ import CoreData
 
 class FirstNameEditViewController:UIViewController {
     
+    var myEditThing:EditAttribute = EditAttribute.EditFirstName
+    
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var navigationLabel: UINavigationItem!
     
     @IBAction func saveButton(sender: AnyObject) {
         //TODO
-        
         self.performSegueWithIdentifier("backToProfileSegue", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayNavigationTitle()
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             var user:UserData = fetchResults[0]
             textField.text = user.first_name
+        }
+    }
+    
+    func displayNavigationTitle() {
+        switch myEditThing {
+        case EditAttribute.EditFirstName:
+            navigationLabel.title = "First Name"
+        case EditAttribute.EditLastName:
+            navigationLabel.title = "Last Name"
+        case EditAttribute.EditSignature:
+            navigationLabel.title = "Signature"
         }
     }
     
@@ -48,6 +62,12 @@ class FirstNameEditViewController:UIViewController {
             return nil
         }
     }()
+    
+    enum EditAttribute {
+        case EditFirstName
+        case EditLastName
+        case EditSignature
+    }
     
 }
 
