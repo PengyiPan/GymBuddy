@@ -11,15 +11,11 @@ import CoreData
 
 class ProfileTableViewController:UITableViewController {
     
-    @IBOutlet weak var photoContent: UILabel!
-    
     @IBOutlet weak var firstNameContent: UILabel!
 
     @IBOutlet weak var lastNameContent: UILabel!
 
     @IBOutlet weak var genderContent: UILabel!
-
-    @IBOutlet weak var thumbsContent: UILabel!
 
     @IBOutlet weak var signatureContent: UILabel!
 
@@ -39,11 +35,11 @@ class ProfileTableViewController:UITableViewController {
         if let fetchResults = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             var user:UserData = fetchResults[0];
             
-            if countElements(user.picture_url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
-                photoContent.text = "Empty >";
-            } else {
-                photoContent.text = user.picture_url + " >";
-            }
+//            if countElements(user.picture_url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
+//                photoContent.text = "Empty >";
+//            } else {
+//                photoContent.text = user.picture_url + " >";
+//            }
             
             if countElements(user.first_name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
                 firstNameContent.text = "Empty >";
@@ -63,7 +59,7 @@ class ProfileTableViewController:UITableViewController {
                 genderContent.text = user.gender + " >";
             }
             
-            thumbsContent.text = user.num_thumbs;
+//            thumbsContent.text = user.num_thumbs;
             
             if countElements(user.signature.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
                 signatureContent.text = "Empty >";
