@@ -11,13 +11,7 @@ import CoreData
 
 class ProfileTableViewController:UITableViewController {
     
-    @IBOutlet weak var firstNameContent: UILabel!
-
-    @IBOutlet weak var lastNameContent: UILabel!
-
-    @IBOutlet weak var genderContent: UILabel!
-
-    @IBOutlet weak var signatureContent: UILabel!
+    let attributeItems = ["First Name", "Last Name", "Gender", "Signature"]
 
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -31,42 +25,37 @@ class ProfileTableViewController:UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return attributeItems.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("ProfileAttributeCell") as UITableViewCell
+        let row = indexPath.row
+        var attribute = attributeItems[row]
+        cell.textLabel?.text = attribute
+        var attributeText = ""
+        
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             var user:UserData = fetchResults[0];
-            
-//            if countElements(user.picture_url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
-//                photoContent.text = "Empty >";
-//            } else {
-//                photoContent.text = user.picture_url + " >";
-//            }
-            
-            if countElements(user.first_name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
-                firstNameContent.text = "Empty >";
-            } else {
-                firstNameContent.text = user.first_name + " >";
-            }
-            
-            if countElements(user.last_name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
-                lastNameContent.text = "Empty >";
-            } else {
-                lastNameContent.text = user.last_name + " >";
-            }
-            
-            if countElements(user.gender.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
-                genderContent.text = "Empty >";
-            } else {
-                genderContent.text = user.gender + " >";
-            }
-            
-//            thumbsContent.text = user.num_thumbs;
-            
-            if countElements(user.signature.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) == 0 {
-                signatureContent.text = "Empty >";
-            } else {
-                signatureContent.text = user.signature + " >";
+            switch attribute {
+            case "First Name":
+                attributeText = user.first_name
+            case "Last Name":
+                attributeText = user.last_name
+            case "Gender":
+                attributeText = user.gender
+            case "Signature":
+                attributeText = user.signature
+            default:
+                attributeText = ""
             }
         }
+        cell.detailTextLabel?.text = attributeText
+        return cell
     }
     
     override func didReceiveMemoryWarning() {
