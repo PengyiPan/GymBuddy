@@ -1,5 +1,5 @@
 <h1>GymBuddy iOS App</h1>
-<h2>Usage</h2>
+<h2>Purpose</h2>
 <p>
 With Gym Buddy, individual’s potential work-out social group will be expanded: we can not only contact those people we know to go to the gym together, but are also provided with information about the workout plan of those we do not know previously on Duke campus.
 </p>
