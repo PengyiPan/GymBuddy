@@ -16,6 +16,8 @@ class PostedWorkoutRecord{
     var sport_type: String?
     var sport_sub_type: String?
     
+    var h_value: Int?
+    
     init() {
         
     }

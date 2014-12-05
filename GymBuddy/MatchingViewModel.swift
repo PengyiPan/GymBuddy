@@ -15,7 +15,15 @@ class MatchingViewModel {
 
     func makeDatabaseQuery(receivedQueryTime:String, receivedQueryLocation:String,receivedQuerySport: String,receivedQueryCategory:String,viewCtrl:MatchingViewController){
         
-        var bodyData = "query= SELECT * FROM PostedWorkoutRecord2"
+        var receivedQuerySportCopy = "'" + receivedQuerySport + "'"
+        
+        var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy
+        
+        
+        //query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " +
+        //SELECT * FROM PostedWorkoutRecord2 AS pwr WHERE pwr
+        
+        
         
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
@@ -29,16 +37,17 @@ class MatchingViewModel {
                 let anyObj: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &error)
                 
                 //parse received Json data
-                self.parseJsonData(anyObj!,viewCtrl:viewCtrl)
+                self.parseJsonData(anyObj!, receivedQueryTime:receivedQueryTime, receivedQueryLocation:receivedQueryLocation, receivedQueryCategory:receivedQueryCategory, viewCtrl:viewCtrl)
                 
             }
         
     
     }
     
-    func parseJsonData(anyObj:AnyObject, viewCtrl:MatchingViewController){
+    func parseJsonData(anyObj:AnyObject, receivedQueryTime:String, receivedQueryLocation:String,receivedQueryCategory:String, viewCtrl:MatchingViewController){
         
         var list:Array<PostedWorkoutRecord> = []
+        
         
         if  anyObj is Array<AnyObject> {
    
@@ -51,16 +60,139 @@ class MatchingViewModel {
                 record.sport_type = (json["sport_type"] as AnyObject? as? String) ?? ""
                 record.sport_sub_type = (json["sport_sub_type"] as AnyObject? as? String) ?? ""
                 
+                
+                
                 list.append(record)
                 
                 
             }
             
-        } 
+        }
+        
+        // for computing time difference
+        var r: String = receivedQueryTime
+        var r_year = 2000 + r.componentsSeparatedByString(", ")[0].componentsSeparatedByString("/")[2].toInt()!
+        var r_month = r.componentsSeparatedByString(", ")[0].componentsSeparatedByString("/")[0].toInt()
+        var r_day = r.componentsSeparatedByString(", ")[0].componentsSeparatedByString("/")[1].toInt()
+        
+        var r_hour = r.componentsSeparatedByString(", ")[1].componentsSeparatedByString(":")[0].toInt()
+        var r_min = r.componentsSeparatedByString(", ")[1].componentsSeparatedByString(":")[1].componentsSeparatedByString(" ")[0].toInt()
+        
+        //for computing heuristic
+        let categoryData: NSArray = NSArray(objects:"Pro","Advanced","Intermediate","Beginner","Other")
+        let locationData: NSArray = NSArray(objects:"East","Central","West","Other")
+
+        //let categoryData = ["Pro","Advanced","Intermediate","Beginner","Other"]
+        //let locationData = ["East","Central","West","Other"]
+        
+        for record in list{
+            
+            var s: String = record.time_start!
+            
+            
+            var s_year = s.componentsSeparatedByString(" ")[0].componentsSeparatedByString("-")[0].toInt()
+            var s_month = s.componentsSeparatedByString(" ")[0].componentsSeparatedByString("-")[1].toInt()
+            var s_day = s.componentsSeparatedByString(" ")[0].componentsSeparatedByString("-")[2].toInt()
+            
+            var s_hour = s.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[0].toInt()
+            var s_min = s.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[1].toInt()
+            
+//            var sTime =
+//            s.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[0] + ":" + s.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[1]
+//            
+//            var startDate: String = s.componentsSeparatedByString(" ")[0] as String
+//            var dateFormatter = NSDateFormatter()
+//            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+//            
+            //var k = start_time_value.timeIntervalSinceDate(received_start_time_value?)
+            
+            var interval_in_min = (r_year - s_year!)*15379200 + (r_month! - s_month!)*43200 + (r_day! - s_day!)*1440 + (r_hour! - s_hour!)*60 + (r_min! - s_min!)
+
+            //println(interval_in_min)
+            //var interval_in_min = interval_2
+
+            let filtered_s_cat = categoryData.indexOfObject(record.sport_sub_type!)
+            let filtered_r_cat = categoryData.indexOfObject(receivedQueryCategory)
+            let filtered_s_loc = locationData.indexOfObject(record.location!)
+            let filtered_r_loc = locationData.indexOfObject(receivedQueryLocation)
+            
+//            var filtered_s_cat = categoryData.filter { $0 == record.sport_sub_type }[0].toInt()
+//            //println(categoryData.filter { $0 == record.sport_sub_type })
+//            var filtered_r_cat = categoryData.filter { $0 == receivedQueryCategory }[0].toInt()
+//            var filtered_s_loc = locationData.filter { $0 == record.location}[0].toInt()
+//            var filtered_r_loc = locationData.filter { $0 == receivedQueryLocation}[0].toInt()
+            
+            
+            record.h_value = abs(interval_in_min) - abs(filtered_r_cat - filtered_s_cat)*20 - abs(filtered_r_loc - filtered_s_loc)*35
+            
+            println(record.time_start)
+            println(record.h_value)
+        }
+        
+        
+        
+        list.sort({ $0.h_value < $1.h_value})
+        
+        //sort the list
         
         viewCtrl.didGetQueryResult(list)
         
     }
+    
+    
+    //find difference between dates
+//    let DATE_FORMATTER = NSDateFormatter();
+//    let MONTH_ABBREVIATIONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dev"];
+//    let MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+//    
+//    func convertUTCDateToLocalDate(utcDate: NSDate) -> NSDate {
+//            let currTimeZone = NSTimeZone.systemTimeZone()
+//            let diff = Double(currTimeZone.secondsFromGMT)
+//            return NSDate(timeInterval: diff, sinceDate: utcDate)
+//        }
+//        
+//    func getTimeWithDateMonthYear(date: NSDate) -> String {
+//            let convertedDate = self.convertUTCDateToLocalDate(date)
+//            let components = NSCalendar.currentCalendar().components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit, fromDate: convertedDate)
+//            let timeOfDay = String(components.hour) + ":" + String(components.minute)
+//            let timeOfYear = MONTHS[components.month - 1] + " " + String(components.day)
+//            return timeOfYear + ", " + String(components.year) + " at " + timeOfDay
+//        }
+//        
+//    func getTimeDifferenceSinceNow(oldDate: NSDate) -> String {
+//            return getTimeDifferenceBetweenDates(NSDate(timeIntervalSinceNow: 0), oldDate: oldDate)
+//        }
+//        
+//    func getTimeDifferenceBetweenDates(newDate: NSDate, oldDate: NSDate) -> String {
+//        let timeDiff = newDate.timeIntervalSinceDate(oldDate)
+//        let timeDiffInt = Int(timeDiff + 0.5)
+//        
+//        if timeDiffInt < 60 {
+//            return String(timeDiffInt) + "s"
+//        } else if timeDiffInt < 3600 {
+//            return String(timeDiffInt/60) + "m"
+//        } else if timeDiffInt < 86400 {
+//            return String(timeDiffInt/3600) + "h"
+//        } else if timeDiffInt < 604800 {
+//            return String(timeDiffInt/86400) + "d"
+//        } else if timeDiffInt < 2419200 {
+//            return String(timeDiffInt/604800) + "w"
+//        } else {
+//            let convertedDate = self.convertUTCDateToLocalDate(oldDate)
+//            let components = NSCalendar.currentCalendar().components(.MonthCalendarUnit | .DayCalendarUnit, fromDate: convertedDate)
+//            return MONTH_ABBREVIATIONS[components.month - 1] + " " + String(components.day)
+//        }
+//    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func makeCellTitleString(post:PostedWorkoutRecord)-> NSString{
         var s: String = post.time_start!
