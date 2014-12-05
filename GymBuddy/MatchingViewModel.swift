@@ -17,8 +17,15 @@ class MatchingViewModel {
         
         var receivedQuerySportCopy = "'" + receivedQuerySport + "'"
         
-        var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy
+
+        let date = NSDate()
+        println("you see the current time hahaha")
+        let str_date = dateformatterDate(date)
+        println(str_date)
         
+        
+        
+        var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy + " AND time_start >= " + "'" + str_date + "'"
         
         //query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " +
         //SELECT * FROM PostedWorkoutRecord2 AS pwr WHERE pwr
@@ -239,6 +246,18 @@ class MatchingViewModel {
         
         return abbrStr
 
+    }
+    
+    
+    func dateformatterDate(date: NSDate) -> NSString
+    {
+        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "ETC")
+        
+        return dateFormatter.stringFromDate(date)
+        
+        
     }
     
 
