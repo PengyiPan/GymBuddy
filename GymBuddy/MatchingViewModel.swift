@@ -19,9 +19,7 @@ class MatchingViewModel {
         
 
         let date = NSDate()
-        println("you see the current time hahaha")
         let str_date = dateformatterDate(date)
-        println(str_date)
         
         
         
@@ -132,8 +130,8 @@ class MatchingViewModel {
             
             record.h_value = abs(interval_in_min) - abs(filtered_r_cat - filtered_s_cat)*20 - abs(filtered_r_loc - filtered_s_loc)*35
             
-            println(record.time_start)
-            println(record.h_value)
+            //println(record.time_start)
+            //println(record.h_value)
         }
         
         
