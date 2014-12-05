@@ -108,8 +108,6 @@ class MatchingViewModel {
 //            var startDate: String = s.componentsSeparatedByString(" ")[0] as String
 //            var dateFormatter = NSDateFormatter()
 //            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-//            
-            //var k = start_time_value.timeIntervalSinceDate(received_start_time_value?)
             
             var interval_in_min = (r_year - s_year!)*15379200 + (r_month! - s_month!)*43200 + (r_day! - s_day!)*1440 + (r_hour! - s_hour!)*60 + (r_min! - s_min!)
 
