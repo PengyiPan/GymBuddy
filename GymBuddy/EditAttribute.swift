@@ -12,5 +12,7 @@ enum EditAttribute {
     case EditFirstName
     case EditLastName
     case EditSignature
+    case EditGender
+    case EditPicture
 }
 

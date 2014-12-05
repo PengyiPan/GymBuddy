@@ -73,7 +73,7 @@ class ProfileTableViewController:UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var viewController = segue.destinationViewController as FirstNameEditViewController
+        var viewController = segue.destinationViewController as ProfileEditViewController
         if segue.identifier == "EditFirstNameSegue" {
             viewController.myEditThing = EditAttribute.EditFirstName
         } else if segue.identifier == "EditLastNameSegue" {

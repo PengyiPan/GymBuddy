@@ -33,12 +33,14 @@
 		AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */; };
 		AA3ED24D1A2902DF00E7DA42 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */; };
 		AA3ED2501A2A53CD00E7DA42 /* ProfileTextEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3ED24F1A2A53CD00E7DA42 /* ProfileTextEdit.storyboard */; };
-		AA3ED2521A2A55BE00E7DA42 /* FirstNameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED2511A2A55BE00E7DA42 /* FirstNameEditViewController.swift */; };
+		AA3ED2521A2A55BE00E7DA42 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED2511A2A55BE00E7DA42 /* ProfileEditViewController.swift */; };
 		AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4637481A279BA7001B75CC /* LogInModel.swift */; };
 		AA46374B1A279BDB001B75CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46374A1A279BDB001B75CC /* User.swift */; };
 		AA6685961A27E08800A802BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6685951A27E08800A802BC /* Profile.storyboard */; };
 		AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6685971A27E74500A802BC /* ProfileViewController.swift */; };
 		AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */; };
+		AA9AD4B21A30D4D7002B1973 /* ProfileUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AD4B11A30D4D7002B1973 /* ProfileUpdateModel.swift */; };
+		AA9AD4B41A30DC91002B1973 /* UpdateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AD4B31A30DC91002B1973 /* UpdateResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,12 +91,14 @@
 		AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		AA3ED24F1A2A53CD00E7DA42 /* ProfileTextEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileTextEdit.storyboard; sourceTree = "<group>"; };
-		AA3ED2511A2A55BE00E7DA42 /* FirstNameEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNameEditViewController.swift; sourceTree = "<group>"; };
+		AA3ED2511A2A55BE00E7DA42 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		AA4637481A279BA7001B75CC /* LogInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		AA46374A1A279BDB001B75CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AA6685951A27E08800A802BC /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AA6685971A27E74500A802BC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAttribute.swift; sourceTree = "<group>"; };
+		AA9AD4B11A30D4D7002B1973 /* ProfileUpdateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUpdateModel.swift; sourceTree = "<group>"; };
+		AA9AD4B31A30DC91002B1973 /* UpdateResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				AA3ED24F1A2A53CD00E7DA42 /* ProfileTextEdit.storyboard */,
-				AA3ED2511A2A55BE00E7DA42 /* FirstNameEditViewController.swift */,
+				AA3ED2511A2A55BE00E7DA42 /* ProfileEditViewController.swift */,
 				AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */,
 			);
 			name = ProfileTableViews;
@@ -225,6 +229,8 @@
 				AA4637481A279BA7001B75CC /* LogInModel.swift */,
 				AA46374A1A279BDB001B75CC /* User.swift */,
 				AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */,
+				AA9AD4B11A30D4D7002B1973 /* ProfileUpdateModel.swift */,
+				AA9AD4B31A30DC91002B1973 /* UpdateResult.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -343,13 +349,15 @@
 				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
 				071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */,
 				AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */,
-				AA3ED2521A2A55BE00E7DA42 /* FirstNameEditViewController.swift in Sources */,
+				AA3ED2521A2A55BE00E7DA42 /* ProfileEditViewController.swift in Sources */,
 				AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */,
 				071BD9601A04354500CCE835 /* RBStoryboardPopoverSegue.m in Sources */,
+				AA9AD4B41A30DC91002B1973 /* UpdateResult.swift in Sources */,
 				AA46374B1A279BDB001B75CC /* User.swift in Sources */,
 				07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */,
 				07CF3DD71A02CADC00FF8773 /* MatchingViewController.swift in Sources */,
 				0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */,
+				AA9AD4B21A30D4D7002B1973 /* ProfileUpdateModel.swift in Sources */,
 				0722280F1A213B050015DC7F /* MatchingViewModel.swift in Sources */,
 				AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */,
 				07CF3DD81A02CADC00FF8773 /* QueryViewController.swift in Sources */,

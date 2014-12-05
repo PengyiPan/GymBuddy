@@ -10,16 +10,31 @@ import Foundation
 import UIKit
 import CoreData
 
-class FirstNameEditViewController:UIViewController {
+class ProfileEditViewController:UIViewController {
     
     var myEditThing:EditAttribute = EditAttribute.EditFirstName
+    let progressView = UIProgressView(progressViewStyle: .Bar)
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var navigationLabel: UINavigationItem!
     
     @IBAction func saveButton(sender: AnyObject) {
-        //TODO
-        self.performSegueWithIdentifier("backToProfileSegue", sender: self)
+        var content = textField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        if !content.isEmpty {
+            var netID:String = ""
+            let fetchRequest = NSFetchRequest(entityName: "UserData")
+            if let fetchResults = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+                var user:UserData = fetchResults[0];
+                netID = user.net_id
+            }
+            
+            ProfileUpdateModel.updateUserProfile(self, netID: netID, attributeContent: content, attributeType: myEditThing)
+            progressView.center = view.center
+            progressView.setProgress(0.5, animated: true)
+            progressView.trackTintColor = UIColor.lightGrayColor()
+            progressView.tintColor = UIColor.blueColor()
+            view.addSubview(progressView)
+        }
     }
     
     override func viewDidLoad() {
@@ -35,6 +50,8 @@ class FirstNameEditViewController:UIViewController {
                 textField.text = user.last_name
             case EditAttribute.EditSignature:
                 textField.text = user.signature
+            default:
+                textField.text = ""
             }
         }
     }
@@ -47,6 +64,8 @@ class FirstNameEditViewController:UIViewController {
             navigationLabel.title = "Last Name"
         case EditAttribute.EditSignature:
             navigationLabel.title = "Signature"
+        default:
+            navigationLabel.title = ""
         }
     }
     
@@ -69,6 +88,30 @@ class FirstNameEditViewController:UIViewController {
             return nil
         }
     }()
+    
+    func didGetPostResult(result:UpdateResult, attributeContent:String, attributeType:EditAttribute){
+        switch  result {
+        case UpdateResult.Success:
+            let fetchRequest = NSFetchRequest(entityName: "UserData")
+            if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+                var user:UserData = fetchResults[0]
+                switch attributeType {
+                case EditAttribute.EditFirstName:
+                    user.first_name = attributeContent
+                case EditAttribute.EditLastName:
+                    user.last_name = attributeContent
+                case EditAttribute.EditSignature:
+                    user.signature = attributeContent
+                default:
+                    break
+                }
+            }
+            progressView.setProgress(1.0, animated: true)
+            self.performSegueWithIdentifier("backToProfileSegue", sender: self)
+        case UpdateResult.Failure:
+            break
+        }
+    }
     
 }
 

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--FirstNameEditView-->
+        <!--ProfileEditViewController-->
         <scene sceneID="iKM-0M-gj2">
             <objects>
-                <viewController title="FirstNameEditView" id="zhV-tv-Tpe" customClass="FirstNameEditViewController" customModule="GymBuddy" sceneMemberID="viewController">
+                <viewController title="ProfileEditViewController" id="zhV-tv-Tpe" customClass="ProfileEditViewController" customModule="GymBuddy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fcN-lB-sOi"/>
                         <viewControllerLayoutGuide type="bottom" id="6Ze-xX-WuS"/>
