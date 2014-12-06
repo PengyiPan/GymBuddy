@@ -125,8 +125,19 @@ class MatchingViewModel {
 //            var filtered_s_loc = locationData.filter { $0 == record.location}[0].toInt()
 //            var filtered_r_loc = locationData.filter { $0 == receivedQueryLocation}[0].toInt()
             
+            var cat_value = abs(filtered_r_cat - filtered_s_cat)
+            var loc_value = abs(filtered_r_loc - filtered_s_loc)
             
-            record.h_value = abs(interval_in_min) - abs(filtered_r_cat - filtered_s_cat)*20 - abs(filtered_r_loc - filtered_s_loc)*35
+//            
+//            
+//            if filtered_r_loc == 3 || {
+//                loc_value = 0.5
+//            }
+//            if filtered_c_loc == 3  {
+//                loc_value = 0.5
+//            }
+//            
+            record.h_value = abs(interval_in_min) - cat_value*30 - loc_value*45
             
             //println(record.time_start)
             //println(record.h_value)
