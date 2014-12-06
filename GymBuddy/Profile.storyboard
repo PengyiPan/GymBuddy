@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="087-w3-Wkd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="087-w3-Wkd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -172,14 +172,17 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb" translatesAutoresizingMaskIntoConstraints="NO" id="afn-iY-bc6">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="135" y="210" width="30" height="42"/>
+                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOo-lB-yk1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOo-lB-yk1">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="5Km-n1-W5F"/>
-                                    <constraint firstAttribute="width" constant="42" id="JiL-AW-hbv"/>
+                                    <constraint firstAttribute="height" constant="20" id="5Km-n1-W5F"/>
+                                    <constraint firstAttribute="width" constant="80" id="JiL-AW-hbv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -206,18 +209,18 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tJV-H8-uX5" secondAttribute="trailing" constant="127" id="06n-pe-eGq" userLabel="profilePicRight"/>
                             <constraint firstItem="cnT-QF-NtD" firstAttribute="top" secondItem="dYp-22-wXd" secondAttribute="bottom" id="1dR-xz-N12" userLabel="navigationTop"/>
-                            <constraint firstItem="bOo-lB-yk1" firstAttribute="leading" secondItem="afn-iY-bc6" secondAttribute="trailing" constant="20" id="7Xm-aP-QkE" userLabel="thumbNumLeft"/>
-                            <constraint firstItem="Lzl-lE-PPI" firstAttribute="top" secondItem="bOo-lB-yk1" secondAttribute="bottom" constant="40" id="98O-qW-7ws" userLabel="thumbNumBottom"/>
+                            <constraint firstItem="bOo-lB-yk1" firstAttribute="leading" secondItem="afn-iY-bc6" secondAttribute="trailing" constant="10" id="7Xm-aP-QkE" userLabel="thumbNumLeft"/>
+                            <constraint firstItem="Lzl-lE-PPI" firstAttribute="top" secondItem="bOo-lB-yk1" secondAttribute="bottom" constant="35" id="98O-qW-7ws" userLabel="thumbNumBottom"/>
                             <constraint firstItem="Lzl-lE-PPI" firstAttribute="trailing" secondItem="PCX-5e-SYB" secondAttribute="trailing" id="AfH-R1-ZkV" userLabel="containerRight"/>
                             <constraint firstItem="tJV-H8-uX5" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" constant="127" id="In9-0j-7zt" userLabel="profilePicLeft"/>
-                            <constraint firstAttribute="trailing" secondItem="bOo-lB-yk1" secondAttribute="trailing" constant="134" id="L2Z-l8-XcC" userLabel="thumbNumRight"/>
-                            <constraint firstItem="afn-iY-bc6" firstAttribute="top" secondItem="tJV-H8-uX5" secondAttribute="bottom" constant="10" id="LaT-Bi-9Qc" userLabel="profilePicBottom"/>
+                            <constraint firstAttribute="trailing" secondItem="bOo-lB-yk1" secondAttribute="trailing" constant="120" id="L2Z-l8-XcC" userLabel="thumbNumRight"/>
+                            <constraint firstItem="afn-iY-bc6" firstAttribute="top" secondItem="tJV-H8-uX5" secondAttribute="bottom" constant="20" id="LaT-Bi-9Qc" userLabel="profilePicBottom"/>
                             <constraint firstItem="tJV-H8-uX5" firstAttribute="top" secondItem="cnT-QF-NtD" secondAttribute="bottom" constant="15" id="MdU-sJ-J54" userLabel="profilePicTop"/>
                             <constraint firstItem="bOo-lB-yk1" firstAttribute="centerY" secondItem="afn-iY-bc6" secondAttribute="centerY" id="OjW-dG-aFN" userLabel="thumbYAlighment"/>
                             <constraint firstItem="cnT-QF-NtD" firstAttribute="trailing" secondItem="PCX-5e-SYB" secondAttribute="trailing" id="UCd-md-8Wj" userLabel="navigationRight"/>
-                            <constraint firstItem="afn-iY-bc6" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" constant="140" id="WBj-ua-i6Z" userLabel="thumbPicLeft"/>
+                            <constraint firstItem="afn-iY-bc6" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" constant="135" id="WBj-ua-i6Z" userLabel="thumbPicLeft"/>
                             <constraint firstItem="Lzl-lE-PPI" firstAttribute="bottom" secondItem="p5L-64-KP6" secondAttribute="top" id="hnX-0s-A91" userLabel="containerBottom"/>
-                            <constraint firstItem="bOo-lB-yk1" firstAttribute="top" secondItem="tJV-H8-uX5" secondAttribute="bottom" constant="25" id="iph-c5-2So" userLabel="thumbNumTop"/>
+                            <constraint firstItem="bOo-lB-yk1" firstAttribute="top" secondItem="tJV-H8-uX5" secondAttribute="bottom" constant="30" id="iph-c5-2So" userLabel="thumbNumTop"/>
                             <constraint firstItem="cnT-QF-NtD" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" id="rYN-DR-gss" userLabel="navigationLeft"/>
                             <constraint firstItem="Lzl-lE-PPI" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" id="yF4-Si-Eod" userLabel="containerLeft"/>
                         </constraints>
