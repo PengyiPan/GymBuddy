@@ -17,8 +17,11 @@ class MatchingViewModel {
         
         var receivedQuerySportCopy = "'" + receivedQuerySport + "'"
         
-        var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy
-        
+
+        let date = NSDate()
+        let str_date = dateformatterDate(date)
+
+        var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy + " AND time_start >= " + "'" + str_date + "'"
         
         //query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " +
         //SELECT * FROM PostedWorkoutRecord2 AS pwr WHERE pwr
@@ -103,8 +106,6 @@ class MatchingViewModel {
 //            var startDate: String = s.componentsSeparatedByString(" ")[0] as String
 //            var dateFormatter = NSDateFormatter()
 //            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-//            
-            //var k = start_time_value.timeIntervalSinceDate(received_start_time_value?)
             
             var interval_in_min = (r_year - s_year!)*15379200 + (r_month! - s_month!)*43200 + (r_day! - s_day!)*1440 + (r_hour! - s_hour!)*60 + (r_min! - s_min!)
 
@@ -122,11 +123,28 @@ class MatchingViewModel {
 //            var filtered_s_loc = locationData.filter { $0 == record.location}[0].toInt()
 //            var filtered_r_loc = locationData.filter { $0 == receivedQueryLocation}[0].toInt()
             
+            var cat_value = abs(filtered_r_cat - filtered_s_cat)
+            var loc_value = abs(filtered_r_loc - filtered_s_loc)
             
-            record.h_value = abs(interval_in_min) - abs(filtered_r_cat - filtered_s_cat)*20 - abs(filtered_r_loc - filtered_s_loc)*35
+//          if cat/location is "other", incluence on heuristics should be same but >= difference between two listed options
             
-            println(record.time_start)
-            println(record.h_value)
+            if filtered_r_loc == 3 && filtered_s_loc == 3 {
+                loc_value = 1
+            } else if filtered_r_loc == 3 || filtered_s_loc == 3 {
+                loc_value = 4
+            }
+            
+            
+            if filtered_r_cat == 3 && filtered_s_cat == 3 {
+                cat_value = 1
+            } else if filtered_r_cat == 3 || filtered_s_cat == 3 {
+                cat_value = 4
+            }
+            
+            record.h_value = abs(interval_in_min) - cat_value*30 - loc_value*45
+            
+            //println(record.time_start)
+            //println(record.h_value)
         }
         
         
@@ -239,6 +257,18 @@ class MatchingViewModel {
         
         return abbrStr
 
+    }
+    
+    
+    func dateformatterDate(date: NSDate) -> NSString
+    {
+        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "ETC")
+        
+        return dateFormatter.stringFromDate(date)
+        
+        
     }
     
 
