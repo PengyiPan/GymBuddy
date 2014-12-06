@@ -126,15 +126,21 @@ class MatchingViewModel {
             var cat_value = abs(filtered_r_cat - filtered_s_cat)
             var loc_value = abs(filtered_r_loc - filtered_s_loc)
             
-//            
-//            
-//            if filtered_r_loc == 3 || filtered_c_loc == 3 {
-//                loc_value = 0.5
-//            }
-//            if filtered_r_cat == 3 || filtered_c_cat == 3 {
-//                loc_value = 0.5
-//            }
-//            
+//          if cat/location is "other", incluence on heuristics should be same but >= difference between two listed options
+            
+            if filtered_r_loc == 3 && filtered_s_loc == 3 {
+                loc_value = 1
+            } else if filtered_r_loc == 3 || filtered_s_loc == 3 {
+                loc_value = 4
+            }
+            
+            
+            if filtered_r_cat == 3 && filtered_s_cat == 3 {
+                cat_value = 1
+            } else if filtered_r_cat == 3 || filtered_s_cat == 3 {
+                cat_value = 4
+            }
+            
             record.h_value = abs(interval_in_min) - cat_value*30 - loc_value*45
             
             //println(record.time_start)
