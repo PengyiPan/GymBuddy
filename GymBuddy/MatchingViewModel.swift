@@ -130,10 +130,10 @@ class MatchingViewModel {
             
 //            
 //            
-//            if filtered_r_loc == 3 || {
+//            if filtered_r_loc == 3 || filtered_c_loc == 3 {
 //                loc_value = 0.5
 //            }
-//            if filtered_c_loc == 3  {
+//            if filtered_r_cat == 3 || filtered_c_cat == 3 {
 //                loc_value = 0.5
 //            }
 //            
