@@ -20,9 +20,7 @@ class MatchingViewModel {
 
         let date = NSDate()
         let str_date = dateformatterDate(date)
-        
-        
-        
+
         var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy + " AND time_start >= " + "'" + str_date + "'"
         
         //query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " +
