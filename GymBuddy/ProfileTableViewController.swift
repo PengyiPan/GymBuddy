@@ -11,15 +11,11 @@ import CoreData
 
 class ProfileTableViewController:UITableViewController {
     
-    @IBOutlet weak var photoContent: UILabel!
-    
     @IBOutlet weak var firstNameContent: UILabel!
 
     @IBOutlet weak var lastNameContent: UILabel!
 
     @IBOutlet weak var genderContent: UILabel!
-
-    @IBOutlet weak var thumbsContent: UILabel!
 
     @IBOutlet weak var signatureContent: UILabel!
 
