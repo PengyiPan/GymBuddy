@@ -47,7 +47,8 @@ class LogInModel {
                 user.first_name = (json["first_name"] as AnyObject? as? String) ?? ""
                 user.gender = (json["gender"] as AnyObject? as? String) ?? ""
                 user.picture_url = (json["picture_url"] as AnyObject? as? String) ?? ""
-                user.numb_thumb_ups = (json["num_thumb_ups"] as AnyObject? as? String) ?? ""
+                user.numb_thumb_ups = (json["num_thumbs"] as AnyObject? as? String) ?? ""
+                NSLog("user has a thumb of " + user.numb_thumb_ups!)
                 user.signature = (json["signature"] as AnyObject? as? String) ?? ""
                 list.append(user)
             }

@@ -11,6 +11,8 @@ import CoreData
 
 class ProfileViewController: UIViewController{
     
+    @IBOutlet weak var thumbNumField: UILabel!
+    
     @IBAction func logOutButton(sender: AnyObject) {
         NSLog("User Credentials in CoreData Deleted")
         let fetchRequest = NSFetchRequest(entityName: "UserData")
@@ -34,6 +36,11 @@ class ProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let fetchRequest = NSFetchRequest(entityName: "UserData")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+            var user:UserData = fetchResults[0];
+            thumbNumField.text = user.num_thumbs
+        }
     }
     
     //set to only support portrait, too lazy to do the landscape

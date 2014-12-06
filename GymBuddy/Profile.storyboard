@@ -282,6 +282,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="thumbNumField" destination="bOo-lB-yk1" id="fOw-XL-bB1"/>
                         <segue destination="VAm-BQ-maj" kind="custom" identifier="logOutSegue" customClass="RBStoryboardModalSegue" id="ryq-jr-yAF"/>
                     </connections>
                 </viewController>
