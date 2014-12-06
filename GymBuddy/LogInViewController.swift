@@ -64,6 +64,9 @@ class LogInViewController: UIViewController {
                 netIDTextField.text = user.net_id
                 passwordTextField.text = user.password
             }
+            for result in fetchResults {
+                managedObjectContext?.deleteObject(result)
+            }
         }
     }
 

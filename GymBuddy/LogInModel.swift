@@ -1,4 +1,4 @@
-//
+     //
 //  LogInModel.swift
 //  GymBuddy
 //
