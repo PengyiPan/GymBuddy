@@ -34,8 +34,6 @@ class ProfileChoiceOverallViewController:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displayNavigationTitle()
-        var childController = self.childViewControllers.first as ProfileChoiceViewController
-        childController.myEditThing = self.myEditThing
     }
     
     //set to only support portrait, too lazy to do the landscape
@@ -74,6 +72,20 @@ class ProfileChoiceOverallViewController:UIViewController {
             navigationLabel.title = "Picture"
         default:
             navigationLabel.title = ""
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "embedChoiceTableSegue" {
+            var viewController = segue.destinationViewController as ProfileChoiceViewController
+            switch myEditThing {
+            case EditAttribute.EditGender:
+                viewController.myEditThing = EditAttribute.EditGender
+            case EditAttribute.EditPicture:
+                viewController.myEditThing = EditAttribute.EditPicture
+            default:
+                break
+            }
         }
     }
     

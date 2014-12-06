@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVz-BQ-Uzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1555.5" y="-448.5"/>
+            <point key="canvasLocation" x="-1606.5" y="517.5"/>
         </scene>
         <!--Profile Table View Controller-->
         <scene sceneID="4Vj-yy-5W9">
@@ -79,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFA-xo-XNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-609" y="-162.375"/>
+            <point key="canvasLocation" x="-1332" y="-298.875"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="uDU-T7-jE7">
@@ -154,7 +154,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doge" translatesAutoresizingMaskIntoConstraints="NO" id="tJV-H8-uX5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default picture" translatesAutoresizingMaskIntoConstraints="NO" id="tJV-H8-uX5">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="6Fz-Ye-efm"/>
@@ -282,8 +282,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="picImage" destination="tJV-H8-uX5" id="xhc-fu-gAv"/>
                         <outlet property="thumbNumField" destination="bOo-lB-yk1" id="fOw-XL-bB1"/>
                         <segue destination="VAm-BQ-maj" kind="custom" identifier="logOutSegue" customClass="RBStoryboardModalSegue" id="ryq-jr-yAF"/>
+                        <segue destination="mhk-Ci-sxI" kind="custom" identifier="EditPicSegue" customClass="RBStoryboardModalSegue" id="eFE-gp-iAe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pb4-An-sjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,10 +316,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doge" width="94" height="103"/>
+        <image name="default picture" width="119" height="119"/>
         <image name="thumb" width="219" height="230"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eFE-gp-iAe"/>
         <segue reference="l6u-Mq-1mV"/>
     </inferredMetricsTieBreakers>
 </document>

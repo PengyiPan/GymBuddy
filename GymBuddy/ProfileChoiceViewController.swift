@@ -15,10 +15,10 @@ class ProfileChoiceViewController:UITableViewController {
     var selectedAttribute:String = ""
     var selected = Dictionary<String, NSIndexPath>()
     let genderItems = ["Male", "Female", "Complicated"]
-    let pictureItems = ["doge"]
+    let pictureItems = ["default picture", "doge", "bluedevil"]
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch (myEditThing) {
+        switch myEditThing {
         case EditAttribute.EditGender:
             return genderItems.count
         case EditAttribute.EditPicture:
@@ -36,8 +36,10 @@ class ProfileChoiceViewController:UITableViewController {
             switch myEditThing {
             case EditAttribute.EditGender:
                 selectedAttribute = user.gender
+                NSLog("Before change, user's gender is " + selectedAttribute)
             case EditAttribute.EditPicture:
                 selectedAttribute = user.picture_url
+                NSLog("Before change, user's picture is " + selectedAttribute)
             default:
                 selectedAttribute = ""
             }
@@ -73,6 +75,8 @@ class ProfileChoiceViewController:UITableViewController {
             } else {
                 cell.accessoryType = UITableViewCellAccessoryType.None
             }
+            var image = UIImage(named: pictureItems[row])
+            cell.imageView?.image = image
         default:
             break
         }
@@ -81,8 +85,10 @@ class ProfileChoiceViewController:UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var selectedCell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell!
-        var prevSelected = tableView.cellForRowAtIndexPath(selected[selectedAttribute]!) as UITableViewCell!
-        prevSelected.accessoryType = UITableViewCellAccessoryType.None
+        if selectedAttribute.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) != "" {
+            var prevSelected = tableView.cellForRowAtIndexPath(selected[selectedAttribute]!) as UITableViewCell!
+            prevSelected.accessoryType = UITableViewCellAccessoryType.None
+        }
         selectedAttribute = selectedCell.textLabel!.text!
         selected.removeAll(keepCapacity: false)
         selected.updateValue(indexPath, forKey: selectedAttribute)
