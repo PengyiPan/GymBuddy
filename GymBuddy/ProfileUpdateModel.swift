@@ -57,7 +57,7 @@ class ProfileUpdateModel {
         }
         
         var query = "query= UPDATE User SET \(attributeTitle) = \(content) WHERE net_id = \(net_id)"
-        println(query)
+        NSLog(query)
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         request.HTTPMethod = "POST"
@@ -71,6 +71,27 @@ class ProfileUpdateModel {
                     println(error?.localizedDescription)
                 }
                 viewCtrl.didGetPostResult(UpdateResult.Success, attributeContent: attributeContent, attributeType: attributeType)
+        }
+    }
+    
+    class func updatePassword(viewCtrl:EditPasswordViewController, netID:String, password:String){
+        var net_id = "'" + netID + "'"
+        var passwordCopy = "'" + password + "'"
+        var query = "query= UPDATE User SET password = \(passwordCopy) WHERE net_id = \(net_id)"
+        NSLog(query)
+        let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = query.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                NSLog("Update User Profile Task Completed")
+                if error != nil{
+                    println(error?.localizedDescription)
+                }
+                viewCtrl.didGetPostResult(UpdateResult.Success, password:password)
         }
     }
 }

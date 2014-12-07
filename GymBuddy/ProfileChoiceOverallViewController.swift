@@ -98,5 +98,4 @@ class ProfileChoiceOverallViewController:UIViewController {
             return nil
         }
     }()
-    
 }

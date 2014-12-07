@@ -11,7 +11,7 @@ import CoreData
 
 class ProfileTableViewController:UITableViewController {
     
-    let attributeItems = ["First Name", "Last Name", "Gender", "Signature"]
+    let attributeItems = ["First Name", "Last Name", "Gender", "Signature", "Password"]
 
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -69,6 +69,8 @@ class ProfileTableViewController:UITableViewController {
                 self.performSegueWithIdentifier("EditSignatureSegue", sender: self)
             case "Gender":
                 self.performSegueWithIdentifier("EditGenderSegue", sender: self)
+            case "Password":
+                self.performSegueWithIdentifier("EditPasswordSegue", sender: self)
             default:
                 break
         }

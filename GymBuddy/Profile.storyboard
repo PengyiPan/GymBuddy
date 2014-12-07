@@ -26,6 +26,27 @@
             </objects>
             <point key="canvasLocation" x="-1606.5" y="517.5"/>
         </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="fmm-rl-Yy1">
+            <objects>
+                <viewController id="ixA-yG-QPk" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G9Y-7F-hVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="pYf-ZA-2YK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1E9-Om-nFd">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="EditPassword"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vj4-FE-OLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2112" y="-456"/>
+        </scene>
         <!--Profile Table View Controller-->
         <scene sceneID="4Vj-yy-5W9">
             <objects>
@@ -68,13 +89,12 @@
                             <outlet property="delegate" destination="Mjm-3N-RZd" id="4Bc-cr-dKV"/>
                         </connections>
                     </tableView>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <segue destination="Wfl-Rk-q8W" kind="custom" identifier="EditFirstNameSegue" customClass="RBStoryboardModalSegue" id="l6u-Mq-1mV"/>
                         <segue destination="Wfl-Rk-q8W" kind="custom" identifier="EditLastNameSegue" customClass="RBStoryboardModalSegue" id="eUy-T8-l2c"/>
                         <segue destination="Wfl-Rk-q8W" kind="custom" identifier="EditSignatureSegue" customClass="RBStoryboardModalSegue" id="2T9-5d-rj6"/>
                         <segue destination="mhk-Ci-sxI" kind="custom" identifier="EditGenderSegue" customClass="RBStoryboardModalSegue" id="lmh-N6-NLB"/>
+                        <segue destination="ixA-yG-QPk" kind="custom" identifier="EditPasswordSegue" customClass="RBStoryboardModalSegue" id="EDK-QF-V3e"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFA-xo-XNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -317,7 +337,7 @@
         <image name="thumb" width="219" height="230"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lmh-N6-NLB"/>
         <segue reference="l6u-Mq-1mV"/>
+        <segue reference="lmh-N6-NLB"/>
     </inferredMetricsTieBreakers>
 </document>
