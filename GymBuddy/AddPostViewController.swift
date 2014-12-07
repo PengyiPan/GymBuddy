@@ -44,7 +44,7 @@ class AddPostViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var categoryDisplayLabel: UILabel!
     
     
-    //the array to keep track of the current input state
+    var postedAlert: UIAlertView = UIAlertView()
 
     
     override func viewDidLoad() {
@@ -52,11 +52,6 @@ class AddPostViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         // Do any additional setup after loading the view, typically from a nib.
         okBtn.alpha = 0
         hideAllPicker()
-        let fetchRequest = NSFetchRequest(entityName: "UserData")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
-            var user:UserData = fetchResults[0];
-            println(user.net_id)
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -122,20 +117,45 @@ class AddPostViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBAction func postBtnPressed(sender: UIButton) {
         
-        
+        var postNetId = ""
         var toPostStartTime = myModel.dateToPostString(self.startTime)
         var toPostEndTime = myModel.dateToPostString(self.endTime)
         var toPostLocation = self.labelTextToOutputText(locationDisplayLabel.text!)
         var toPostSport = self.labelTextToOutputText(sportDisplayLabel.text!)
         var toPostCategory = self.labelTextToOutputText(categoryDisplayLabel.text!)
+        let fetchRequest = NSFetchRequest(entityName: "UserData")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+            var user:UserData = fetchResults[0];
+            postNetId = user.net_id
+        }
         
         println("Post Btn Pressed, new post info sent:")
-
+        
+        println(postNetId)
         println(toPostStartTime)
         println(toPostEndTime)
         println(toPostLocation)
         println(toPostSport)
         println(toPostCategory)
+        
+        myModel.insertToDatabase(postNetId,startTime:toPostStartTime, endTime:toPostEndTime, location:toPostLocation, sport:toPostSport, category:toPostCategory, viewCtrl:self)
+        
+        hideAllPicker()
+        
+        
+        postedAlert.title = "Posting"
+        
+        postedAlert.show()
+    }
+    
+    func didReceivdPostResult() {
+        postedAlert.dismissWithClickedButtonIndex(-1, animated: true)
+        
+        var Alert: UIAlertView = UIAlertView()
+        Alert.title = "Succeed"
+        Alert.show()
+        self.performSegueWithIdentifier("backToMatchSegue", sender: Alert)
+        Alert.dismissWithClickedButtonIndex(-1, animated: true)
         
     }
     
