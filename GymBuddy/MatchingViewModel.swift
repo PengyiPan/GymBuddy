@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MatchingViewModel {
             
@@ -17,11 +18,28 @@ class MatchingViewModel {
         
         var receivedQuerySportCopy = "'" + receivedQuerySport + "'"
         
-
+        
+        //filtered records posted by this user
+        var my_Netid = ""
+        
+        let fetchRequest = NSFetchRequest(entityName: "UserData")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+            var user:UserData = fetchResults[0];
+            my_Netid = user.net_id
+        }
+        
         let date = NSDate()
         let str_date = dateformatterDate(date)
+        let str_date_copy = "'" + str_date + "'"
+        let my_netid_copy =  "'" +  my_Netid  + "'"
 
-        var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy + " AND time_start >= " + "'" + str_date + "'"
+        //var bodyData = "query= SELECT * FROM PostedWorkoutRecord2 WHERE sport_type = " + receivedQuerySportCopy + " AND time_start >= " + "'" + str_date + "'"
+        
+        var bodyData1 = "query= SELECT * FROM PostedWorkoutRecord2 AS pwr, PostedBy as pb WHERE pwr.sport_type = " + receivedQuerySportCopy + " AND pwr.time_start >= " + str_date_copy
+        var bodyData2 =  " AND pwr.record_id = pb.record_id " + "AND NOT (pb.net_id = \(my_netid_copy))"
+        
+        var bodyData = bodyData1 + bodyData2
+        
         
         //query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " +
         //SELECT * FROM PostedWorkoutRecord2 AS pwr WHERE pwr
@@ -44,6 +62,8 @@ class MatchingViewModel {
                 
             }
         
+        
+        
     
     }
     
@@ -64,13 +84,15 @@ class MatchingViewModel {
                 record.sport_sub_type = (json["sport_sub_type"] as AnyObject? as? String) ?? ""
                 
                 
-                
                 list.append(record)
                 
                 
             }
-            
         }
+        
+        
+        
+        
         
         // for computing time difference
         var r: String = receivedQueryTime
@@ -204,7 +226,15 @@ class MatchingViewModel {
 
     
     
-    
+    lazy var managedObjectContext : NSManagedObjectContext? = {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        if let managedObjectContext = appDelegate.managedObjectContext {
+            return managedObjectContext
+        }
+        else {
+            return nil
+        }
+        }()
     
     
     

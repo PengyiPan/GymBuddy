@@ -18,6 +18,7 @@ class DetailViewModel {
         
         var bodyData = "query= SELECT * FROM PostedBy WHERE record_id = " + receivedRecordId
 
+
         
         var URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         var request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
