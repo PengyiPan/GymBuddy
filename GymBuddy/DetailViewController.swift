@@ -18,9 +18,7 @@ class DetailViewController: UIViewController {
     var receivedQueryCategory = ""
     
     @IBOutlet weak var thumbUpBtn: UIButton!
-    @IBOutlet weak var displayTextView: UITextView!
 
-    
     var receivedRecord: PostedWorkoutRecord = PostedWorkoutRecord()
     
     var userToPresent: User = User()
@@ -54,8 +52,6 @@ class DetailViewController: UIViewController {
             destinationVC.receivedQueryLocation = self.receivedQueryLocation
             destinationVC.receivedQuerySport = self.receivedQuerySport
             destinationVC.receivedQueryCategory = self.receivedQueryCategory
-            
-            
         }
     }
     
@@ -65,12 +61,6 @@ class DetailViewController: UIViewController {
     
     func didReceiveQueryResult(data: Array<User>){
         userToPresent = data[0]
-        
-        self.displayTextView.text = "Name: " + userToPresent.first_name! + " " + userToPresent.last_name! + "\n\n" +
-        "Gender: " + userToPresent.gender! + "\n\n" +
-        "Url: " + userToPresent.picture_url! + "\n\n" +
-        "Number of thumb-ups: " + userToPresent.numb_thumb_ups! + "\n\n" +
-        "Comment: " + userToPresent.signature! + "\n"
         
         thumbUpBtn.alpha = 1
         
