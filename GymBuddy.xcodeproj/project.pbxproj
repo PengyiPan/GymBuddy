@@ -21,6 +21,10 @@
 		072228131A214E2E0015DC7F /* PostedWorkoutRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072228121A214E2E0015DC7F /* PostedWorkoutRecord.swift */; };
 		0767FB6219F89102000AB021 /* GymBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6119F89102000AB021 /* GymBuddyTests.swift */; };
 		0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0769AEB81A0360E400689EAE /* GymBuddy.xcdatamodeld */; };
+		07829F931A33B3D8004DC0F1 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07829F921A33B3D8004DC0F1 /* DetailViewModel.swift */; };
+		07829F951A33BA64004DC0F1 /* PostedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07829F941A33BA64004DC0F1 /* PostedBy.swift */; };
+		07829F971A33D8CB004DC0F1 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07829F961A33D8CB004DC0F1 /* Detail.storyboard */; };
+		078864491A33A35100E44B02 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078864481A33A35100E44B02 /* DetailViewController.swift */; };
 		07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5219F89102000AB021 /* Images.xcassets */; };
 		07CF3DD51A02CAC100FF8773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB4B19F89102000AB021 /* AppDelegate.swift */; };
 		07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB4D19F89102000AB021 /* LogInViewController.swift */; };
@@ -29,9 +33,6 @@
 		07CF3DD91A02CADC00FF8773 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */; };
 		07CF3DDC1A02CADC00FF8773 /* QueryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB711A01E32D000AB021 /* QueryViewModel.swift */; };
 		07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5419F89102000AB021 /* LaunchScreen.xib */; };
-		AA2E323D1A3294FC000BF47A /* ProfileChoice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2E323C1A3294FC000BF47A /* ProfileChoice.storyboard */; };
-		AA2E323F1A329ACA000BF47A /* ProfileChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E323E1A329ACA000BF47A /* ProfileChoiceViewController.swift */; };
-		AA2E32411A33A20B000BF47A /* ProfileChoiceOverallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E32401A33A20B000BF47A /* ProfileChoiceOverallViewController.swift */; };
 		AA3ED21B1A2862FD00E7DA42 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED21A1A2862FD00E7DA42 /* UserData.swift */; };
 		AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */; };
 		AA3ED24D1A2902DF00E7DA42 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */; };
@@ -90,9 +91,10 @@
 		0767FB6F19F89A01000AB021 /* MatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
 		0767FB711A01E32D000AB021 /* QueryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewModel.swift; sourceTree = "<group>"; };
 		0769AEB91A0360E400689EAE /* GymBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymBuddy.xcdatamodel; sourceTree = "<group>"; };
-		AA2E323C1A3294FC000BF47A /* ProfileChoice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileChoice.storyboard; sourceTree = "<group>"; };
-		AA2E323E1A329ACA000BF47A /* ProfileChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileChoiceViewController.swift; sourceTree = "<group>"; };
-		AA2E32401A33A20B000BF47A /* ProfileChoiceOverallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileChoiceOverallViewController.swift; sourceTree = "<group>"; };
+		07829F921A33B3D8004DC0F1 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		07829F941A33BA64004DC0F1 /* PostedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostedBy.swift; sourceTree = "<group>"; };
+		07829F961A33D8CB004DC0F1 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		078864481A33A35100E44B02 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AA3ED21A1A2862FD00E7DA42 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -170,11 +172,13 @@
 				AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */,
 				AA4637471A279B6B001B75CC /* Models */,
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
+				07829F961A33D8CB004DC0F1 /* Detail.storyboard */,
 				0767FB4D19F89102000AB021 /* LogInViewController.swift */,
 				0767FB6F19F89A01000AB021 /* MatchingViewController.swift */,
 				071BD89B1A04252C00CCE835 /* Query.storyboard */,
 				071BD8971A04233D00CCE835 /* Login.storyboard */,
 				071BD89D1A0425B400CCE835 /* Matching.storyboard */,
+				078864481A33A35100E44B02 /* DetailViewController.swift */,
 				071BD8991A04247000CCE835 /* Registration.storyboard */,
 				0767FB6D19F899C4000AB021 /* QueryViewController.swift */,
 				0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */,
@@ -198,6 +202,8 @@
 				0767FB4A19F89102000AB021 /* Info.plist */,
 				0767FB711A01E32D000AB021 /* QueryViewModel.swift */,
 				072228121A214E2E0015DC7F /* PostedWorkoutRecord.swift */,
+				07829F921A33B3D8004DC0F1 /* DetailViewModel.swift */,
+				07829F941A33BA64004DC0F1 /* PostedBy.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,9 +231,6 @@
 				AA3ED24F1A2A53CD00E7DA42 /* ProfileTextEdit.storyboard */,
 				AA3ED2511A2A55BE00E7DA42 /* ProfileEditViewController.swift */,
 				AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */,
-				AA2E323C1A3294FC000BF47A /* ProfileChoice.storyboard */,
-				AA2E323E1A329ACA000BF47A /* ProfileChoiceViewController.swift */,
-				AA2E32401A33A20B000BF47A /* ProfileChoiceOverallViewController.swift */,
 			);
 			name = ProfileTableViews;
 			sourceTree = "<group>";
@@ -326,10 +329,10 @@
 			files = (
 				071BD89A1A04247000CCE835 /* Registration.storyboard in Resources */,
 				071BD89C1A04252C00CCE835 /* Query.storyboard in Resources */,
+				07829F971A33D8CB004DC0F1 /* Detail.storyboard in Resources */,
 				071BD8981A04233D00CCE835 /* Login.storyboard in Resources */,
 				07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */,
 				071BD89E1A0425B400CCE835 /* Matching.storyboard in Resources */,
-				AA2E323D1A3294FC000BF47A /* ProfileChoice.storyboard in Resources */,
 				AA6685961A27E08800A802BC /* Profile.storyboard in Resources */,
 				AA3ED2501A2A53CD00E7DA42 /* ProfileTextEdit.storyboard in Resources */,
 				07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */,
@@ -354,6 +357,7 @@
 				071BD9621A04354500CCE835 /* RBStoryboardSegue.m in Sources */,
 				AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */,
 				071BD9631A04354500CCE835 /* UIViewController+RBStoryboardLink.m in Sources */,
+				07829F931A33B3D8004DC0F1 /* DetailViewModel.swift in Sources */,
 				071BD9611A04354500CCE835 /* RBStoryboardPushSegue.m in Sources */,
 				AA3ED21B1A2862FD00E7DA42 /* UserData.swift in Sources */,
 				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
@@ -362,8 +366,9 @@
 				AA3ED2521A2A55BE00E7DA42 /* ProfileEditViewController.swift in Sources */,
 				AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */,
 				071BD9601A04354500CCE835 /* RBStoryboardPopoverSegue.m in Sources */,
-				AA2E32411A33A20B000BF47A /* ProfileChoiceOverallViewController.swift in Sources */,
 				AA9AD4B41A30DC91002B1973 /* UpdateResult.swift in Sources */,
+				078864491A33A35100E44B02 /* DetailViewController.swift in Sources */,
+				07829F951A33BA64004DC0F1 /* PostedBy.swift in Sources */,
 				AA46374B1A279BDB001B75CC /* User.swift in Sources */,
 				07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */,
 				07CF3DD71A02CADC00FF8773 /* MatchingViewController.swift in Sources */,
@@ -372,7 +377,6 @@
 				0722280F1A213B050015DC7F /* MatchingViewModel.swift in Sources */,
 				AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */,
 				07CF3DD81A02CADC00FF8773 /* QueryViewController.swift in Sources */,
-				AA2E323F1A329ACA000BF47A /* ProfileChoiceViewController.swift in Sources */,
 				07CF3DD91A02CADC00FF8773 /* RegistrationViewController.swift in Sources */,
 				072228131A214E2E0015DC7F /* PostedWorkoutRecord.swift in Sources */,
 				07CF3DDC1A02CADC00FF8773 /* QueryViewModel.swift in Sources */,

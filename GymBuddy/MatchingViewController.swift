@@ -12,6 +12,7 @@ class MatchingViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var myTableView: UITableView!
     
+    @IBOutlet weak var toDetailBtn: UIButton!
 
     var myData: Array<AnyObject> = []
     
@@ -22,8 +23,12 @@ class MatchingViewController: UIViewController, UITableViewDelegate, UITableView
     var receivedQuerySport = ""
     var receivedQueryCategory = ""
     
+    var selectedRecord: PostedWorkoutRecord = PostedWorkoutRecord()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        toDetailBtn.alpha = 0
+        
         makeQuery()
         //myData = ["asdasd","asdasdddd","sssss","kkkkk"]
         
@@ -116,13 +121,28 @@ class MatchingViewController: UIViewController, UITableViewDelegate, UITableView
 //        var formattedPrice: String = rowData["formattedPrice"] as String
         
         var alert: UIAlertView = UIAlertView()
-        alert.title = "alllalla"
-        alert.message = "SB"
-        alert.addButtonWithTitle("Ok")
+        alert.delegate = self
+        alert.title = "Want to see who posted this?"
+        selectedRecord = myData[indexPath.row] as PostedWorkoutRecord
+        alert.message = myModel.makeAlertString(selectedRecord)
+        alert.addButtonWithTitle("Yes")
+        alert.addButtonWithTitle("No")
         alert.show()
     }
-
     
+    func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int){
+        switch buttonIndex{
+        case 0:
+            println("Yes pressed")
+            self.performSegueWithIdentifier("toDetailSegue", sender: alertView)
+        case 1:
+            println("No pressed")
+
+        default:
+            println("no button choosed")
+        }
+
+    }
 
     
     func makeQuery() {
@@ -148,6 +168,18 @@ class MatchingViewController: UIViewController, UITableViewDelegate, UITableView
         
         myTableView.reloadData()
     
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toDetailSegue") {
+            var destinationVC = segue.destinationViewController as DetailViewController;
+            destinationVC.receivedQueryTime = self.receivedQueryTime
+            destinationVC.receivedQueryLocation = self.receivedQueryLocation
+            destinationVC.receivedQuerySport = self.receivedQuerySport
+            destinationVC.receivedQueryCategory = self.receivedQueryCategory
+        
+            destinationVC.receivedRecord = self.selectedRecord
+        }
     }
     
     

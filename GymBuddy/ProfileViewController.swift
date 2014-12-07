@@ -54,13 +54,13 @@ class ProfileViewController: UIViewController{
         self.performSegueWithIdentifier("EditPicSegue", sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        NSLog("Ready to launch segue with name " + segue.identifier!)
-        if segue.identifier == "EditPicSegue" {
-            var viewController = segue.destinationViewController as ProfileChoiceOverallViewController
-            viewController.myEditThing = EditAttribute.EditPicture
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        NSLog("Ready to launch segue with name " + segue.identifier!)
+//        if segue.identifier == "EditPicSegue" {
+//            var viewController = segue.destinationViewController as ProfileChoiceOverallViewController
+//            viewController.myEditThing = EditAttribute.EditPicture
+//        }
+//    }
     
     //set to only support portrait, too lazy to do the landscape
     override func supportedInterfaceOrientations() -> Int {

@@ -74,22 +74,22 @@ class ProfileTableViewController:UITableViewController {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        NSLog("Ready to launch segue with name " + segue.identifier!)
-        if segue.identifier == "EditFirstNameSegue" {
-            var viewController = segue.destinationViewController as ProfileEditViewController
-            viewController.myEditThing = EditAttribute.EditFirstName
-        } else if segue.identifier == "EditLastNameSegue" {
-            var viewController = segue.destinationViewController as ProfileEditViewController
-            viewController.myEditThing = EditAttribute.EditLastName
-        } else if segue.identifier == "EditSignatureSegue" {
-            var viewController = segue.destinationViewController as ProfileEditViewController
-            viewController.myEditThing = EditAttribute.EditSignature
-        } else if segue.identifier == "EditGenderSegue" {
-            var viewController = segue.destinationViewController as ProfileChoiceOverallViewController
-            viewController.myEditThing = EditAttribute.EditGender
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        NSLog("Ready to launch segue with name " + segue.identifier!)
+//        if segue.identifier == "EditFirstNameSegue" {
+//            var viewController = segue.destinationViewController as ProfileEditViewController
+//            viewController.myEditThing = EditAttribute.EditFirstName
+//        } else if segue.identifier == "EditLastNameSegue" {
+//            var viewController = segue.destinationViewController as ProfileEditViewController
+//            viewController.myEditThing = EditAttribute.EditLastName
+//        } else if segue.identifier == "EditSignatureSegue" {
+//            var viewController = segue.destinationViewController as ProfileEditViewController
+//            viewController.myEditThing = EditAttribute.EditSignature
+//        } else if segue.identifier == "EditGenderSegue" {
+//            var viewController = segue.destinationViewController as ProfileChoiceOverallViewController
+//            viewController.myEditThing = EditAttribute.EditGender
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
