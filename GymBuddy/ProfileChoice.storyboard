@@ -9,6 +9,7 @@
             <objects>
                 <tableViewController id="87T-PS-uIl" customClass="ProfileChoiceViewController" customModule="GymBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IR6-Vl-EiE">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -44,7 +45,6 @@
         <!--ProfileChoiceOverall-->
         <scene sceneID="6Nx-v7-xi5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hVd-jv-Byd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="ProfileChoiceOverall" id="kRl-5j-GOy" customClass="ProfileChoiceOverallViewController" customModule="GymBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YtO-F8-YxM"/>
@@ -125,6 +125,7 @@
                         <outlet property="navigationLabel" destination="jRn-La-pJz" id="wJe-bM-MCH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVd-jv-Byd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="252" y="354.75"/>
         </scene>

@@ -33,6 +33,9 @@
 		07CF3DD91A02CADC00FF8773 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB6B19F8998E000AB021 /* RegistrationViewController.swift */; };
 		07CF3DDC1A02CADC00FF8773 /* QueryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB711A01E32D000AB021 /* QueryViewModel.swift */; };
 		07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5419F89102000AB021 /* LaunchScreen.xib */; };
+		AA2E32431A33F1F9000BF47A /* ProfileChoice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2E32421A33F1F9000BF47A /* ProfileChoice.storyboard */; };
+		AA2E32451A33F1FE000BF47A /* ProfileChoiceOverallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E32441A33F1FE000BF47A /* ProfileChoiceOverallViewController.swift */; };
+		AA2E32471A33F202000BF47A /* ProfileChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E32461A33F202000BF47A /* ProfileChoiceViewController.swift */; };
 		AA3ED21B1A2862FD00E7DA42 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED21A1A2862FD00E7DA42 /* UserData.swift */; };
 		AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */; };
 		AA3ED24D1A2902DF00E7DA42 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */; };
@@ -95,6 +98,9 @@
 		07829F941A33BA64004DC0F1 /* PostedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostedBy.swift; sourceTree = "<group>"; };
 		07829F961A33D8CB004DC0F1 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		078864481A33A35100E44B02 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AA2E32421A33F1F9000BF47A /* ProfileChoice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileChoice.storyboard; sourceTree = "<group>"; };
+		AA2E32441A33F1FE000BF47A /* ProfileChoiceOverallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileChoiceOverallViewController.swift; sourceTree = "<group>"; };
+		AA2E32461A33F202000BF47A /* ProfileChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileChoiceViewController.swift; sourceTree = "<group>"; };
 		AA3ED21A1A2862FD00E7DA42 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -228,7 +234,10 @@
 		AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */ = {
 			isa = PBXGroup;
 			children = (
+				AA2E32461A33F202000BF47A /* ProfileChoiceViewController.swift */,
+				AA2E32441A33F1FE000BF47A /* ProfileChoiceOverallViewController.swift */,
 				AA3ED24F1A2A53CD00E7DA42 /* ProfileTextEdit.storyboard */,
+				AA2E32421A33F1F9000BF47A /* ProfileChoice.storyboard */,
 				AA3ED2511A2A55BE00E7DA42 /* ProfileEditViewController.swift */,
 				AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */,
 			);
@@ -334,6 +343,7 @@
 				07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */,
 				071BD89E1A0425B400CCE835 /* Matching.storyboard in Resources */,
 				AA6685961A27E08800A802BC /* Profile.storyboard in Resources */,
+				AA2E32431A33F1F9000BF47A /* ProfileChoice.storyboard in Resources */,
 				AA3ED2501A2A53CD00E7DA42 /* ProfileTextEdit.storyboard in Resources */,
 				07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */,
 			);
@@ -372,9 +382,11 @@
 				AA46374B1A279BDB001B75CC /* User.swift in Sources */,
 				07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */,
 				07CF3DD71A02CADC00FF8773 /* MatchingViewController.swift in Sources */,
+				AA2E32451A33F1FE000BF47A /* ProfileChoiceOverallViewController.swift in Sources */,
 				0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */,
 				AA9AD4B21A30D4D7002B1973 /* ProfileUpdateModel.swift in Sources */,
 				0722280F1A213B050015DC7F /* MatchingViewModel.swift in Sources */,
+				AA2E32471A33F202000BF47A /* ProfileChoiceViewController.swift in Sources */,
 				AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */,
 				07CF3DD81A02CADC00FF8773 /* QueryViewController.swift in Sources */,
 				07CF3DD91A02CADC00FF8773 /* RegistrationViewController.swift in Sources */,
