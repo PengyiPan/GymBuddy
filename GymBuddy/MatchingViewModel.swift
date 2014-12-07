@@ -40,8 +40,8 @@ class MatchingViewModel {
         var bodyData1 = "query= SELECT * FROM PostedWorkoutRecord2 AS pwr, PostedBy as pb WHERE pwr.sport_type = " + receivedQuerySportCopy + " AND pwr.time_start >= " + str_date_copy
         var bodyData2 =  " AND pwr.record_id = pb.record_id " + "AND NOT (pb.net_id = \(my_netid_copy))"
         
-        var bodyDatapre = bodyData1 + bodyData2
-        var bodyData = ""
+        var bodyData = bodyData1 + bodyData2
+        
         
 //        if (!injectionProtection(bodyDatapre)){
 //            viewCtrl.popUpAlertDialog("Alert", message: "Potential Injection Detected.", buttonText: "Ok")
