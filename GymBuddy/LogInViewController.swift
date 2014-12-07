@@ -80,7 +80,7 @@ class LogInViewController: UIViewController {
         if myUsers.isEmpty {
             progressView.setProgress(0.0, animated:false)
             progressView.removeFromSuperview()
-            popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
+            popUpAlertDialog("Alert", message: "Incorrect password or username", buttonText: "OK")
         } else {
             progressView.setProgress(1.0, animated: true)
             var user:User = resultList[0]

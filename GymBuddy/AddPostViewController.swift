@@ -122,6 +122,8 @@ class AddPostViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBAction func postBtnPressed(sender: UIButton) {
         
+        let date = NSDate()
+        let toPostedTime = dateformatterDate(date)
         
         var toPostStartTime = myModel.dateToPostString(self.startTime)
         var toPostEndTime = myModel.dateToPostString(self.endTime)
@@ -129,7 +131,7 @@ class AddPostViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         var toPostSport = self.labelTextToOutputText(sportDisplayLabel.text!)
         var toPostCategory = self.labelTextToOutputText(categoryDisplayLabel.text!)
         
-        println("Post Btn Pressed, new post info sent:")
+        println("Post Btn Pressed, new post info sent to PostedRecord:")
 
         println(toPostStartTime)
         println(toPostEndTime)
@@ -137,7 +139,12 @@ class AddPostViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         println(toPostSport)
         println(toPostCategory)
         
+        println("Post Btn Pressed, new post info sent to PostedBy:")
+        println(toPostedTime)
+        //println(toNetID)
+        //println(toRecordID)
     }
+
     
     @IBAction func okBtnPressed(sender: UIButton) {
         
@@ -278,6 +285,19 @@ class AddPostViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             
             
         }
+    }
+    
+    
+    
+    func dateformatterDate(date: NSDate) -> NSString
+    {
+        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "ETC")
+        
+        return dateFormatter.stringFromDate(date)
+        
+        
     }
     
     
