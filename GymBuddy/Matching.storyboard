@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sxf-UO-gqu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sxf-UO-gqu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -41,6 +41,9 @@
                                                 <state key="normal" title="Next">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="ocw-dk-RUy" kind="custom" identifier="toDetailSegue" customClass="RBStoryboardModalSegue" id="VUj-x1-Juo"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -85,20 +88,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="EKF-xc-EIh"/>
+                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="0qy-1A-y5S"/>
+                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="4JB-KZ-9hc"/>
+                            <constraint firstItem="nQI-KU-2vb" firstAttribute="top" secondItem="kpc-5t-gCP" secondAttribute="bottom" id="5Wh-Lp-cEh"/>
                             <constraint firstItem="kpc-5t-gCP" firstAttribute="top" secondItem="vXm-C4-HhX" secondAttribute="bottom" id="EYv-ua-lmO"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leading" id="Ep2-KB-B5N"/>
-                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="HFd-Ce-KYI"/>
+                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="G9s-h5-W28"/>
                             <constraint firstAttribute="trailing" secondItem="vXm-C4-HhX" secondAttribute="trailing" id="IFu-AF-uqa"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leading" id="JQe-kg-Qwh"/>
                             <constraint firstAttribute="trailing" secondItem="vXm-C4-HhX" secondAttribute="trailing" id="P9F-AF-avE"/>
-                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="PzY-Cv-go2"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leading" id="Thy-Gz-wij"/>
+                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="bHS-9A-Ruq"/>
                             <constraint firstItem="vXm-C4-HhX" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leading" id="iyP-1y-j1B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kpc-5t-gCP" secondAttribute="trailing" constant="-16" id="l09-Bu-ESV"/>
                             <constraint firstItem="kpc-5t-gCP" firstAttribute="leading" secondItem="J85-eT-V1J" secondAttribute="leadingMargin" constant="-16" id="mPH-pO-qRA"/>
-                            <constraint firstItem="nQI-KU-2vb" firstAttribute="top" secondItem="kpc-5t-gCP" secondAttribute="bottom" id="scQ-8P-27l"/>
-                            <constraint firstItem="vXm-C4-HhX" firstAttribute="top" secondItem="Nkf-8P-j10" secondAttribute="bottom" id="xrL-wf-5Xu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -106,8 +109,6 @@
                                 <exclude reference="kpc-5t-gCP"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="scQ-8P-27l"/>
-                                <exclude reference="EKF-xc-EIh"/>
                                 <exclude reference="IFu-AF-uqa"/>
                                 <exclude reference="iyP-1y-j1B"/>
                                 <exclude reference="EYv-ua-lmO"/>
@@ -121,8 +122,6 @@
                                 <include reference="kpc-5t-gCP"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="scQ-8P-27l"/>
-                                <include reference="EKF-xc-EIh"/>
                                 <include reference="IFu-AF-uqa"/>
                                 <include reference="iyP-1y-j1B"/>
                                 <include reference="EYv-ua-lmO"/>
@@ -133,11 +132,34 @@
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="kpc-5t-gCP" id="4UB-ze-q87"/>
+                        <outlet property="toDetailBtn" destination="aDK-fr-mXC" id="OIq-I7-95B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmH-0x-kGi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-997.5" y="-309"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="LUE-sc-dbx">
+            <objects>
+                <viewController id="ocw-dk-RUy" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yjX-w1-Gs9"/>
+                        <viewControllerLayoutGuide type="bottom" id="DTi-6Z-8rg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Beg-r7-aMD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Detail"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAb-ud-s0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214.5" y="-760"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="cKg-s6-dQA">

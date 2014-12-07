@@ -271,6 +271,28 @@ class MatchingViewModel {
         
     }
     
+    func makeAlertString(post:PostedWorkoutRecord)-> NSString{
+        var s: String = post.time_start!
+        
+        var e: String = post.time_end!
+        
+        var startTime =
+        s.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[0] + ":" + s.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[1]
+        
+        var startDate: String = s.componentsSeparatedByString(" ")[0] as String
+        
+        var endTime =
+        e.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[0] + ":" + e.componentsSeparatedByString(" ")[1].componentsSeparatedByString(":")[1]
+        
+        var endDate: String = e.componentsSeparatedByString(" ")[0] as String
+        
+        
+        return "\n" + dateStringToWeekday(startDate) + " " + startDate + " " + startTime + " \n -\n" + dateStringToWeekday(endDate) + " " + endDate + " " + endTime + "\n" + "\nLocation: " + post.location! + "\nSport: " + post.sport_type! + "\nType: " + post.sport_sub_type!
+        
+        
+    }
+
+    
 
     
 }

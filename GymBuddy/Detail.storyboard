@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wFU-dL-tJg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="sOs-OO-f5P">
+            <objects>
+                <viewController id="wFU-dL-tJg" customClass="DetailViewController" customModule="GymBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZPU-mj-bXQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lfc-CV-MyY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PYK-Bp-bh8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-ZF-aw0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Detail" id="rnt-K0-TRe">
+                                        <barButtonItem key="leftBarButtonItem" id="Wnm-uq-6Th">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RYH-h2-WV9">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="&lt;">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="frO-Uf-6CD" kind="custom" identifier="toMatchingSegue" customClass="RBStoryboardModalSegue" id="L0Z-cq-xMc"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPZ-b5-Iii">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.68103021527865137" green="1" blue="0.92907613673487366" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="UPQ-dN-p5F"/>
+                                    <constraint firstAttribute="width" constant="368" id="vvi-0N-1Is"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UPQ-dN-p5F"/>
+                                        <exclude reference="vvi-0N-1Is"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UPQ-dN-p5F"/>
+                                        <include reference="vvi-0N-1Is"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="0gg-n2-Ovd"/>
+                            <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="7aJ-TF-vT2"/>
+                            <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leadingMargin" constant="-16" id="7fU-U7-icB"/>
+                            <constraint firstItem="LPZ-b5-Iii" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leadingMargin" id="9b1-lv-SEA"/>
+                            <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="CJe-JM-svQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9qB-ZF-aw0" secondAttribute="trailing" constant="-16" id="Suh-bA-XNt"/>
+                            <constraint firstItem="LPZ-b5-Iii" firstAttribute="top" secondItem="9qB-ZF-aw0" secondAttribute="bottom" constant="86" id="V06-FC-vu4"/>
+                            <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="VmZ-49-eqd"/>
+                            <constraint firstAttribute="trailing" secondItem="9qB-ZF-aw0" secondAttribute="trailing" id="WeP-9x-qEG"/>
+                            <constraint firstItem="LPZ-b5-Iii" firstAttribute="trailing" secondItem="PYK-Bp-bh8" secondAttribute="trailingMargin" id="bkf-rf-soj"/>
+                            <constraint firstAttribute="trailing" secondItem="9qB-ZF-aw0" secondAttribute="trailing" id="dgD-Zg-KQq"/>
+                            <constraint firstItem="9qB-ZF-aw0" firstAttribute="top" secondItem="ZPU-mj-bXQ" secondAttribute="bottom" id="lVt-M8-vMW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9qB-ZF-aw0"/>
+                                <exclude reference="LPZ-b5-Iii"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7aJ-TF-vT2"/>
+                                <exclude reference="7fU-U7-icB"/>
+                                <exclude reference="Suh-bA-XNt"/>
+                                <exclude reference="WeP-9x-qEG"/>
+                                <exclude reference="lVt-M8-vMW"/>
+                                <exclude reference="9b1-lv-SEA"/>
+                                <exclude reference="V06-FC-vu4"/>
+                                <exclude reference="bkf-rf-soj"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9qB-ZF-aw0"/>
+                                <include reference="LPZ-b5-Iii"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7aJ-TF-vT2"/>
+                                <include reference="7fU-U7-icB"/>
+                                <include reference="Suh-bA-XNt"/>
+                                <include reference="WeP-9x-qEG"/>
+                                <include reference="lVt-M8-vMW"/>
+                                <include reference="9b1-lv-SEA"/>
+                                <include reference="V06-FC-vu4"/>
+                                <include reference="bkf-rf-soj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zni-K7-Q8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="283"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="l9K-2N-Ffu">
+            <objects>
+                <viewController id="frO-Uf-6CD" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lXC-hT-BVS"/>
+                        <viewControllerLayoutGuide type="bottom" id="u0e-Ck-I6E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wfb-rv-Ipl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Matching"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VST-9g-9Je" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="-6"/>
+        </scene>
+    </scenes>
+</document>
