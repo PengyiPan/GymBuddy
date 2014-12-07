@@ -28,8 +28,13 @@ class EditPasswordViewController:UIViewController {
         var oldPassword = oldPassField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         var newPassword = newPassField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         var reNewPassword = reNewPassField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        if(oldPassword != currentPassword){
+        
+        if (!validatePassword(newPassword)){
+            popUpAlertDialog("Alert", message: "Password length need to be between 5 to 10 characters", buttonText: "Ok")
+        } else if(oldPassword != currentPassword){
             popUpAlertDialog("Alert", message: "Old password not correct", buttonText: "Ok")
+        } else if (oldPassword == newPassword){
+            popUpAlertDialog("Alert", message: "New password and old password cannot be the same", buttonText: "Ok")
         } else if (newPassword != reNewPassword) {
             popUpAlertDialog("Alert", message: "New passwords not matched", buttonText: "Ok")
         } else {
@@ -40,6 +45,15 @@ class EditPasswordViewController:UIViewController {
             progressView.tintColor = UIColor.blueColor()
             view.addSubview(progressView)
         }
+        
+        
+    }
+    
+    func validatePassword(password:String) -> Bool {
+        if countElements(password) < 5 || countElements(password) > 10 {
+            return false
+        } 
+        return true
     }
     
     override func viewDidLoad() {

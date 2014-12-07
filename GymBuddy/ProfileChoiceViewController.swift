@@ -83,6 +83,7 @@ class ProfileChoiceViewController:UITableViewController {
         return cell
     }
     
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var selectedCell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell!
         if selectedAttribute.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) != "" {
