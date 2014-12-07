@@ -193,8 +193,6 @@
 		0767FB4819F89102000AB021 /* GymBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				AA62C8351A343843003C524D /* AddPost.storyboard */,
-				AA62C8331A3437F0003C524D /* AddPostViewController.swift */,
 				AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */,
 				AA4637471A279B6B001B75CC /* Models */,
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
@@ -224,6 +222,8 @@
 		0767FB4919F89102000AB021 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA62C8331A3437F0003C524D /* AddPostViewController.swift */,
+				AA62C8351A343843003C524D /* AddPost.storyboard */,
 				AA62C8311A3437E8003C524D /* AddPostViewModel.swift */,
 				071BD9501A04354500CCE835 /* RBStoryboardLink */,
 				0722280E1A213B050015DC7F /* MatchingViewModel.swift */,

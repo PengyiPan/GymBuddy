@@ -14,6 +14,8 @@ class AddPostViewModel {
     init(){
     }
     
+
+    
     func dateToString(date:NSDate) -> NSString{
         let dateFormatter = NSDateFormatter()
         
