@@ -44,7 +44,7 @@ class RegistrationViewController: UIViewController {
         if code == RegistrationModel.RegisterResult.RegisterSuccess {
             progressView.setProgress(1.0, animated: true)
             deleteUserData()
-            let newUser = UserData.createInManagedObjectContext(self.managedObjectContext!, netID: user.net_id!, password: user.password!)
+            let newUser = UserData.createInManagedObjectContext(self.managedObjectContext!, netID: user.net_id!, password: user.password!, picture: user.picture_url!)
             self.performSegueWithIdentifier("registerSuccess", sender: self)
         } else {
             progressView.setProgress(0.0, animated: false)

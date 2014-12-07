@@ -55,7 +55,7 @@ class RegistrationModel {
                         user.first_name = (json["first_name"] as AnyObject? as? String) ?? ""
                         user.gender = (json["gender"] as AnyObject? as? String) ?? ""
                         user.picture_url = (json["picture_url"] as AnyObject? as? String) ?? ""
-                        user.numb_thumb_ups = (json["num_thumb_ups"] as AnyObject? as? String) ?? ""
+                        user.numb_thumb_ups = (json["num_thumb"] as AnyObject? as? String) ?? ""
                         user.signature = (json["signature"] as AnyObject? as? String) ?? ""
                         list.append(user)
                     }
@@ -71,7 +71,9 @@ class RegistrationModel {
     func sendUserCredentials(viewCtrl:RegistrationViewController, user:User) {
         var net_id = "'" + user.net_id! + "'"
         var passwordCopy = "'" + user.password! + "'"
-        var query = "query= INSERT INTO User (`net_id`, `password`, `last_name`, `first_name`, `gender`, `picture_url`, `num_thumbs`, `signature`) VALUES (" + net_id + ", " + passwordCopy + ", NULL, NULL, NULL, NULL, 0, NULL)"
+        var query = "query= INSERT INTO User (`net_id`, `password`, `last_name`, `first_name`, `gender`, `picture_url`, `num_thumbs`, `signature`) VALUES (" + net_id + ", " + passwordCopy + ", NULL, NULL, NULL, 'default picture', 0, NULL)"
+        user.picture_url = "default picture"
+        user.numb_thumb_ups = "0"
         println(query)
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
