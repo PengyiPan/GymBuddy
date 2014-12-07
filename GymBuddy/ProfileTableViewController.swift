@@ -11,7 +11,7 @@ import CoreData
 
 class ProfileTableViewController:UITableViewController {
     
-    let attributeItems = ["First Name", "Last Name", "Gender", "Signature", "Password"]
+    let attributeItems = ["First Name", "Last Name", "Gender", "Contact Info", "Password"]
 
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -43,18 +43,18 @@ class ProfileTableViewController:UITableViewController {
             var user:UserData = fetchResults[0];
             switch attribute {
             case "First Name":
-                attributeText = user.first_name
+                cell.detailTextLabel?.text = user.first_name
             case "Last Name":
-                attributeText = user.last_name
+                cell.detailTextLabel?.text = user.last_name
             case "Gender":
-                attributeText = user.gender
-            case "Signature":
-                attributeText = user.signature
+                cell.detailTextLabel?.text = user.gender
+            case "Contact Info":
+                cell.detailTextLabel?.text = user.signature
+                cell.detailTextLabel?.numberOfLines = 5
             default:
-                attributeText = ""
+                cell.detailTextLabel?.text = ""
             }
         }
-        cell.detailTextLabel?.text = attributeText
         return cell
     }
     
@@ -65,7 +65,7 @@ class ProfileTableViewController:UITableViewController {
                 self.performSegueWithIdentifier("EditFirstNameSegue", sender: self)
             case "Last Name":
                 self.performSegueWithIdentifier("EditLastNameSegue", sender: self)
-            case "Signature":
+            case "Contact Info":
                 self.performSegueWithIdentifier("EditSignatureSegue", sender: self)
             case "Gender":
                 self.performSegueWithIdentifier("EditGenderSegue", sender: self)

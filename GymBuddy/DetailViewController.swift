@@ -72,7 +72,7 @@ class DetailViewController: UIViewController {
         data.append("First Name")
         data.append("Last Name")
         data.append("Gender")
-        data.append("Signature")
+        data.append("Contact Info")
         tableController.refreshCells(data)
     }
 

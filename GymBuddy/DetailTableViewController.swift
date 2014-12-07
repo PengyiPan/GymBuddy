@@ -30,8 +30,9 @@ class DetailTableViewController:UITableViewController {
             cell.detailTextLabel?.text = LastName
         case "Gender":
             cell.detailTextLabel?.text = gender
-        case "Signature":
+        case "Contact Info":
             cell.detailTextLabel?.text = signature
+            cell.detailTextLabel?.numberOfLines = 5
         default:
             break
         }
@@ -57,7 +58,6 @@ class DetailTableViewController:UITableViewController {
     }
     
     func refreshCells(data: Array<String>) {
-        //NSLog("reload data " + firstName + LastName + gender + signature)
         myData = data
         self.tableView.reloadData()
     }
