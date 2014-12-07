@@ -43,6 +43,7 @@
 		AA3ED2521A2A55BE00E7DA42 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ED2511A2A55BE00E7DA42 /* ProfileEditViewController.swift */; };
 		AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4637481A279BA7001B75CC /* LogInModel.swift */; };
 		AA46374B1A279BDB001B75CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46374A1A279BDB001B75CC /* User.swift */; };
+		AA62C8241A33FFD3003C524D /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C8231A33FFD3003C524D /* DetailTableViewController.swift */; };
 		AA6685961A27E08800A802BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6685951A27E08800A802BC /* Profile.storyboard */; };
 		AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6685971A27E74500A802BC /* ProfileViewController.swift */; };
 		AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */; };
@@ -108,6 +109,7 @@
 		AA3ED2511A2A55BE00E7DA42 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		AA4637481A279BA7001B75CC /* LogInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		AA46374A1A279BDB001B75CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AA62C8231A33FFD3003C524D /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		AA6685951A27E08800A802BC /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AA6685971A27E74500A802BC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAttribute.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				AA6685951A27E08800A802BC /* Profile.storyboard */,
 				AA6685971A27E74500A802BC /* ProfileViewController.swift */,
 				AA3ED24C1A2902DF00E7DA42 /* ProfileTableViewController.swift */,
+				AA62C8231A33FFD3003C524D /* DetailTableViewController.swift */,
 			);
 			path = GymBuddy;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				AA9AD4B41A30DC91002B1973 /* UpdateResult.swift in Sources */,
 				078864491A33A35100E44B02 /* DetailViewController.swift in Sources */,
 				07829F951A33BA64004DC0F1 /* PostedBy.swift in Sources */,
+				AA62C8241A33FFD3003C524D /* DetailTableViewController.swift in Sources */,
 				AA46374B1A279BDB001B75CC /* User.swift in Sources */,
 				07CF3DD61A02CADC00FF8773 /* LogInViewController.swift in Sources */,
 				07CF3DD71A02CADC00FF8773 /* MatchingViewController.swift in Sources */,

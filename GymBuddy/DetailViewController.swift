@@ -18,21 +18,17 @@ class DetailViewController: UIViewController {
     var receivedQueryCategory = ""
     
     @IBOutlet weak var thumbUpBtn: UIButton!
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var numThumbs: UILabel!
 
     var receivedRecord: PostedWorkoutRecord = PostedWorkoutRecord()
     
     var userToPresent: User = User()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         thumbUpBtn.alpha = 0
-        
         myModel.makeDatabaseQuery(receivedRecord.record_id!, viewCtrl: self)
- 
-        // Do any additional setup after loading the view, typically from a nib.
-
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +48,8 @@ class DetailViewController: UIViewController {
             destinationVC.receivedQueryLocation = self.receivedQueryLocation
             destinationVC.receivedQuerySport = self.receivedQuerySport
             destinationVC.receivedQueryCategory = self.receivedQueryCategory
+        } else if (segue.identifier == "embedProfileSegue"){
+            NSLog("embed detail table view segue called")
         }
     }
     
@@ -60,10 +58,22 @@ class DetailViewController: UIViewController {
     }
     
     func didReceiveQueryResult(data: Array<User>){
+        NSLog("Detail View Controller receives query results")
         userToPresent = data[0]
-        
         thumbUpBtn.alpha = 1
-        
+        numThumbs.text = userToPresent.numb_thumb_ups
+        profilePic.image = UIImage(named: userToPresent.picture_url!)
+        var tableController = self.childViewControllers.first as DetailTableViewController
+        tableController.firstName = userToPresent.first_name!
+        tableController.LastName = userToPresent.last_name!
+        tableController.gender = userToPresent.gender!
+        tableController.signature = userToPresent.signature!
+        var data: Array<String> = []
+        data.append("First Name")
+        data.append("Last Name")
+        data.append("Gender")
+        data.append("Signature")
+        tableController.refreshCells(data)
     }
 
 }

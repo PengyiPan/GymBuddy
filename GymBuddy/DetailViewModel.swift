@@ -31,7 +31,6 @@ class DetailViewModel {
                 var anyObj1: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &error)
                 //parse received Json data
                 self.parsePostedByJsonData(anyObj1!,viewCtrl:viewCtrl)
-                
         }
         
         
@@ -170,7 +169,6 @@ class DetailViewModel {
                         //parse received Json data
                         
                         self.makeUserDatabaseQuery(net_id, viewCtrl: viewCtrl)
-                        
                 }
                 
         }
