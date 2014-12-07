@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController{
     
     @IBOutlet weak var thumbNumField: UILabel!
     @IBOutlet weak var picImage: UIImageView!
+    let myModel = ProfileUpdateModel()
     let tapRec = UITapGestureRecognizer()
     @IBAction func logOutButton(sender: AnyObject) {
         //NSLog("User Credentials in CoreData Deleted")
@@ -43,14 +44,13 @@ class ProfileViewController: UIViewController{
         tapRec.addTarget(self, action: "tappedImage")
         picImage.addGestureRecognizer(tapRec)
         picImage.userInteractionEnabled = true
-        var imageName:String = ""
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             var user:UserData = fetchResults[0];
             thumbNumField.text = user.num_thumbs
-            imageName = user.picture_url
+            picImage.image = UIImage(named: user.picture_url)
+            myModel.updateUserData(self, netID:user.net_id)
         }
-        picImage.image = UIImage(named: imageName)
     }
     
     func tappedImage() {
@@ -62,6 +62,17 @@ class ProfileViewController: UIViewController{
         if segue.identifier == "EditPicSegue" {
             var viewController = segue.destinationViewController as ProfileChoiceOverallViewController
             viewController.myEditThing = EditAttribute.EditPicture
+        }
+    }
+    
+    func didGetQueryResult(result:UpdateResult, user:User) {
+        if result == UpdateResult.Success {
+            let fetchRequest = NSFetchRequest(entityName: "UserData")
+            if let fetchResults = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
+                var local:UserData = fetchResults[0];
+                local.num_thumbs = user.numb_thumb_ups!
+                thumbNumField.text = local.num_thumbs
+            }
         }
     }
     

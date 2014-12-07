@@ -94,4 +94,49 @@ class ProfileUpdateModel {
                 viewCtrl.didGetPostResult(UpdateResult.Success, password:password)
         }
     }
+    
+    func updateUserData(viewCtrl:ProfileViewController, netID:String){
+        var net_id = "'" + netID + "'"
+        var query = "query= SELECT * FROM User WHERE net_id = \(net_id)"
+        NSLog(query)
+        let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = query.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                //NSLog("Search Credentials Task Completed")
+                if error != nil{
+                    println(error?.localizedDescription)
+                }
+                var err: NSError?
+                let jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &err)
+                if err != nil { //if there is an error parsing Json, print it
+                    println(err?.localizedDescription)
+                }
+                self.parseJsonData(jsonResult, viewCtrl: viewCtrl)
+        }
+    }
+    
+    func parseJsonData(anyObj:AnyObject?, viewCtrl:ProfileViewController){
+        var list:Array<User> = []
+        if  anyObj is Array<AnyObject> {
+            for json in anyObj as Array<AnyObject>{
+                var user:User = User()
+                user.net_id = (json["net_id"] as AnyObject? as? String) ?? ""
+                user.password = (json["password"] as AnyObject? as? String) ?? ""
+                user.last_name = (json["last_name"] as AnyObject? as? String) ?? ""
+                user.first_name = (json["first_name"] as AnyObject? as? String) ?? ""
+                user.gender = (json["gender"] as AnyObject? as? String) ?? ""
+                user.picture_url = (json["picture_url"] as AnyObject? as? String) ?? ""
+                user.numb_thumb_ups = (json["num_thumbs"] as AnyObject? as? String) ?? ""
+                //NSLog("user has a thumb of " + user.numb_thumb_ups!)
+                user.signature = (json["signature"] as AnyObject? as? String) ?? ""
+                list.append(user)
+            }
+        }
+        viewCtrl.didGetQueryResult(UpdateResult.Success, user: list[0])
+    }
 }
