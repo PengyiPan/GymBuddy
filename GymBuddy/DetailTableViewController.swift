@@ -22,7 +22,7 @@ class DetailTableViewController:UITableViewController {
         let row = indexPath.row
         var attribute = myData[row]
         cell.textLabel?.text = attribute
-        NSLog("Detail table view's textLable created " + attribute)
+        //NSLog("Detail table view's textLable created " + attribute)
         switch attribute {
         case "First Name":
             cell.detailTextLabel?.text = firstName
@@ -57,7 +57,7 @@ class DetailTableViewController:UITableViewController {
     }
     
     func refreshCells(data: Array<String>) {
-        NSLog("reload data " + firstName + LastName + gender + signature)
+        //NSLog("reload data " + firstName + LastName + gender + signature)
         myData = data
         self.tableView.reloadData()
     }

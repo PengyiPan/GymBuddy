@@ -59,7 +59,7 @@ class RegistrationViewController: UIViewController {
     }
     
     func deleteUserData() {
-        NSLog("User Credentials in CoreData Deleted")
+        //NSLog("User Credentials in CoreData Deleted")
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             for result in fetchResults {

@@ -36,10 +36,10 @@ class ProfileChoiceViewController:UITableViewController {
             switch myEditThing {
             case EditAttribute.EditGender:
                 selectedAttribute = user.gender
-                NSLog("Before change, user's gender is " + selectedAttribute)
+                //NSLog("Before change, user's gender is " + selectedAttribute)
             case EditAttribute.EditPicture:
                 selectedAttribute = user.picture_url
-                NSLog("Before change, user's picture is " + selectedAttribute)
+                //NSLog("Before change, user's picture is " + selectedAttribute)
             default:
                 selectedAttribute = ""
             }

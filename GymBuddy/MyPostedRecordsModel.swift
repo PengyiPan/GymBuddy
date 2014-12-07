@@ -14,7 +14,7 @@ class MyPostedRecordsModel {
         var net_id = "'" + netID + "'"
         
         var query = "query= SELECT * FROM PostedBy AS pb, PostedWorkoutRecord2 AS record WHERE pb.net_id = \(net_id) AND pb.record_id = record.record_id"
-        NSLog(query)
+        //NSLog(query)
         
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
@@ -39,7 +39,7 @@ class MyPostedRecordsModel {
     func parseJsonIDsData(anyObj:AnyObject?, viewCtrl:MyPostedRecordsViewController) {
         var list:Array<PostedWorkoutRecord> = []
         if anyObj is Array<AnyObject> {
-            NSLog("fetched my workout records")
+            //NSLog("fetched my workout records")
             for json in anyObj as Array<AnyObject> {
                 var record:PostedWorkoutRecord = PostedWorkoutRecord()
                 record.record_id = (json["record_id"] as AnyObject? as? String) ?? ""
@@ -48,7 +48,7 @@ class MyPostedRecordsModel {
                 record.location = (json["location"] as AnyObject? as? String) ?? ""
                 record.sport_type = (json["sport_type"] as AnyObject? as? String) ?? ""
                 record.sport_sub_type = (json["sport_sub_type"] as AnyObject? as? String) ?? ""
-                NSLog("added my workout record with id " + record.record_id!)
+                //NSLog("added my workout record with id " + record.record_id!)
                 list.append(record)
             }
         }

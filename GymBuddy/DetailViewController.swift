@@ -49,7 +49,7 @@ class DetailViewController: UIViewController {
             destinationVC.receivedQuerySport = self.receivedQuerySport
             destinationVC.receivedQueryCategory = self.receivedQueryCategory
         } else if (segue.identifier == "embedProfileSegue"){
-            NSLog("embed detail table view segue called")
+            //NSLog("embed detail table view segue called")
         }
     }
     
@@ -58,7 +58,7 @@ class DetailViewController: UIViewController {
     }
     
     func didReceiveQueryResult(data: Array<User>){
-        NSLog("Detail View Controller receives query results")
+        //NSLog("Detail View Controller receives query results")
         userToPresent = data[0]
         thumbUpBtn.alpha = 1
         numThumbs.text = userToPresent.numb_thumb_ups

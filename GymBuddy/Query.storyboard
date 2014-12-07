@@ -651,21 +651,21 @@
                             <constraint firstItem="LIY-my-w79" firstAttribute="top" secondItem="G5w-A5-0f9" secondAttribute="bottom" constant="3" id="0sP-DN-cQp"/>
                             <constraint firstItem="6Bm-eQ-vPb" firstAttribute="top" secondItem="Dpy-1d-lIc" secondAttribute="bottom" constant="26" id="25M-yt-DXm"/>
                             <constraint firstItem="6Bm-eQ-vPb" firstAttribute="top" secondItem="jgB-3U-TeP" secondAttribute="bottom" constant="26" id="3Em-8c-kjB"/>
+                            <constraint firstItem="krg-pD-F13" firstAttribute="top" secondItem="6Bm-eQ-vPb" secondAttribute="bottom" constant="20" id="5D3-Sb-SV5"/>
                             <constraint firstItem="vWp-QW-IpY" firstAttribute="top" secondItem="keH-zj-qTx" secondAttribute="bottom" constant="52" id="8Ax-1A-acP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dpy-1d-lIc" secondAttribute="trailing" id="9jk-Z6-ktR"/>
+                            <constraint firstItem="krg-pD-F13" firstAttribute="top" secondItem="Dfh-Bf-sbe" secondAttribute="bottom" constant="16" id="A2Z-YA-ftH"/>
+                            <constraint firstItem="keH-zj-qTx" firstAttribute="top" secondItem="eoh-os-Peo" secondAttribute="bottom" id="BFk-Ef-o0n"/>
                             <constraint firstAttribute="centerX" secondItem="pGy-gT-JPm" secondAttribute="centerX" id="DGA-4w-HRi"/>
                             <constraint firstItem="6Bm-eQ-vPb" firstAttribute="top" secondItem="pGy-gT-JPm" secondAttribute="bottom" constant="26" id="GQM-s5-ZYy"/>
                             <constraint firstAttribute="centerX" secondItem="vWp-QW-IpY" secondAttribute="centerX" id="Nvp-Zs-ZSh"/>
-                            <constraint firstItem="krg-pD-F13" firstAttribute="top" secondItem="Dfh-Bf-sbe" secondAttribute="bottom" constant="16" id="Qwn-dz-9j0"/>
                             <constraint firstItem="Dpy-1d-lIc" firstAttribute="leading" secondItem="gsF-N8-wd2" secondAttribute="leadingMargin" id="SHc-tK-7RQ"/>
                             <constraint firstAttribute="centerX" secondItem="Dfh-Bf-sbe" secondAttribute="centerX" id="Zq1-2i-XhJ"/>
                             <constraint firstItem="keH-zj-qTx" firstAttribute="leading" secondItem="gsF-N8-wd2" secondAttribute="leading" id="dvw-Ph-stc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Bm-eQ-vPb" secondAttribute="trailing" id="eOV-3f-OGb"/>
                             <constraint firstItem="6Bm-eQ-vPb" firstAttribute="leading" secondItem="gsF-N8-wd2" secondAttribute="leadingMargin" id="g9y-Ek-i4u"/>
-                            <constraint firstItem="krg-pD-F13" firstAttribute="top" secondItem="6Bm-eQ-vPb" secondAttribute="bottom" constant="20" id="hSy-sJ-kGc"/>
                             <constraint firstAttribute="centerX" secondItem="LIY-my-w79" secondAttribute="centerX" id="oM0-Nx-zo9"/>
                             <constraint firstAttribute="centerX" secondItem="G5w-A5-0f9" secondAttribute="centerX" id="vCI-gf-dZg"/>
-                            <constraint firstItem="keH-zj-qTx" firstAttribute="top" secondItem="eoh-os-Peo" secondAttribute="bottom" id="x0h-eI-ASh"/>
                             <constraint firstItem="G5w-A5-0f9" firstAttribute="top" secondItem="vWp-QW-IpY" secondAttribute="bottom" constant="8" id="y0O-LE-nlr"/>
                             <constraint firstAttribute="centerX" secondItem="jgB-3U-TeP" secondAttribute="centerX" id="yZe-Sg-mQA"/>
                             <constraint firstAttribute="trailing" secondItem="keH-zj-qTx" secondAttribute="trailing" id="z7y-ga-YRm"/>
@@ -683,25 +683,24 @@
                                 <exclude reference="Dfh-Bf-sbe"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="dvw-Ph-stc"/>
+                                <exclude reference="z7y-ga-YRm"/>
+                                <exclude reference="8Ax-1A-acP"/>
+                                <exclude reference="Nvp-Zs-ZSh"/>
+                                <exclude reference="vCI-gf-dZg"/>
+                                <exclude reference="y0O-LE-nlr"/>
+                                <exclude reference="9jk-Z6-ktR"/>
+                                <exclude reference="SHc-tK-7RQ"/>
+                                <exclude reference="yZe-Sg-mQA"/>
+                                <exclude reference="DGA-4w-HRi"/>
                                 <exclude reference="0sP-DN-cQp"/>
                                 <exclude reference="oM0-Nx-zo9"/>
-                                <exclude reference="yZe-Sg-mQA"/>
-                                <exclude reference="Qwn-dz-9j0"/>
-                                <exclude reference="DGA-4w-HRi"/>
+                                <exclude reference="Zq1-2i-XhJ"/>
                                 <exclude reference="25M-yt-DXm"/>
                                 <exclude reference="3Em-8c-kjB"/>
                                 <exclude reference="GQM-s5-ZYy"/>
                                 <exclude reference="eOV-3f-OGb"/>
                                 <exclude reference="g9y-Ek-i4u"/>
-                                <exclude reference="Zq1-2i-XhJ"/>
-                                <exclude reference="dvw-Ph-stc"/>
-                                <exclude reference="z7y-ga-YRm"/>
-                                <exclude reference="9jk-Z6-ktR"/>
-                                <exclude reference="SHc-tK-7RQ"/>
-                                <exclude reference="vCI-gf-dZg"/>
-                                <exclude reference="y0O-LE-nlr"/>
-                                <exclude reference="8Ax-1A-acP"/>
-                                <exclude reference="Nvp-Zs-ZSh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -717,25 +716,24 @@
                                 <include reference="Dfh-Bf-sbe"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="dvw-Ph-stc"/>
+                                <include reference="z7y-ga-YRm"/>
+                                <include reference="8Ax-1A-acP"/>
+                                <include reference="Nvp-Zs-ZSh"/>
+                                <include reference="vCI-gf-dZg"/>
+                                <include reference="y0O-LE-nlr"/>
+                                <include reference="9jk-Z6-ktR"/>
+                                <include reference="SHc-tK-7RQ"/>
+                                <include reference="yZe-Sg-mQA"/>
+                                <include reference="DGA-4w-HRi"/>
                                 <include reference="0sP-DN-cQp"/>
                                 <include reference="oM0-Nx-zo9"/>
-                                <include reference="yZe-Sg-mQA"/>
-                                <include reference="Qwn-dz-9j0"/>
-                                <include reference="DGA-4w-HRi"/>
+                                <include reference="Zq1-2i-XhJ"/>
                                 <include reference="25M-yt-DXm"/>
                                 <include reference="3Em-8c-kjB"/>
                                 <include reference="GQM-s5-ZYy"/>
                                 <include reference="eOV-3f-OGb"/>
                                 <include reference="g9y-Ek-i4u"/>
-                                <include reference="Zq1-2i-XhJ"/>
-                                <include reference="dvw-Ph-stc"/>
-                                <include reference="z7y-ga-YRm"/>
-                                <include reference="9jk-Z6-ktR"/>
-                                <include reference="SHc-tK-7RQ"/>
-                                <include reference="vCI-gf-dZg"/>
-                                <include reference="y0O-LE-nlr"/>
-                                <include reference="8Ax-1A-acP"/>
-                                <include reference="Nvp-Zs-ZSh"/>
                             </mask>
                         </variation>
                     </view>

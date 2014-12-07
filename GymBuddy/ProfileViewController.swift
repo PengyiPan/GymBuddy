@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController{
     @IBOutlet weak var picImage: UIImageView!
     let tapRec = UITapGestureRecognizer()
     @IBAction func logOutButton(sender: AnyObject) {
-        NSLog("User Credentials in CoreData Deleted")
+        //NSLog("User Credentials in CoreData Deleted")
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             for result in fetchResults {
@@ -58,7 +58,7 @@ class ProfileViewController: UIViewController{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        NSLog("Ready to launch segue with name " + segue.identifier!)
+        //NSLog("Ready to launch segue with name " + segue.identifier!)
         if segue.identifier == "EditPicSegue" {
             var viewController = segue.destinationViewController as ProfileChoiceOverallViewController
             viewController.myEditThing = EditAttribute.EditPicture

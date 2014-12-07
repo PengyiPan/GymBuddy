@@ -36,7 +36,7 @@ class RegistrationModel {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
             {
                 (response, data, error) in
-                NSLog("Check Duplicated NetID Task Completed")
+                //NSLog("Check Duplicated NetID Task Completed")
                 if error != nil{
                     println(error?.localizedDescription)
                 }
@@ -74,7 +74,7 @@ class RegistrationModel {
         var query = "query= INSERT INTO User (`net_id`, `password`, `last_name`, `first_name`, `gender`, `picture_url`, `num_thumbs`, `signature`) VALUES (" + net_id + ", " + passwordCopy + ", NULL, NULL, NULL, 'default picture', 0, NULL)"
         user.picture_url = "default picture"
         user.numb_thumb_ups = "0"
-        println(query)
+        //println(query)
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         request.HTTPMethod = "POST"
@@ -83,7 +83,7 @@ class RegistrationModel {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
             {
                 (response, data, error) in
-                NSLog("Add User Account Task Completed")
+                //NSLog("Add User Account Task Completed")
                 if error != nil{
                     println(error?.localizedDescription)
                 }

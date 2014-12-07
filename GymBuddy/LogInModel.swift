@@ -22,7 +22,7 @@ class LogInModel {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
             {
                 (response, data, error) in
-                NSLog("Search Credentials Task Completed")
+                //NSLog("Search Credentials Task Completed")
                 if error != nil{
                     println(error?.localizedDescription)
                 }
@@ -48,7 +48,7 @@ class LogInModel {
                 user.gender = (json["gender"] as AnyObject? as? String) ?? ""
                 user.picture_url = (json["picture_url"] as AnyObject? as? String) ?? ""
                 user.numb_thumb_ups = (json["num_thumbs"] as AnyObject? as? String) ?? ""
-                NSLog("user has a thumb of " + user.numb_thumb_ups!)
+                //NSLog("user has a thumb of " + user.numb_thumb_ups!)
                 user.signature = (json["signature"] as AnyObject? as? String) ?? ""
                 list.append(user)
             }

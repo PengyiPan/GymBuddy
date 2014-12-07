@@ -49,6 +49,9 @@
 		AA62C82A1A342347003C524D /* MyPostedRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA62C8291A342347003C524D /* MyPostedRecords.storyboard */; };
 		AA62C82C1A342699003C524D /* MyPostedRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C82B1A342699003C524D /* MyPostedRecordsViewController.swift */; };
 		AA62C8301A3427D6003C524D /* MyPostedRecordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C82F1A3427D6003C524D /* MyPostedRecordsModel.swift */; };
+		AA62C8321A3437E8003C524D /* AddPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C8311A3437E8003C524D /* AddPostViewModel.swift */; };
+		AA62C8341A3437F0003C524D /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C8331A3437F0003C524D /* AddPostViewController.swift */; };
+		AA62C8361A343843003C524D /* AddPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA62C8351A343843003C524D /* AddPost.storyboard */; };
 		AA6685961A27E08800A802BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6685951A27E08800A802BC /* Profile.storyboard */; };
 		AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6685971A27E74500A802BC /* ProfileViewController.swift */; };
 		AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */; };
@@ -120,6 +123,9 @@
 		AA62C8291A342347003C524D /* MyPostedRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPostedRecords.storyboard; sourceTree = "<group>"; };
 		AA62C82B1A342699003C524D /* MyPostedRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostedRecordsViewController.swift; sourceTree = "<group>"; };
 		AA62C82F1A3427D6003C524D /* MyPostedRecordsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostedRecordsModel.swift; sourceTree = "<group>"; };
+		AA62C8311A3437E8003C524D /* AddPostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewModel.swift; sourceTree = "<group>"; };
+		AA62C8331A3437F0003C524D /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		AA62C8351A343843003C524D /* AddPost.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPost.storyboard; sourceTree = "<group>"; };
 		AA6685951A27E08800A802BC /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AA6685971A27E74500A802BC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAttribute.swift; sourceTree = "<group>"; };
@@ -187,6 +193,8 @@
 		0767FB4819F89102000AB021 /* GymBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				AA62C8351A343843003C524D /* AddPost.storyboard */,
+				AA62C8331A3437F0003C524D /* AddPostViewController.swift */,
 				AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */,
 				AA4637471A279B6B001B75CC /* Models */,
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
@@ -216,6 +224,7 @@
 		0767FB4919F89102000AB021 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA62C8311A3437E8003C524D /* AddPostViewModel.swift */,
 				071BD9501A04354500CCE835 /* RBStoryboardLink */,
 				0722280E1A213B050015DC7F /* MatchingViewModel.swift */,
 				0767FB4A19F89102000AB021 /* Info.plist */,
@@ -359,6 +368,7 @@
 				071BD89C1A04252C00CCE835 /* Query.storyboard in Resources */,
 				07829F971A33D8CB004DC0F1 /* Detail.storyboard in Resources */,
 				071BD8981A04233D00CCE835 /* Login.storyboard in Resources */,
+				AA62C8361A343843003C524D /* AddPost.storyboard in Resources */,
 				07CF3EB71A02DFAF00FF8773 /* LaunchScreen.xib in Resources */,
 				071BD89E1A0425B400CCE835 /* Matching.storyboard in Resources */,
 				AA62C8261A3416DC003C524D /* EditPassword.storyboard in Resources */,
@@ -389,6 +399,7 @@
 				AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */,
 				071BD9631A04354500CCE835 /* UIViewController+RBStoryboardLink.m in Sources */,
 				07829F931A33B3D8004DC0F1 /* DetailViewModel.swift in Sources */,
+				AA62C8321A3437E8003C524D /* AddPostViewModel.swift in Sources */,
 				071BD9611A04354500CCE835 /* RBStoryboardPushSegue.m in Sources */,
 				AA62C8281A3418E7003C524D /* EditPasswordViewController.swift in Sources */,
 				AA3ED21B1A2862FD00E7DA42 /* UserData.swift in Sources */,
@@ -410,6 +421,7 @@
 				0769AEBA1A0360E400689EAE /* GymBuddy.xcdatamodeld in Sources */,
 				AA9AD4B21A30D4D7002B1973 /* ProfileUpdateModel.swift in Sources */,
 				0722280F1A213B050015DC7F /* MatchingViewModel.swift in Sources */,
+				AA62C8341A3437F0003C524D /* AddPostViewController.swift in Sources */,
 				AA2E32471A33F202000BF47A /* ProfileChoiceViewController.swift in Sources */,
 				AA3ED24B1A28FB1000E7DA42 /* RegistrationModel.swift in Sources */,
 				07CF3DD81A02CADC00FF8773 /* QueryViewController.swift in Sources */,

@@ -37,7 +37,7 @@ class MyPostedRecordsViewController:UIViewController, UITableViewDelegate, UITab
         var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("recordCell") as UITableViewCell
         cell.textLabel?.text =  myModel.makeCellTitleString(myData[indexPath.row] as PostedWorkoutRecord)
         cell.detailTextLabel?.text = myModel.makeCellDetailString(myData[indexPath.row] as PostedWorkoutRecord)
-        NSLog("changed cell with text " + cell.textLabel!.text!)
+        //NSLog("changed cell with text " + cell.textLabel!.text!)
         return cell
     }
     
@@ -46,7 +46,7 @@ class MyPostedRecordsViewController:UIViewController, UITableViewDelegate, UITab
     }
     
     func didGetQueryResult(resultList:Array<PostedWorkoutRecord>){
-        NSLog("MyPostedRecordsViewController got query results")
+        //NSLog("MyPostedRecordsViewController got query results")
         myData = resultList
         myTableView.reloadData()
     }
