@@ -14,5 +14,20 @@ enum EditAttribute {
     case EditSignature
     case EditGender
     case EditPicture
+    
+    var description:String {
+        switch self {
+        case .EditFirstName:
+            return "EditFirstName"
+        case .EditLastName:
+            return "EditLastName"
+        case .EditSignature:
+            return "EditSignature"
+        case .EditGender:
+            return "EditGender"
+        case .EditPicture:
+            return "EditPicture"
+        }
+    }
 }
 

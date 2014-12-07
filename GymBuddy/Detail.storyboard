@@ -40,21 +40,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPZ-b5-Iii">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.68103021527865137" green="1" blue="0.92907613673487366" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="UPQ-dN-p5F"/>
-                                    <constraint firstAttribute="width" constant="368" id="vvi-0N-1Is"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UPQ-dN-p5F"/>
-                                        <exclude reference="vvi-0N-1Is"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="UPQ-dN-p5F"/>
-                                        <include reference="vvi-0N-1Is"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="150" width="368" height="300"/>
                                 </variation>
                             </view>
                         </subviews>
@@ -63,13 +50,10 @@
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="0gg-n2-Ovd"/>
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="7aJ-TF-vT2"/>
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leadingMargin" constant="-16" id="7fU-U7-icB"/>
-                            <constraint firstItem="LPZ-b5-Iii" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leadingMargin" id="9b1-lv-SEA"/>
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="CJe-JM-svQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9qB-ZF-aw0" secondAttribute="trailing" constant="-16" id="Suh-bA-XNt"/>
-                            <constraint firstItem="LPZ-b5-Iii" firstAttribute="top" secondItem="9qB-ZF-aw0" secondAttribute="bottom" constant="86" id="V06-FC-vu4"/>
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="VmZ-49-eqd"/>
                             <constraint firstAttribute="trailing" secondItem="9qB-ZF-aw0" secondAttribute="trailing" id="WeP-9x-qEG"/>
-                            <constraint firstItem="LPZ-b5-Iii" firstAttribute="trailing" secondItem="PYK-Bp-bh8" secondAttribute="trailingMargin" id="bkf-rf-soj"/>
                             <constraint firstAttribute="trailing" secondItem="9qB-ZF-aw0" secondAttribute="trailing" id="dgD-Zg-KQq"/>
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="top" secondItem="ZPU-mj-bXQ" secondAttribute="bottom" id="lVt-M8-vMW"/>
                         </constraints>
@@ -84,9 +68,6 @@
                                 <exclude reference="Suh-bA-XNt"/>
                                 <exclude reference="WeP-9x-qEG"/>
                                 <exclude reference="lVt-M8-vMW"/>
-                                <exclude reference="9b1-lv-SEA"/>
-                                <exclude reference="V06-FC-vu4"/>
-                                <exclude reference="bkf-rf-soj"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -100,9 +81,6 @@
                                 <include reference="Suh-bA-XNt"/>
                                 <include reference="WeP-9x-qEG"/>
                                 <include reference="lVt-M8-vMW"/>
-                                <include reference="9b1-lv-SEA"/>
-                                <include reference="V06-FC-vu4"/>
-                                <include reference="bkf-rf-soj"/>
                             </mask>
                         </variation>
                     </view>

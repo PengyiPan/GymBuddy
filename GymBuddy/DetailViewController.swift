@@ -60,7 +60,7 @@ class DetailViewController: UIViewController {
     func didReceiveQueryResult(data: Array<User>){
         userToPresent = data[0]
         
-        self.displayLabel.text = "Name: " + userToPresent.first_name! + " " + userToPresent.last_name! + 
+        //self.displayLabel.text = "Name: " + userToPresent.first_name! + " " + userToPresent.last_name! +
             "Gender: " + userToPresent.gender!
       
 //        self.urlLabel.text = "Url: " + userToPresent.picture_url!
