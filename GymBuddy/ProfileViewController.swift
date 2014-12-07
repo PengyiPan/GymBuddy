@@ -24,6 +24,9 @@ class ProfileViewController: UIViewController{
         }
         self.performSegueWithIdentifier("logOutSegue", sender: self)
     }
+    @IBAction func viewPostedButton(sender: AnyObject) {
+        
+    }
     
     lazy var managedObjectContext : NSManagedObjectContext? = {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate

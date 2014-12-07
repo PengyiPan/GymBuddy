@@ -217,10 +217,23 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzl-lE-PPI">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="275" width="400" height="379"/>
+                                </variation>
                                 <connections>
                                     <segue destination="Mjm-3N-RZd" kind="embed" identifier="embedProfileTableSegue" id="4Sd-XO-Kf5"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sG-pv-4eq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="View Posted Records">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewPostedButton:" destination="087-w3-Wkd" eventType="touchUpInside" id="jQE-cO-xgI"/>
+                                    <segue destination="ip9-ah-X1x" kind="custom" identifier="ViewRecordsSegue" customClass="RBStoryboardModalSegue" id="kAp-Wx-AmM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -230,14 +243,18 @@
                             <constraint firstItem="Lzl-lE-PPI" firstAttribute="top" secondItem="bOo-lB-yk1" secondAttribute="bottom" constant="35" id="98O-qW-7ws" userLabel="thumbNumBottom"/>
                             <constraint firstItem="Lzl-lE-PPI" firstAttribute="trailing" secondItem="PCX-5e-SYB" secondAttribute="trailing" id="AfH-R1-ZkV" userLabel="containerRight"/>
                             <constraint firstItem="tJV-H8-uX5" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" constant="127" id="In9-0j-7zt" userLabel="profilePicLeft"/>
+                            <constraint firstItem="1sG-pv-4eq" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" constant="73" id="Kak-tT-5BZ" userLabel="viewButtonLeft"/>
                             <constraint firstAttribute="trailing" secondItem="bOo-lB-yk1" secondAttribute="trailing" constant="120" id="L2Z-l8-XcC" userLabel="thumbNumRight"/>
                             <constraint firstItem="afn-iY-bc6" firstAttribute="top" secondItem="tJV-H8-uX5" secondAttribute="bottom" constant="20" id="LaT-Bi-9Qc" userLabel="profilePicBottom"/>
                             <constraint firstItem="tJV-H8-uX5" firstAttribute="top" secondItem="cnT-QF-NtD" secondAttribute="bottom" constant="15" id="MdU-sJ-J54" userLabel="profilePicTop"/>
                             <constraint firstItem="bOo-lB-yk1" firstAttribute="centerY" secondItem="afn-iY-bc6" secondAttribute="centerY" id="OjW-dG-aFN" userLabel="thumbYAlighment"/>
+                            <constraint firstItem="p5L-64-KP6" firstAttribute="top" secondItem="1sG-pv-4eq" secondAttribute="bottom" constant="35" id="Q9a-f8-6E5" userLabel="viewButtonBottom"/>
                             <constraint firstItem="cnT-QF-NtD" firstAttribute="trailing" secondItem="PCX-5e-SYB" secondAttribute="trailing" id="UCd-md-8Wj" userLabel="navigationRight"/>
                             <constraint firstItem="afn-iY-bc6" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" constant="135" id="WBj-ua-i6Z" userLabel="thumbPicLeft"/>
-                            <constraint firstItem="Lzl-lE-PPI" firstAttribute="bottom" secondItem="p5L-64-KP6" secondAttribute="top" id="hnX-0s-A91" userLabel="containerBottom"/>
+                            <constraint firstItem="1sG-pv-4eq" firstAttribute="top" secondItem="Lzl-lE-PPI" secondAttribute="bottom" constant="30" id="g5e-kl-h8X" userLabel="viewButtonTop"/>
                             <constraint firstItem="bOo-lB-yk1" firstAttribute="top" secondItem="tJV-H8-uX5" secondAttribute="bottom" constant="30" id="iph-c5-2So" userLabel="thumbNumTop"/>
+                            <constraint firstItem="1sG-pv-4eq" firstAttribute="centerX" secondItem="Lzl-lE-PPI" secondAttribute="centerX" id="j8Y-as-imd" userLabel="viewButtonXCenter"/>
+                            <constraint firstAttribute="trailing" secondItem="1sG-pv-4eq" secondAttribute="trailing" constant="72" id="jIG-75-T7o" userLabel="viewButtonBottom"/>
                             <constraint firstItem="cnT-QF-NtD" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" id="rYN-DR-gss" userLabel="navigationLeft"/>
                             <constraint firstItem="Lzl-lE-PPI" firstAttribute="leading" secondItem="PCX-5e-SYB" secondAttribute="leading" id="yF4-Si-Eod" userLabel="containerLeft"/>
                         </constraints>
@@ -248,24 +265,29 @@
                                 <exclude reference="afn-iY-bc6"/>
                                 <exclude reference="bOo-lB-yk1"/>
                                 <exclude reference="Lzl-lE-PPI"/>
+                                <exclude reference="1sG-pv-4eq"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="1dR-xz-N12"/>
+                                <exclude reference="UCd-md-8Wj"/>
+                                <exclude reference="rYN-DR-gss"/>
+                                <exclude reference="06n-pe-eGq"/>
+                                <exclude reference="In9-0j-7zt"/>
+                                <exclude reference="MdU-sJ-J54"/>
+                                <exclude reference="LaT-Bi-9Qc"/>
+                                <exclude reference="WBj-ua-i6Z"/>
+                                <exclude reference="98O-qW-7ws"/>
+                                <exclude reference="AfH-R1-ZkV"/>
+                                <exclude reference="yF4-Si-Eod"/>
                                 <exclude reference="7Xm-aP-QkE"/>
                                 <exclude reference="L2Z-l8-XcC"/>
                                 <exclude reference="OjW-dG-aFN"/>
                                 <exclude reference="iph-c5-2So"/>
-                                <exclude reference="1dR-xz-N12"/>
-                                <exclude reference="UCd-md-8Wj"/>
-                                <exclude reference="rYN-DR-gss"/>
-                                <exclude reference="98O-qW-7ws"/>
-                                <exclude reference="AfH-R1-ZkV"/>
-                                <exclude reference="hnX-0s-A91"/>
-                                <exclude reference="yF4-Si-Eod"/>
-                                <exclude reference="LaT-Bi-9Qc"/>
-                                <exclude reference="WBj-ua-i6Z"/>
-                                <exclude reference="06n-pe-eGq"/>
-                                <exclude reference="In9-0j-7zt"/>
-                                <exclude reference="MdU-sJ-J54"/>
+                                <exclude reference="Kak-tT-5BZ"/>
+                                <exclude reference="g5e-kl-h8X"/>
+                                <exclude reference="j8Y-as-imd"/>
+                                <exclude reference="jIG-75-T7o"/>
+                                <exclude reference="Q9a-f8-6E5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -275,24 +297,29 @@
                                 <include reference="afn-iY-bc6"/>
                                 <include reference="bOo-lB-yk1"/>
                                 <include reference="Lzl-lE-PPI"/>
+                                <include reference="1sG-pv-4eq"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="1dR-xz-N12"/>
+                                <include reference="UCd-md-8Wj"/>
+                                <include reference="rYN-DR-gss"/>
+                                <include reference="06n-pe-eGq"/>
+                                <include reference="In9-0j-7zt"/>
+                                <include reference="MdU-sJ-J54"/>
+                                <include reference="LaT-Bi-9Qc"/>
+                                <include reference="WBj-ua-i6Z"/>
+                                <include reference="98O-qW-7ws"/>
+                                <include reference="AfH-R1-ZkV"/>
+                                <include reference="yF4-Si-Eod"/>
                                 <include reference="7Xm-aP-QkE"/>
                                 <include reference="L2Z-l8-XcC"/>
                                 <include reference="OjW-dG-aFN"/>
                                 <include reference="iph-c5-2So"/>
-                                <include reference="1dR-xz-N12"/>
-                                <include reference="UCd-md-8Wj"/>
-                                <include reference="rYN-DR-gss"/>
-                                <include reference="98O-qW-7ws"/>
-                                <include reference="AfH-R1-ZkV"/>
-                                <include reference="hnX-0s-A91"/>
-                                <include reference="yF4-Si-Eod"/>
-                                <include reference="LaT-Bi-9Qc"/>
-                                <include reference="WBj-ua-i6Z"/>
-                                <include reference="06n-pe-eGq"/>
-                                <include reference="In9-0j-7zt"/>
-                                <include reference="MdU-sJ-J54"/>
+                                <include reference="Kak-tT-5BZ"/>
+                                <include reference="g5e-kl-h8X"/>
+                                <include reference="j8Y-as-imd"/>
+                                <include reference="jIG-75-T7o"/>
+                                <include reference="Q9a-f8-6E5"/>
                             </mask>
                         </variation>
                     </view>
@@ -308,6 +335,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pb4-An-sjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="219" y="189"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="bAS-Ki-sBF">
+            <objects>
+                <viewController id="ip9-ah-X1x" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F6H-u5-bgE"/>
+                        <viewControllerLayoutGuide type="bottom" id="uRV-py-Ywh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oVz-OC-dOf">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="MyPostedRecords"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlT-2L-62i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304.5" y="954"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="dSf-Mk-Ujk">
@@ -338,6 +386,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="l6u-Mq-1mV"/>
-        <segue reference="lmh-N6-NLB"/>
+        <segue reference="eFE-gp-iAe"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -46,6 +46,9 @@
 		AA62C8241A33FFD3003C524D /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C8231A33FFD3003C524D /* DetailTableViewController.swift */; };
 		AA62C8261A3416DC003C524D /* EditPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA62C8251A3416DC003C524D /* EditPassword.storyboard */; };
 		AA62C8281A3418E7003C524D /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C8271A3418E7003C524D /* EditPasswordViewController.swift */; };
+		AA62C82A1A342347003C524D /* MyPostedRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA62C8291A342347003C524D /* MyPostedRecords.storyboard */; };
+		AA62C82C1A342699003C524D /* MyPostedRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C82B1A342699003C524D /* MyPostedRecordsViewController.swift */; };
+		AA62C8301A3427D6003C524D /* MyPostedRecordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA62C82F1A3427D6003C524D /* MyPostedRecordsModel.swift */; };
 		AA6685961A27E08800A802BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6685951A27E08800A802BC /* Profile.storyboard */; };
 		AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6685971A27E74500A802BC /* ProfileViewController.swift */; };
 		AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */; };
@@ -114,6 +117,9 @@
 		AA62C8231A33FFD3003C524D /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		AA62C8251A3416DC003C524D /* EditPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditPassword.storyboard; sourceTree = "<group>"; };
 		AA62C8271A3418E7003C524D /* EditPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
+		AA62C8291A342347003C524D /* MyPostedRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPostedRecords.storyboard; sourceTree = "<group>"; };
+		AA62C82B1A342699003C524D /* MyPostedRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostedRecordsViewController.swift; sourceTree = "<group>"; };
+		AA62C82F1A3427D6003C524D /* MyPostedRecordsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostedRecordsModel.swift; sourceTree = "<group>"; };
 		AA6685951A27E08800A802BC /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AA6685971A27E74500A802BC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAttribute.swift; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 				AA9AD4AF1A2F9C16002B1973 /* EditAttribute.swift */,
 				AA62C8251A3416DC003C524D /* EditPassword.storyboard */,
 				AA62C8271A3418E7003C524D /* EditPasswordViewController.swift */,
+				AA62C8291A342347003C524D /* MyPostedRecords.storyboard */,
+				AA62C82B1A342699003C524D /* MyPostedRecordsViewController.swift */,
 			);
 			name = ProfileTableViews;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 				AA3ED24A1A28FB1000E7DA42 /* RegistrationModel.swift */,
 				AA9AD4B11A30D4D7002B1973 /* ProfileUpdateModel.swift */,
 				AA9AD4B31A30DC91002B1973 /* UpdateResult.swift */,
+				AA62C82F1A3427D6003C524D /* MyPostedRecordsModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -345,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA62C82A1A342347003C524D /* MyPostedRecords.storyboard in Resources */,
 				071BD89A1A04247000CCE835 /* Registration.storyboard in Resources */,
 				071BD89C1A04252C00CCE835 /* Query.storyboard in Resources */,
 				07829F971A33D8CB004DC0F1 /* Detail.storyboard in Resources */,
@@ -374,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3ED24D1A2902DF00E7DA42 /* ProfileTableViewController.swift in Sources */,
+				AA62C8301A3427D6003C524D /* MyPostedRecordsModel.swift in Sources */,
 				071BD9621A04354500CCE835 /* RBStoryboardSegue.m in Sources */,
 				AA9AD4B01A2F9C16002B1973 /* EditAttribute.swift in Sources */,
 				071BD9631A04354500CCE835 /* UIViewController+RBStoryboardLink.m in Sources */,
@@ -382,6 +393,7 @@
 				AA62C8281A3418E7003C524D /* EditPasswordViewController.swift in Sources */,
 				AA3ED21B1A2862FD00E7DA42 /* UserData.swift in Sources */,
 				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
+				AA62C82C1A342699003C524D /* MyPostedRecordsViewController.swift in Sources */,
 				071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */,
 				AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */,
 				AA3ED2521A2A55BE00E7DA42 /* ProfileEditViewController.swift in Sources */,

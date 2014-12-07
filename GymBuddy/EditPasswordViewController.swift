@@ -84,6 +84,6 @@ class EditPasswordViewController:UIViewController {
         else {
             return nil
         }
-        }()
-    
+    }()
+
 }

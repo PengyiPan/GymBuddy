@@ -26,7 +26,7 @@ class ProfileUpdateModel {
         }
         
         var query = "query= UPDATE User SET \(attributeTitle) = \(content) WHERE net_id = \(net_id)"
-        println(query)
+        NSLog(query)
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         request.HTTPMethod = "POST"
