@@ -27,6 +27,8 @@
 		07829F991A33FC36004DC0F1 /* AddPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07829F981A33FC36004DC0F1 /* AddPost.storyboard */; };
 		07829F9B1A33FCB7004DC0F1 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07829F9A1A33FCB7004DC0F1 /* AddPostViewController.swift */; };
 		07829F9D1A33FCCD004DC0F1 /* AddPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07829F9C1A33FCCD004DC0F1 /* AddPostViewModel.swift */; };
+		07829F9F1A3435F6004DC0F1 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07829F9E1A3435F6004DC0F1 /* EditPasswordViewController.swift */; };
+		07829FA11A34364A004DC0F1 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07829FA01A34364A004DC0F1 /* DetailTableViewController.swift */; };
 		078864491A33A35100E44B02 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078864481A33A35100E44B02 /* DetailViewController.swift */; };
 		07CF3DD41A02CA5E00FF8773 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0767FB5219F89102000AB021 /* Images.xcassets */; };
 		07CF3DD51A02CAC100FF8773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767FB4B19F89102000AB021 /* AppDelegate.swift */; };
@@ -103,6 +105,8 @@
 		07829F981A33FC36004DC0F1 /* AddPost.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPost.storyboard; sourceTree = "<group>"; };
 		07829F9A1A33FCB7004DC0F1 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		07829F9C1A33FCCD004DC0F1 /* AddPostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewModel.swift; sourceTree = "<group>"; };
+		07829F9E1A3435F6004DC0F1 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
+		07829FA01A34364A004DC0F1 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		078864481A33A35100E44B02 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AA2E32421A33F1F9000BF47A /* ProfileChoice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileChoice.storyboard; sourceTree = "<group>"; };
 		AA2E32441A33F1FE000BF47A /* ProfileChoiceOverallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileChoiceOverallViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 				071BD89D1A0425B400CCE835 /* Matching.storyboard */,
 				07829F981A33FC36004DC0F1 /* AddPost.storyboard */,
 				07829F9A1A33FCB7004DC0F1 /* AddPostViewController.swift */,
+				07829FA01A34364A004DC0F1 /* DetailTableViewController.swift */,
 				078864481A33A35100E44B02 /* DetailViewController.swift */,
 				071BD8991A04247000CCE835 /* Registration.storyboard */,
 				0767FB6D19F899C4000AB021 /* QueryViewController.swift */,
@@ -243,6 +248,7 @@
 		AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */ = {
 			isa = PBXGroup;
 			children = (
+				07829F9E1A3435F6004DC0F1 /* EditPasswordViewController.swift */,
 				AA2E32461A33F202000BF47A /* ProfileChoiceViewController.swift */,
 				AA2E32441A33F1FE000BF47A /* ProfileChoiceOverallViewController.swift */,
 				AA3ED24F1A2A53CD00E7DA42 /* ProfileTextEdit.storyboard */,
@@ -383,7 +389,9 @@
 				071BD95F1A04354500CCE835 /* RBStoryboardModalSegue.m in Sources */,
 				071BD95E1A04354500CCE835 /* RBStoryboardLink.m in Sources */,
 				AA4637491A279BA7001B75CC /* LogInModel.swift in Sources */,
+				07829F9F1A3435F6004DC0F1 /* EditPasswordViewController.swift in Sources */,
 				07829F9B1A33FCB7004DC0F1 /* AddPostViewController.swift in Sources */,
+				07829FA11A34364A004DC0F1 /* DetailTableViewController.swift in Sources */,
 				AA3ED2521A2A55BE00E7DA42 /* ProfileEditViewController.swift in Sources */,
 				07829F9D1A33FCCD004DC0F1 /* AddPostViewModel.swift in Sources */,
 				AA6685981A27E74500A802BC /* ProfileViewController.swift in Sources */,

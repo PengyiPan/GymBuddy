@@ -50,6 +50,7 @@ class ProfileEditViewController:UIViewController {
                 textField.text = user.last_name
             case EditAttribute.EditSignature:
                 textField.text = user.signature
+                textField.placeholder = "You may leave contact information here"
             default:
                 textField.text = ""
             }
