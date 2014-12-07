@@ -11,8 +11,6 @@ import UIKit
 class MatchingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myTableView: UITableView!
-    
-    @IBOutlet weak var toDetailBtn: UIButton!
 
     var myData: Array<AnyObject> = []
     
@@ -27,8 +25,6 @@ class MatchingViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        toDetailBtn.alpha = 0
-        
         makeQuery()
         //myData = ["asdasd","asdasdddd","sssss","kkkkk"]
         

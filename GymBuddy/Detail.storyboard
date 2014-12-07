@@ -122,26 +122,44 @@
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcp-sB-8eq">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Hip-eQ-8he"/>
+                                    <constraint firstAttribute="width" constant="60" id="V6E-WZ-97i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="235" width="42" height="21"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hip-eQ-8he"/>
+                                        <exclude reference="V6E-WZ-97i"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="220" y="235" width="60" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="Hip-eQ-8he"/>
+                                        <include reference="V6E-WZ-97i"/>
+                                    </mask>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uSv-dd-CyR" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" constant="120" id="7Ff-nR-Ean" userLabel="picLeft"/>
+                            <constraint firstItem="bcp-sB-8eq" firstAttribute="top" secondItem="uSv-dd-CyR" secondAttribute="bottom" constant="29" id="86P-bh-IgL"/>
                             <constraint firstAttribute="trailing" secondItem="9qB-ZF-aw0" secondAttribute="trailing" id="8LP-WB-7jc" userLabel="navigationRight"/>
                             <constraint firstItem="uSv-dd-CyR" firstAttribute="top" secondItem="9qB-ZF-aw0" secondAttribute="bottom" constant="20" id="QjH-1d-IBo" userLabel="picTop"/>
+                            <constraint firstItem="bcp-sB-8eq" firstAttribute="leading" secondItem="jvV-aW-xNb" secondAttribute="trailing" constant="33" id="ZAU-W4-wcr"/>
                             <constraint firstItem="jvV-aW-xNb" firstAttribute="top" secondItem="uSv-dd-CyR" secondAttribute="bottom" constant="18" id="atC-rw-Xc4" userLabel="thumbTop"/>
+                            <constraint firstItem="m5u-Lo-SRZ" firstAttribute="top" secondItem="bcp-sB-8eq" secondAttribute="bottom" constant="34" id="h8o-MU-JrU"/>
                             <constraint firstItem="jvV-aW-xNb" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" constant="130" id="lXM-rh-taC" userLabel="thumbLeft"/>
                             <constraint firstAttribute="trailing" secondItem="uSv-dd-CyR" secondAttribute="trailing" constant="120" id="ld9-bI-bno" userLabel="picRight"/>
                             <constraint firstItem="uSv-dd-CyR" firstAttribute="centerX" secondItem="sNA-5q-yni" secondAttribute="centerX" id="qLV-ON-fsS" userLabel="picXCenter"/>
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="top" secondItem="ZPU-mj-bXQ" secondAttribute="bottom" id="slu-c1-djN" userLabel="navigationTop"/>
                             <constraint firstItem="uSv-dd-CyR" firstAttribute="centerX" secondItem="m5u-Lo-SRZ" secondAttribute="centerX" id="w4n-iX-BhB" userLabel="containerXCenter"/>
                             <constraint firstItem="9qB-ZF-aw0" firstAttribute="leading" secondItem="PYK-Bp-bh8" secondAttribute="leading" id="wbU-mf-ebh" userLabel="navigationLeft"/>
+                            <constraint firstAttribute="trailing" secondItem="bcp-sB-8eq" secondAttribute="trailing" constant="120" id="xDf-i3-pnV" userLabel="numThumbRight"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -163,6 +181,10 @@
                                 <exclude reference="w4n-iX-BhB"/>
                                 <exclude reference="atC-rw-Xc4"/>
                                 <exclude reference="lXM-rh-taC"/>
+                                <exclude reference="h8o-MU-JrU"/>
+                                <exclude reference="86P-bh-IgL"/>
+                                <exclude reference="ZAU-W4-wcr"/>
+                                <exclude reference="xDf-i3-pnV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -189,6 +211,10 @@
                                 <include reference="w4n-iX-BhB"/>
                                 <include reference="atC-rw-Xc4"/>
                                 <include reference="lXM-rh-taC"/>
+                                <include reference="h8o-MU-JrU"/>
+                                <include reference="86P-bh-IgL"/>
+                                <include reference="ZAU-W4-wcr"/>
+                                <include reference="xDf-i3-pnV"/>
                             </mask>
                         </variation>
                     </view>
