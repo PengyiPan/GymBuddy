@@ -15,7 +15,7 @@ class ProfileChoiceViewController:UITableViewController {
     var selectedAttribute:String = ""
     var selected = Dictionary<String, NSIndexPath>()
     let genderItems = ["Male", "Female", "Complicated"]
-    let pictureItems = ["default picture", "doge", "bluedevil"]
+    let pictureItems = ["default picture", "doge", "female1","female2","female3","female4","male1","male2","male3","male4","male5","male6"]
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch myEditThing {
