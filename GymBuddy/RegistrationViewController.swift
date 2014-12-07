@@ -51,7 +51,7 @@ class RegistrationViewController: UIViewController {
             progressView.removeFromSuperview()
             
             if code == RegistrationModel.RegisterResult.NonValidPassword {
-                popUpAlertDialog("NonValid Password", message: "Password must be longer than 5 and shorter than 10 (inclusive)", buttonText: "OK")
+                popUpAlertDialog("NonValid Password", message: "Password length need to be between 5 to 10 characters and contain both digits and letters.", buttonText: "OK")
             } else if code == RegistrationModel.RegisterResult.AlreadyExists {
                 popUpAlertDialog("NetID Already Exists", message: "Change NetID or Login With Password", buttonText: "OK")
             }
