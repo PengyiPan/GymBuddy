@@ -77,7 +77,7 @@ class MyPostedRecordsModel {
         
         var delete_Record = "query= DELETE FROM `PostedWorkoutRecord2` WHERE record_id = \(record_id)"
         
-        
+        var delete_PostedBy =  "query= DELETE FROM `PostedBy` WHERE record_id = \(record_id)";
         
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request_1:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
@@ -109,8 +109,7 @@ class MyPostedRecordsModel {
 //                //self.parseJsonIDsData(jsonResult, viewCtrl: viewCtrl)
 //
 //        }
-        
-        var delete_PostedBy =  "query= DELETE FROM `PostedBy` WHERE record_id = \(record_id)";
+
 
         //then delete postedby
         let URL2: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
