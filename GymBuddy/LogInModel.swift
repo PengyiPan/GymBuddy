@@ -36,6 +36,7 @@ class LogInModel {
         }
     }
     
+
     func parseJsonData(anyObj:AnyObject?, viewCtrl:LogInViewController){
         var list:Array<User> = []
         if  anyObj is Array<AnyObject> {
@@ -55,4 +56,52 @@ class LogInModel {
         }
         viewCtrl.didGetQueryResult(list)
     }
+    
+    //if gorget password, ask for netid, first/lastname, and email password to netid@duke.edu
+    func retrievePassword(viewCtrl: LogInViewController, netID:String, lastname:String, firstname: String){
+        var net_id = "'" + netID + "'"
+        var firstnamecopy = "'" + firstname + "'"
+        var lastnamecopy = "'" + lastname + "'"
+        
+        var query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND first_name = " + firstnamecopy + " AND last_name = " + lastnamecopy
+
+        let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = query.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                //NSLog("Search Credentials Task Completed")
+                if error != nil{
+                    println(error?.localizedDescription)
+                }
+                var err: NSError?
+                let jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &err)
+                if err != nil { //if there is an error parsing Json, print it
+                    println(err?.localizedDescription)
+                }
+                //parse received Json data
+                self.parseJsonDataforRetrievePassword(jsonResult,viewCtrl:viewCtrl)
+        }
+    }
+    
+    func parseJsonDataforRetrievePassword(anyObj:AnyObject?, viewCtrl:LogInViewController){
+        var list:Array<User> = []
+        if  anyObj is Array<AnyObject> {
+            for json in anyObj as Array<AnyObject>{
+                var user:User = User()
+                user.net_id = (json["net_id"] as AnyObject? as? String) ?? ""
+                user.password = (json["password"] as AnyObject? as? String) ?? ""
+                user.last_name = (json["last_name"] as AnyObject? as? String) ?? ""
+                user.first_name = (json["first_name"] as AnyObject? as? String) ?? ""
+                list.append(user)
+            }
+        }
+        viewCtrl.didGetForgottenPassword(list)
+    }
+
+    
+    
 }

@@ -28,8 +28,13 @@ class EditPasswordViewController:UIViewController {
         var oldPassword = oldPassField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         var newPassword = newPassField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         var reNewPassword = reNewPassField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        if(oldPassword != currentPassword){
+        
+        if (!validatePassword(newPassword)){
+            popUpAlertDialog("Alert", message: "Password length need to be between 5 to 10 characters and contain both digits and letters.", buttonText: "Ok")
+        } else if(oldPassword != currentPassword){
             popUpAlertDialog("Alert", message: "Old password not correct", buttonText: "Ok")
+        } else if (oldPassword == newPassword){
+            popUpAlertDialog("Alert", message: "New password and old password cannot be the same", buttonText: "Ok")
         } else if (newPassword != reNewPassword) {
             popUpAlertDialog("Alert", message: "New passwords not matched", buttonText: "Ok")
         } else {
@@ -39,6 +44,33 @@ class EditPasswordViewController:UIViewController {
             progressView.trackTintColor = UIColor.lightGrayColor()
             progressView.tintColor = UIColor.blueColor()
             view.addSubview(progressView)
+        }
+        
+        
+    }
+    
+    func validatePassword(password:String) -> Bool {
+        if countElements(password) < 5 || countElements(password) > 10 {
+            return false
+        } else if !Regex("(?=.*\\d)(?=.*[a-z])").test(password) {
+            return false
+        }
+        return true
+    }
+    
+    class Regex {
+        let internalExpression: NSRegularExpression
+        let pattern: String
+        
+        init(_ pattern: String) {
+            self.pattern = pattern
+            var error: NSError?
+            self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+        }
+        
+        func test(input: String) -> Bool {
+            let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input)))
+            return matches.count > 0
         }
     }
     

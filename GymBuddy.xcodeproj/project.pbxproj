@@ -193,14 +193,13 @@
 		0767FB4819F89102000AB021 /* GymBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				AA62C8351A343843003C524D /* AddPost.storyboard */,
-				AA62C8331A3437F0003C524D /* AddPostViewController.swift */,
 				AA3ED24E1A2A53B000E7DA42 /* ProfileTableViews */,
 				AA4637471A279B6B001B75CC /* Models */,
 				0767FB4B19F89102000AB021 /* AppDelegate.swift */,
 				07829F961A33D8CB004DC0F1 /* Detail.storyboard */,
 				0767FB4D19F89102000AB021 /* LogInViewController.swift */,
 				0767FB6F19F89A01000AB021 /* MatchingViewController.swift */,
+				0722280E1A213B050015DC7F /* MatchingViewModel.swift */,
 				071BD89B1A04252C00CCE835 /* Query.storyboard */,
 				071BD8971A04233D00CCE835 /* Login.storyboard */,
 				071BD89D1A0425B400CCE835 /* Matching.storyboard */,
@@ -224,9 +223,10 @@
 		0767FB4919F89102000AB021 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA62C8331A3437F0003C524D /* AddPostViewController.swift */,
+				AA62C8351A343843003C524D /* AddPost.storyboard */,
 				AA62C8311A3437E8003C524D /* AddPostViewModel.swift */,
 				071BD9501A04354500CCE835 /* RBStoryboardLink */,
-				0722280E1A213B050015DC7F /* MatchingViewModel.swift */,
 				0767FB4A19F89102000AB021 /* Info.plist */,
 				0767FB711A01E32D000AB021 /* QueryViewModel.swift */,
 				072228121A214E2E0015DC7F /* PostedWorkoutRecord.swift */,

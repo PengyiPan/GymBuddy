@@ -80,7 +80,7 @@ class LogInViewController: UIViewController {
         if myUsers.isEmpty {
             progressView.setProgress(0.0, animated:false)
             progressView.removeFromSuperview()
-            popUpAlertDialog("Alert", message: "Password not correct", buttonText: "OK")
+            popUpAlertDialog("Alert", message: "Incorrect password or username", buttonText: "OK")
         } else {
             progressView.setProgress(1.0, animated: true)
             var user:User = resultList[0]
@@ -101,5 +101,21 @@ class LogInViewController: UIViewController {
     override func supportedInterfaceOrientations() -> Int {
         return Int(UIInterfaceOrientationMask.Portrait.rawValue)
     }
+    
+    //after trying to retrieve the password
+    func didGetForgottenPassword(resultList:Array<User>){
+        myUsers = resultList
+        if myUsers.isEmpty {
+            popUpAlertDialog("Alert", message: "No matching user", buttonText: "OK")
+        } else {
+            //send email to netid@duke.edu
+            var user:User = resultList[0]
+            let newUser = UserData.createInManagedObjectContext(self.managedObjectContext!, netID:user.net_id!, password:user.password!,
+                firstName:user.first_name,
+                lastName:user.last_name, gender:user.gender, pictureURL:user.picture_url, numThumbs:user.numb_thumb_ups, signature:user.signature)
+            //self.performSegueWithIdentifier("logInSuccess", sender: self)
+        }
+    }
+    
 }
 
