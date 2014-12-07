@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wFU-dL-tJg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wFU-dL-tJg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -9,6 +9,7 @@
             <objects>
                 <tableViewController id="t0V-nl-8RE" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ozH-RE-uNr">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -171,20 +172,20 @@
                                 <exclude reference="bcp-sB-8eq"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="86P-bh-IgL"/>
+                                <exclude reference="ZAU-W4-wcr"/>
+                                <exclude reference="xDf-i3-pnV"/>
                                 <exclude reference="8LP-WB-7jc"/>
                                 <exclude reference="slu-c1-djN"/>
                                 <exclude reference="wbU-mf-ebh"/>
+                                <exclude reference="atC-rw-Xc4"/>
+                                <exclude reference="lXM-rh-taC"/>
+                                <exclude reference="h8o-MU-JrU"/>
                                 <exclude reference="7Ff-nR-Ean"/>
                                 <exclude reference="QjH-1d-IBo"/>
                                 <exclude reference="ld9-bI-bno"/>
                                 <exclude reference="qLV-ON-fsS"/>
                                 <exclude reference="w4n-iX-BhB"/>
-                                <exclude reference="atC-rw-Xc4"/>
-                                <exclude reference="lXM-rh-taC"/>
-                                <exclude reference="h8o-MU-JrU"/>
-                                <exclude reference="86P-bh-IgL"/>
-                                <exclude reference="ZAU-W4-wcr"/>
-                                <exclude reference="xDf-i3-pnV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -201,20 +202,20 @@
                                 <include reference="bcp-sB-8eq"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="86P-bh-IgL"/>
+                                <include reference="ZAU-W4-wcr"/>
+                                <include reference="xDf-i3-pnV"/>
                                 <include reference="8LP-WB-7jc"/>
                                 <include reference="slu-c1-djN"/>
                                 <include reference="wbU-mf-ebh"/>
+                                <include reference="atC-rw-Xc4"/>
+                                <include reference="lXM-rh-taC"/>
+                                <include reference="h8o-MU-JrU"/>
                                 <include reference="7Ff-nR-Ean"/>
                                 <include reference="QjH-1d-IBo"/>
                                 <include reference="ld9-bI-bno"/>
                                 <include reference="qLV-ON-fsS"/>
                                 <include reference="w4n-iX-BhB"/>
-                                <include reference="atC-rw-Xc4"/>
-                                <include reference="lXM-rh-taC"/>
-                                <include reference="h8o-MU-JrU"/>
-                                <include reference="86P-bh-IgL"/>
-                                <include reference="ZAU-W4-wcr"/>
-                                <include reference="xDf-i3-pnV"/>
                             </mask>
                         </variation>
                     </view>

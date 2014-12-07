@@ -1,16 +1,16 @@
 //
-//  QueryViewModel.swift
+//  AddPostViewModel.swift
 //  GymBuddy
 //
-//  Created by Pengyi Pan on 10/29/14.
+//  Created by Pengyi Pan on 12/6/14.
 //  Copyright (c) 2014 Duke 2014 Fall CS316. All rights reserved.
 //
 
 import UIKit
 
-class QueryViewModel {
+class AddPostViewModel {
     
-
+    
     init(){
     }
     
@@ -18,12 +18,22 @@ class QueryViewModel {
         let dateFormatter = NSDateFormatter()
         
         var theDateFormat = NSDateFormatterStyle.ShortStyle
-        let theTimeFormat = NSDateFormatterStyle.MediumStyle
+        let theTimeFormat = NSDateFormatterStyle.ShortStyle
         
         dateFormatter.dateStyle = theDateFormat
         dateFormatter.timeStyle = theTimeFormat
         
         return dateFormatter.stringFromDate(date)
+        
+        }
+    
+    func dateToPostString(date:NSDate) -> NSString {
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        
+        return dateFormatter.stringFromDate(date)
+
     }
     
     //TODO need to write using xml or SQL
@@ -45,8 +55,8 @@ class QueryViewModel {
     }
     
     
-
-
+    
+    
 }
 
 

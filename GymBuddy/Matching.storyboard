@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sxf-UO-gqu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sxf-UO-gqu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -31,6 +31,18 @@
                                                 </state>
                                                 <connections>
                                                     <segue destination="2eo-TV-u6a" kind="custom" customClass="RBStoryboardModalSegue" id="wQX-Ac-0B3"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="CZY-eB-Qce">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5f8-Y5-H0w">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="New">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="5Ov-Bn-oCV" kind="custom" identifier="toAddPostSegue" customClass="RBStoryboardModalSegue" id="hst-oR-JdH"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -126,6 +138,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmH-0x-kGi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-997.5" y="-309"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="R0o-3U-lqW">
+            <objects>
+                <viewController id="5Ov-Bn-oCV" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yYQ-G5-25h"/>
+                        <viewControllerLayoutGuide type="bottom" id="2aS-EF-mxa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cW2-p9-jct">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="AddPost"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="needsTopLayoutGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LpK-gn-aRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334.5" y="673"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="LUE-sc-dbx">

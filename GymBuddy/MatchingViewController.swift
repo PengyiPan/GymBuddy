@@ -176,6 +176,14 @@ class MatchingViewController: UIViewController, UITableViewDelegate, UITableView
         
             destinationVC.receivedRecord = self.selectedRecord
         }
+        else if (segue.identifier == "toAddPostSegue") {
+            var destinationVC = segue.destinationViewController as AddPostViewController;
+            destinationVC.receivedQueryTime = self.receivedQueryTime
+            destinationVC.receivedQueryLocation = self.receivedQueryLocation
+            destinationVC.receivedQuerySport = self.receivedQuerySport
+            destinationVC.receivedQueryCategory = self.receivedQueryCategory
+
+        }
     }
     
     
