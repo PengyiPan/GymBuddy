@@ -11,9 +11,31 @@ import Foundation
 class LogInModel {
     
     func searchForCredentials(viewCtrl: LogInViewController, netID:String, password:String){
-        var net_id = "'" + netID + "'"
-        var passwordCopy = "'" + password + "'"
+        var net_id_pre = "'" + netID + "'"
+        var net_id = ""
+        
+        //sql injection protection
+
+        if (injectionProtection(net_id_pre)){
+            viewCtrl.popUpAlertDialog("Alert", message: "Potential Injection Detected.", buttonText: "Ok")
+        } else {
+            net_id = net_id_pre
+        }
+        
+        var passwordCopy_pre = "'" + password + "'"
+        var passwordCopy = ""
+        
+        if (injectionProtection(passwordCopy_pre)){
+            viewCtrl.popUpAlertDialog("Alert", message: "Potential Injection Detected.", buttonText: "Ok")
+        } else {
+            passwordCopy = passwordCopy_pre
+        }
+        
+        
+        
         var query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " + passwordCopy
+        
+        
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         request.HTTPMethod = "POST"
@@ -100,6 +122,33 @@ class LogInModel {
             }
         }
         viewCtrl.didGetForgottenPassword(list)
+    }
+    
+    //return true if contains illegal phrase
+    func injectionProtection(query:String) -> Bool {
+        //"(?=.*[password||delete||drop])||(?=.*\")"
+        if Regex("(?=.*(drop|create|delete|password))").test(query) {
+            return true
+        }
+        return false
+    }
+    
+    
+    
+    class Regex {
+        let internalExpression: NSRegularExpression
+        let pattern: String
+        
+        init(_ pattern: String) {
+            self.pattern = pattern
+            var error: NSError?
+            self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+        }
+        
+        func test(input: String) -> Bool {
+            let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input)))
+            return matches.count > 0
+        }
     }
 
     

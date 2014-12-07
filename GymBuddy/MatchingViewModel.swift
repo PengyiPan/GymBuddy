@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Foundation
+
 
 class MatchingViewModel {
             
@@ -38,7 +40,16 @@ class MatchingViewModel {
         var bodyData1 = "query= SELECT * FROM PostedWorkoutRecord2 AS pwr, PostedBy as pb WHERE pwr.sport_type = " + receivedQuerySportCopy + " AND pwr.time_start >= " + str_date_copy
         var bodyData2 =  " AND pwr.record_id = pb.record_id " + "AND NOT (pb.net_id = \(my_netid_copy))"
         
-        var bodyData = bodyData1 + bodyData2
+        var bodyDatapre = bodyData1 + bodyData2
+        var bodyData = ""
+        
+        if (!injectionProtection(bodyDatapre)){
+            viewCtrl.popUpAlertDialog("Alert", message: "Potential Injection Detected.", buttonText: "Ok")
+        } else {
+            bodyData = bodyDatapre
+        
+        }
+        
         
         
         //query = "query= SELECT * FROM User WHERE net_id = " + net_id + " AND password = " +
@@ -65,6 +76,32 @@ class MatchingViewModel {
         
         
     
+    }
+    
+    //return true if theatening i.e contains illegal phrase
+    func injectionProtection(query:String) -> Bool {
+        if Regex("(?=.*password)(?=.*delete)(?=.*drop)").test(query) {
+            return true
+        }
+        return false
+    }
+    
+    
+    
+    class Regex {
+        let internalExpression: NSRegularExpression
+        let pattern: String
+        
+        init(_ pattern: String) {
+            self.pattern = pattern
+            var error: NSError?
+            self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+        }
+        
+        func test(input: String) -> Bool {
+            let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input)))
+            return matches.count > 0
+        }
     }
     
     func parseJsonData(anyObj:AnyObject, receivedQueryTime:String, receivedQueryLocation:String,receivedQueryCategory:String, viewCtrl:MatchingViewController){
