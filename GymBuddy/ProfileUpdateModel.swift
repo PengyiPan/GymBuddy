@@ -12,7 +12,18 @@ class ProfileUpdateModel {
     
     class func updateUserProfile(viewCtrl:ProfileEditViewController, netID:String, attributeContent:String, attributeType:EditAttribute) {
         var net_id = "'" + netID + "'"
-        var content = "'" + attributeContent + "'"
+        var content_pre = "'" + attributeContent + "'"
+        
+        var content = ""
+        
+        if (Regex("(?=.*(drop|create|delete|password|\"))").test(content_pre)){
+            viewCtrl.popUpAlertDialog("Alert", message: "Potential Injection Detected.", buttonText: "Ok")
+        } else {
+            content = content_pre
+        }
+        
+        
+        
         var attributeTitle = ""
         switch attributeType {
         case EditAttribute.EditFirstName:
@@ -41,7 +52,26 @@ class ProfileUpdateModel {
                 }
                 viewCtrl.didGetPostResult(UpdateResult.Success, attributeContent: attributeContent, attributeType: attributeType)
         }
+        
+}
+    
+    class Regex {
+        let internalExpression: NSRegularExpression
+        let pattern: String
+        
+        init(_ pattern: String) {
+            self.pattern = pattern
+            var error: NSError?
+            self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+        }
+        
+        func test(input: String) -> Bool {
+            let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input)))
+            return matches.count > 0
+        }
     }
+
+    
     
     class func updateChoiceProfile(viewCtrl:ProfileChoiceOverallViewController, netID:String, attributeContent:String, attributeType:EditAttribute) {
         var net_id = "'" + netID + "'"

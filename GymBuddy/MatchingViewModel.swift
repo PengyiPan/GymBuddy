@@ -43,12 +43,12 @@ class MatchingViewModel {
         var bodyDatapre = bodyData1 + bodyData2
         var bodyData = ""
         
-        if (!injectionProtection(bodyDatapre)){
-            viewCtrl.popUpAlertDialog("Alert", message: "Potential Injection Detected.", buttonText: "Ok")
-        } else {
-            bodyData = bodyDatapre
-        
-        }
+//        if (!injectionProtection(bodyDatapre)){
+//            viewCtrl.popUpAlertDialog("Alert", message: "Potential Injection Detected.", buttonText: "Ok")
+//        } else {
+//            bodyData = bodyDatapre
+//        
+//        }
         
         
         
@@ -78,14 +78,14 @@ class MatchingViewModel {
     
     }
     
-    //return true if theatening i.e contains illegal phrase
+    //return true if contains illegal phrase
     func injectionProtection(query:String) -> Bool {
-        if Regex("(?=.*password)(?=.*delete)(?=.*drop)").test(query) {
+        //"(?=.*[password||delete||drop])||(?=.*\")"
+        if Regex("(?=.*(drop|create|delete|password))").test(query) {
             return true
         }
         return false
     }
-    
     
     
     class Regex {

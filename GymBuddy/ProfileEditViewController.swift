@@ -90,6 +90,14 @@ class ProfileEditViewController:UIViewController {
         }
     }()
     
+    
+    func popUpAlertDialog(alert:String, message:String, buttonText:String){
+        var alert = UIAlertController(title: alert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
     func didGetPostResult(result:UpdateResult, attributeContent:String, attributeType:EditAttribute){
         switch  result {
         case UpdateResult.Success:

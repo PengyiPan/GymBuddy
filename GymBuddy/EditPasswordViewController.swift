@@ -31,7 +31,9 @@ class EditPasswordViewController:UIViewController {
         
         if (!validatePassword(newPassword)){
             popUpAlertDialog("Alert", message: "Password length need to be between 5 to 10 characters and contain both digits and letters.", buttonText: "Ok")
-        } else if(oldPassword != currentPassword){
+        } else if (injectionProtection(newPassword)){
+            popUpAlertDialog("Alert", message: "Potential injection detected", buttonText: "Ok")
+        }else if(oldPassword != currentPassword){
             popUpAlertDialog("Alert", message: "Old password not correct", buttonText: "Ok")
         } else if (oldPassword == newPassword){
             popUpAlertDialog("Alert", message: "New password and old password cannot be the same", buttonText: "Ok")
@@ -57,6 +59,16 @@ class EditPasswordViewController:UIViewController {
         }
         return true
     }
+    
+    func injectionProtection(query:String) -> Bool {
+        //"(?=.*[password||delete||drop])||(?=.*\")"
+        if Regex("(?=.*(drop|create|delete|password|\"))").test(query) {
+            return true
+        }
+        return false
+    }
+    
+    
     
     class Regex {
         let internalExpression: NSRegularExpression

@@ -127,7 +127,7 @@ class LogInModel {
     //return true if contains illegal phrase
     func injectionProtection(query:String) -> Bool {
         //"(?=.*[password||delete||drop])||(?=.*\")"
-        if Regex("(?=.*(drop|create|delete|password))").test(query) {
+        if Regex("(?=.*(drop|create|delete|password|\"))").test(query) {
             return true
         }
         return false
