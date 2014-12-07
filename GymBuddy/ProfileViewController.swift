@@ -40,11 +40,14 @@ class ProfileViewController: UIViewController{
         tapRec.addTarget(self, action: "tappedImage")
         picImage.addGestureRecognizer(tapRec)
         picImage.userInteractionEnabled = true
+        var imageName:String = ""
         let fetchRequest = NSFetchRequest(entityName: "UserData")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [UserData] {
             var user:UserData = fetchResults[0];
             thumbNumField.text = user.num_thumbs
+            imageName = user.picture_url
         }
+        picImage.image = UIImage(named: imageName)
     }
     
     func tappedImage() {
