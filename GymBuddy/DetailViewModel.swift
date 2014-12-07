@@ -106,7 +106,7 @@ class DetailViewModel {
                 record.first_name = (json["first_name"] as AnyObject? as? String) ?? ""
                 record.gender = (json["gender"] as AnyObject? as? String) ?? ""
                 record.picture_url = (json["picture_url"] as AnyObject? as? String) ?? ""
-                record.numb_thumb_ups = (json["numb_thumb_ups"] as AnyObject? as? String) ?? ""
+                record.numb_thumb_ups = (json["num_thumbs"] as AnyObject? as? String) ?? ""
                 record.signature = (json["signature"] as AnyObject? as? String) ?? ""
                 
                 
@@ -118,6 +118,63 @@ class DetailViewModel {
             viewCtrl.didReceiveQueryResult(list)
             
         }
+    }
+    
+    func thumbUp(net_id:String, viewCtrl:DetailViewController){
+        
+        var bodyData = "query= SELECT * FROM User WHERE net_id = " + "'" + net_id + "'"
+        
+        var URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
+        var request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                var error: NSError?
+                var output = NSString(data: data, encoding: NSUTF8StringEncoding) // output as string for debugging
+                var anyObj2: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &error)
+                var list:Array<User> = []
+                
+                
+                if  anyObj2 is Array<AnyObject> {
+                    
+                    for json in anyObj2 as Array<AnyObject>{
+                        
+                        var record:User = User()
+
+                        record.numb_thumb_ups = (json["num_thumbs"] as AnyObject? as? String) ?? ""
+                        
+                        list.append(record)
+                        
+                    }
+                    
+                }
+                
+                var thumbNum:Int = list[0].numb_thumb_ups!.toInt()!
+                thumbNum += 1
+                var newThumbNum = String(thumbNum)
+                
+                var netId: String = "'" + net_id + "'"
+                var bodyData = "query= UPDATE User SET num_thumbs = " + newThumbNum + " WHERE net_id = " + netId
+                var URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
+                var request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+                request.HTTPMethod = "POST"
+                request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+                    {
+                        (response, data, error) in
+                        var error: NSError?
+                        var output = NSString(data: data, encoding: NSUTF8StringEncoding) // output as string for debugging
+                        var anyObj2: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &error)
+                        //parse received Json data
+                        
+                        self.makeUserDatabaseQuery(net_id, viewCtrl: viewCtrl)
+                        
+                }
+                
+        }
+        
     }
 
 }

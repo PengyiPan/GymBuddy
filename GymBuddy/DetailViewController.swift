@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     var receivedQuerySport = ""
     var receivedQueryCategory = ""
     
+    @IBOutlet weak var thumbUpBtn: UIButton!
+    @IBOutlet weak var displayTextView: UITextView!
 
     
     var receivedRecord: PostedWorkoutRecord = PostedWorkoutRecord()
@@ -26,7 +28,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("received record id: " + receivedRecord.record_id!)
+        thumbUpBtn.alpha = 0
         
         myModel.makeDatabaseQuery(receivedRecord.record_id!, viewCtrl: self)
  
@@ -57,16 +59,20 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBAction func thumbUp(sender: UIButton) {
+        myModel.thumbUp(userToPresent.net_id!, viewCtrl: self)
+    }
+    
     func didReceiveQueryResult(data: Array<User>){
         userToPresent = data[0]
         
-        //self.displayLabel.text = "Name: " + userToPresent.first_name! + " " + userToPresent.last_name! +
-            "Gender: " + userToPresent.gender!
-      
-//        self.urlLabel.text = "Url: " + userToPresent.picture_url!
-//        self.ThumbLabel.text = "# of thumb ups: " + userToPresent.numb_thumb_ups!
-//        self.SignatureLabel.text = "Comment: " + userToPresent.signature!
+        self.displayTextView.text = "Name: " + userToPresent.first_name! + " " + userToPresent.last_name! + "\n\n" +
+        "Gender: " + userToPresent.gender! + "\n\n" +
+        "Url: " + userToPresent.picture_url! + "\n\n" +
+        "Number of thumb-ups: " + userToPresent.numb_thumb_ups! + "\n\n" +
+        "Comment: " + userToPresent.signature! + "\n"
         
+        thumbUpBtn.alpha = 1
         
     }
 
