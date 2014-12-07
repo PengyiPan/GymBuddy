@@ -86,6 +86,8 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.secureTextEntry = true
+        rePasswordTextField.secureTextEntry = true
     }
     
     //set to only support portrait, too lazy to do the landscape
