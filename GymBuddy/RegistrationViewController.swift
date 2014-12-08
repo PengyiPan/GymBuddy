@@ -27,6 +27,8 @@ class RegistrationViewController: UIViewController {
         if !netID.isEmpty && !password.isEmpty && !rePassword.isEmpty {
             if(password != rePassword){
                 popUpAlertDialog("Alert", message: "Password not matched", buttonText: "OK")
+                progressView.setProgress(0.0, animated: false)
+                progressView.removeFromSuperview()
             } else {
                 myModel.postCredentials(self, netID: netID, password: password)
                 progressView.center = view.center
@@ -37,6 +39,8 @@ class RegistrationViewController: UIViewController {
             }
         } else {
             popUpAlertDialog("Alert", message: "Fill all the fields", buttonText: "OK")
+            progressView.setProgress(0.0, animated: false)
+            progressView.removeFromSuperview()
         }
     }
     
