@@ -59,3 +59,9 @@ https://github.com/nickbiaogame/GymBuddyDataGenerator.git
 <p>
 This is a random data generator written in java. It takes in two standard inputs: number of users and number of posted records, and outputs three SQL queries. Each query corresponds to one of the relations above and can be used to insert the desired number of entries to each relation. Together they can be used to populate our database with dummy data while preserving data integrity (Keys, Foreign Keys).
 </p>
+<h2>Contributors</h2>
+<ul>
+	<li>Nick (Pengyi) Pan</li>
+	<li>Justin (Zihao) Zhang</li>
+	<li>Yubo Tian</li>
+</ul>
