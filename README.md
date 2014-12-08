@@ -41,7 +41,7 @@ CHECK (sport_type IN (‘All’, 'Workout’, ‘Tennis', ‘PingPong’, ‘Bad
 </p>
 <h3>User Interface</h3>
 <p>
-Login - Registration
+Login - Registration \n
       - query - matching - Details 
                          - Add Post   
               - profile  - MyPostedRecord
