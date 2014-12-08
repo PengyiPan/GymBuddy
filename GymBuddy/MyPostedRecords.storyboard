@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yEx-IG-DxD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yEx-IG-DxD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -47,9 +47,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="72" width="400" height="728"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="yEx-IG-DxD" id="xxT-Ig-agd"/>
                                     <outlet property="delegate" destination="yEx-IG-DxD" id="PrJ-wJ-4xc"/>
@@ -66,22 +63,46 @@
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="28" width="400" height="44"/>
-                                </variation>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eqf-F4-XRp" firstAttribute="leading" secondItem="PO1-lY-U0S" secondAttribute="leading" id="JEQ-dr-s8r" userLabel="tableViewLeft"/>
+                            <constraint firstItem="Eqf-F4-XRp" firstAttribute="bottom" secondItem="3CV-xD-sQP" secondAttribute="top" id="R7G-Dv-Ph9" userLabel="tableViewBottom"/>
+                            <constraint firstItem="PO1-lY-U0S" firstAttribute="leading" secondItem="v1q-8t-LYA" secondAttribute="leading" id="U6F-EM-9M2" userLabel="navigationLeft"/>
+                            <constraint firstItem="Eqf-F4-XRp" firstAttribute="top" secondItem="PO1-lY-U0S" secondAttribute="bottom" id="i31-ca-UR1" userLabel="tableViewTop"/>
+                            <constraint firstAttribute="trailing" secondItem="PO1-lY-U0S" secondAttribute="trailing" id="jeP-lB-1rc" userLabel="navigationRight"/>
+                            <constraint firstItem="PO1-lY-U0S" firstAttribute="top" secondItem="p1p-qB-qIN" secondAttribute="bottom" id="lxF-OH-UMu" userLabel="navigationTop"/>
+                            <constraint firstItem="PO1-lY-U0S" firstAttribute="trailing" secondItem="Eqf-F4-XRp" secondAttribute="trailing" id="uWg-7c-Bma" userLabel="tableViewRight"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Eqf-F4-XRp"/>
                                 <exclude reference="PO1-lY-U0S"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="U6F-EM-9M2"/>
+                                <exclude reference="jeP-lB-1rc"/>
+                                <exclude reference="lxF-OH-UMu"/>
+                                <exclude reference="uWg-7c-Bma"/>
+                                <exclude reference="JEQ-dr-s8r"/>
+                                <exclude reference="R7G-Dv-Ph9"/>
+                                <exclude reference="i31-ca-UR1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Eqf-F4-XRp"/>
                                 <include reference="PO1-lY-U0S"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="U6F-EM-9M2"/>
+                                <include reference="jeP-lB-1rc"/>
+                                <include reference="lxF-OH-UMu"/>
+                                <include reference="uWg-7c-Bma"/>
+                                <include reference="JEQ-dr-s8r"/>
+                                <include reference="R7G-Dv-Ph9"/>
+                                <include reference="i31-ca-UR1"/>
                             </mask>
                         </variation>
                     </view>

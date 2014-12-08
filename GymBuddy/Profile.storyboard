@@ -35,6 +35,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pYf-ZA-2YK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1E9-Om-nFd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -217,9 +218,6 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzl-lE-PPI">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="275" width="400" height="379"/>
-                                </variation>
                                 <connections>
                                     <segue destination="Mjm-3N-RZd" kind="embed" identifier="embedProfileTableSegue" id="4Sd-XO-Kf5"/>
                                 </connections>
@@ -268,17 +266,6 @@
                                 <exclude reference="1sG-pv-4eq"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1dR-xz-N12"/>
-                                <exclude reference="UCd-md-8Wj"/>
-                                <exclude reference="rYN-DR-gss"/>
-                                <exclude reference="06n-pe-eGq"/>
-                                <exclude reference="In9-0j-7zt"/>
-                                <exclude reference="MdU-sJ-J54"/>
-                                <exclude reference="LaT-Bi-9Qc"/>
-                                <exclude reference="WBj-ua-i6Z"/>
-                                <exclude reference="98O-qW-7ws"/>
-                                <exclude reference="AfH-R1-ZkV"/>
-                                <exclude reference="yF4-Si-Eod"/>
                                 <exclude reference="7Xm-aP-QkE"/>
                                 <exclude reference="L2Z-l8-XcC"/>
                                 <exclude reference="OjW-dG-aFN"/>
@@ -287,7 +274,18 @@
                                 <exclude reference="g5e-kl-h8X"/>
                                 <exclude reference="j8Y-as-imd"/>
                                 <exclude reference="jIG-75-T7o"/>
+                                <exclude reference="1dR-xz-N12"/>
+                                <exclude reference="UCd-md-8Wj"/>
+                                <exclude reference="rYN-DR-gss"/>
                                 <exclude reference="Q9a-f8-6E5"/>
+                                <exclude reference="98O-qW-7ws"/>
+                                <exclude reference="AfH-R1-ZkV"/>
+                                <exclude reference="yF4-Si-Eod"/>
+                                <exclude reference="LaT-Bi-9Qc"/>
+                                <exclude reference="WBj-ua-i6Z"/>
+                                <exclude reference="06n-pe-eGq"/>
+                                <exclude reference="In9-0j-7zt"/>
+                                <exclude reference="MdU-sJ-J54"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -300,17 +298,6 @@
                                 <include reference="1sG-pv-4eq"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1dR-xz-N12"/>
-                                <include reference="UCd-md-8Wj"/>
-                                <include reference="rYN-DR-gss"/>
-                                <include reference="06n-pe-eGq"/>
-                                <include reference="In9-0j-7zt"/>
-                                <include reference="MdU-sJ-J54"/>
-                                <include reference="LaT-Bi-9Qc"/>
-                                <include reference="WBj-ua-i6Z"/>
-                                <include reference="98O-qW-7ws"/>
-                                <include reference="AfH-R1-ZkV"/>
-                                <include reference="yF4-Si-Eod"/>
                                 <include reference="7Xm-aP-QkE"/>
                                 <include reference="L2Z-l8-XcC"/>
                                 <include reference="OjW-dG-aFN"/>
@@ -319,7 +306,18 @@
                                 <include reference="g5e-kl-h8X"/>
                                 <include reference="j8Y-as-imd"/>
                                 <include reference="jIG-75-T7o"/>
+                                <include reference="1dR-xz-N12"/>
+                                <include reference="UCd-md-8Wj"/>
+                                <include reference="rYN-DR-gss"/>
                                 <include reference="Q9a-f8-6E5"/>
+                                <include reference="98O-qW-7ws"/>
+                                <include reference="AfH-R1-ZkV"/>
+                                <include reference="yF4-Si-Eod"/>
+                                <include reference="LaT-Bi-9Qc"/>
+                                <include reference="WBj-ua-i6Z"/>
+                                <include reference="06n-pe-eGq"/>
+                                <include reference="In9-0j-7zt"/>
+                                <include reference="MdU-sJ-J54"/>
                             </mask>
                         </variation>
                     </view>
@@ -345,6 +343,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uRV-py-Ywh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oVz-OC-dOf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
