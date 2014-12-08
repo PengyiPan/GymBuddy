@@ -10,38 +10,35 @@ Users may filter and find potential gym partners according to certain search cri
 <h3>Relational Database</h3>
 <p>
 CREATE TABLE User (
-user_id INT NOT NULL,  
-last_name VARCHAR(50) NOT NULL, 
-first_name VARCHAR(50) NOT NULL,  
-gender CHAR(1) NOT NULL, 
-picture_url VARCHAR(50) NOT NULL, 
-num_thumbs INT NOT NULL, 
-signature VARCHAR(200),
----------------------------------
+user_id,  
+last_name, 
+first_name,  
+gender, 
+picture_url, 
+num_thumbs, 
+signature,
 PRIMARY KEY user_id,);
-
+</p>
+<p>
 CREATE TABLE PostedBy(
-user_id INT NOT NULL REFERENCES User.user_id,
-record_id INT NOT NULL REFERENCES PostedWorkoutRecord.record_id,
-time_posted DATETIME NOT NULL,
----------------------------------
-PRIMARY KEY ( record_id));
-
+user_id,
+record_id,
+time_posted,
+PRIMARY KEY (record_id));
+</p>
+<p>
 CREATE TABLE PostedWorkoutRecord(
-record_id INT NOT NULL,
-time_start DATETIME NOT NULL,
-time_end DATETIME NOT NULL,
-location VARCHAR(50) NOT NULL,
-sport_type VARCHAR(50) NOT NULL,
-sport_sub_type VARCHAR(50) NOT NULL,  -- defines the subcategory of work_type
----------------------------------
-PRIMARY KEY record_id,
-CHECK (time_start < time_end),
-CHECK (sport_type IN (‘All’, 'Workout’, ‘Tennis', ‘PingPong’, ‘Badminton', 'Swimming', ‘......’)));
+record_id,
+time_start,
+time_end,
+location,
+sport_type,
+sport_sub_type,
+PRIMARY KEY record_id);
 </p>
 <h3>User Interface</h3>
 <p>
-Login - Registration \n
+Login - Registration
       - query - matching - Details 
                          - Add Post   
               - profile  - MyPostedRecord
