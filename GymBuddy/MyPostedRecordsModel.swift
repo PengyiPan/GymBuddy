@@ -55,6 +55,81 @@ class MyPostedRecordsModel {
         viewCtrl.didGetQueryResult(list)
     }
     
+    //function to delete this workout record
+    func queryDeleteMyRecord(viewCtrl:MyPostedRecordsViewController, post:PostedWorkoutRecord){
+        
+        var this = post
+        
+        var t_start: String = this.time_start!
+        var t_end: String = this.time_end!
+        var l: String = this.location!
+        var s_type: String = this.sport_type!
+        
+        var r_id: String = this.record_id!
+        
+        var time_start = "'" + t_start + "'"
+        var time_end = "'" + t_end + "'"
+        
+        var record_id = "'" + r_id + "'"
+        
+        //var query = "query = SELECT * FROM PostedBy AS pb, PostedWorkoutRecord2 AS record WHERE pb.net_id = \(net_id) AND pb.record_id = record.record_id"
+        println("tobedeleted record id is :" + record_id)
+        
+        var delete_Record = "query= DELETE FROM `PostedWorkoutRecord2` WHERE record_id = \(record_id)"
+        
+        var delete_PostedBy =  "query= DELETE FROM `PostedBy` WHERE record_id = \(record_id)";
+        
+        let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
+        let request_1:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request_1.HTTPMethod = "POST"
+        request_1.HTTPBody = delete_Record.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        NSURLConnection.sendAsynchronousRequest(request_1, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                if error != nil{
+                    println(error?.localizedDescription)
+                }
+                // donothing
+                //self.parseJsonIDsData(jsonResult, viewCtrl: viewCtrl)
+                //viewCtrl.viewDidLoad()
+        }
+        
+//        NSURLConnection.sendAsynchronousRequest(request_record, queue: NSOperationQueue.mainQueue())
+//            {//do nothing
+//                (response, data, error) in
+//                if error != nil{
+//                    println(error?.localizedDescription)
+//                }
+//                var err: NSError?
+//                let jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),error: &err)
+//                if err != nil { //if there is an error parsing Json, print it
+//                    println(err?.localizedDescription)
+//                }
+//                //self.parseJsonIDsData(jsonResult, viewCtrl: viewCtrl)
+//
+//        }
+
+
+        //then delete postedby
+        let URL2: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
+        let request_2:NSMutableURLRequest = NSMutableURLRequest(URL:URL2)
+        request_2.HTTPMethod = "POST"
+        request_2.HTTPBody = delete_PostedBy.dataUsingEncoding(NSUTF8StringEncoding);
+        
+        NSURLConnection.sendAsynchronousRequest(request_2, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                if error != nil{
+                    println(error?.localizedDescription)
+                }
+                // donothing
+                //self.parseJsonIDsData(jsonResult, viewCtrl: viewCtrl)
+                viewCtrl.viewDidLoad()
+        }
+
+        
+    }
     
     func makeCellTitleString(post:PostedWorkoutRecord)-> NSString{
         var s: String = post.time_start!

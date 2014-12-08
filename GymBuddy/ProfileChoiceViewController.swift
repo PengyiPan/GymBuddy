@@ -88,7 +88,9 @@ class ProfileChoiceViewController:UITableViewController {
         var selectedCell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell!
         if selectedAttribute.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) != "" {
             var prevSelected = tableView.cellForRowAtIndexPath(selected[selectedAttribute]!) as UITableViewCell!
-            prevSelected.accessoryType = UITableViewCellAccessoryType.None
+            if prevSelected != nil {
+                prevSelected.accessoryType = UITableViewCellAccessoryType.None
+            }
         }
         selectedAttribute = selectedCell.textLabel!.text!
         selected.removeAll(keepCapacity: false)

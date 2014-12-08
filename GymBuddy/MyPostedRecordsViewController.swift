@@ -44,6 +44,20 @@ class MyPostedRecordsViewController:UIViewController, UITableViewDelegate, UITab
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //do nothing
     }
+    //delete one of my posted record
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            //delete from database
+            var tobeRemovedPost = myData[indexPath.row]
+            
+            myData.removeAtIndex(indexPath.row)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            //delete from database
+            myModel.queryDeleteMyRecord(self, post: tobeRemovedPost)
+        }
+    }
+    //
     
     func didGetQueryResult(resultList:Array<PostedWorkoutRecord>){
         //NSLog("MyPostedRecordsViewController got query results")

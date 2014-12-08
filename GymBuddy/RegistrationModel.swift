@@ -26,6 +26,11 @@ class RegistrationModel {
             return
         }
         
+        if injectionProtection(password) == true {
+            viewCtrl.didGetPostResult(RegisterResult.NonValidPassword, user:user)
+            return
+        }
+        
         var net_id = "'" + netID + "'"
         var query = "query= SELECT * FROM User WHERE net_id = " + net_id
         let URL: NSURL = NSURL(string: "http://pengyipan.com/service.php")!
@@ -98,6 +103,14 @@ class RegistrationModel {
             return false
         }
         return true
+    }
+    
+    func injectionProtection(query:String) -> Bool {
+        //"(?=.*[password||delete||drop])||(?=.*\")"
+        if Regex("(?=.*(drop|create|delete|password|\"))").test(query) {
+            return true
+        }
+        return false
     }
     
     class Regex {
