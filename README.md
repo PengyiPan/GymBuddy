@@ -2,10 +2,15 @@
 <h2>Purpose</h2>
 <p>
 With Gym Buddy, individual’s potential work-out social group will be expanded: we can not only contact those people we know to go to the gym together, but are also provided with information about the workout plan of those we do not know previously on Duke campus.
-</p>
-<p>
+<br>
 Users may filter and find potential gym partners according to certain search criteria, such as time, location, sports type and level. Users may also post their work out plans so that others may find and join them. 
 </p>
+<h2>Contributors</h2>
+<ul>
+	<li>Nick (Pengyi) Pan</li>
+	<li>Justin (Zihao) Zhang</li>
+	<li>Yubo Tian</li>
+</ul>
 <h2>Overview of Code Structure</h2>
 <h3>Relational Database</h3>
 <p>
@@ -59,9 +64,3 @@ https://github.com/nickbiaogame/GymBuddyDataGenerator.git
 <p>
 This is a random data generator written in java. It takes in two standard inputs: number of users and number of posted records, and outputs three SQL queries. Each query corresponds to one of the relations above and can be used to insert the desired number of entries to each relation. Together they can be used to populate our database with dummy data while preserving data integrity (Keys, Foreign Keys).
 </p>
-<h2>Contributors</h2>
-<ul>
-	<li>Nick (Pengyi) Pan</li>
-	<li>Justin (Zihao) Zhang</li>
-	<li>Yubo Tian</li>
-</ul>
