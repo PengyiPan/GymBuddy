@@ -1,9 +1,9 @@
-<h1>GymBuddy iOS App</h1>
+<h1>Duke GymBuddy iOS App</h1>
 <h2>Purpose</h2>
 <p>
 With Gym Buddy, individual’s potential work-out social group will be expanded: we can not only contact those people we know to go to the gym together, but are also provided with information about the workout plan of those we do not know previously on Duke campus.
 <br>
-Users may filter and find potential gym partners according to certain search criteria, such as time, location, sports type and level. Users may also post their work out plans so that others may find and join them. 
+Dukies may filter and find potential gym partners according to certain search criteria, such as time, location, sports type and level. Dukies may also post their work out plans so that others may find and join them. 
 </p>
 <h2>Contributors</h2>
 <ul>
